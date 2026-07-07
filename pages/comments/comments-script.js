@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reviews = document.querySelectorAll(".review__item");
     const button = document.querySelector(".comments .btn");
 
-    const step = 8; 
+    const step = 12; 
     let visible = step;
 
     function updateReviews() {

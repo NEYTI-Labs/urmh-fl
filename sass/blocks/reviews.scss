@@ -27,6 +27,13 @@
     }
     
 }
+.review__header {
+    &-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
 
 .review__item{
     background: #F7F7F8;
@@ -46,6 +53,9 @@
         margin-bottom: 13px;
         height: 65px;
         gap: 10px;
+    }
+    &-grade {
+        display: flex;
     }
     &-icon{
         width: 65px;
@@ -75,11 +85,12 @@
         height: 100%;
     }
     &-footer{
-        svg{
+        svg, img{
             width: 56px;
             height: 20px;
             margin-top: 13px;
         }
+        
     }
 }
 

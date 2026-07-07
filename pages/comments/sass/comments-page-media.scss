@@ -1,0 +1,55 @@
+@media (max-width: 1750px) {
+  .comments {
+    .review__item {
+      min-width: 440px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .comments {
+    padding-bottom: 16px;
+    gap: 16px;
+    h1 {
+      font-size: 20px;
+    }
+    .review__item {
+      padding: 16px;
+      height: 232px;
+      width: 100%;
+      min-width: unset;
+      &-icon {
+        width: 55px;
+        height: 55px;
+      }
+      &-text {
+          &::before {
+            content: "";
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            width: 19px;
+            height: 96px;
+            border-radius: 0 8px 8px 0;
+            z-index: 5;
+
+            background: linear-gradient(270deg, #f7f8fa 50%, rgba(247, 248, 250, 0) 100%);
+          }
+        }
+        p {
+        line-height: 24px;
+        max-height: 72px;
+        min-width: 590px;
+        margin: 0;
+      }
+    }
+    .review__footer-link {
+      img {
+        margin-top: 13px;
+      }
+    }
+    .btn {
+      margin: 0;
+    }
+  }
+}

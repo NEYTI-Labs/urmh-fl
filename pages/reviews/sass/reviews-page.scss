@@ -20,12 +20,9 @@
     height: 276px;
     min-width: 602px;
     &-text {
-      position: relative;
-      max-height: fit-content;
-      padding: 10px;
-      margin-bottom: 14px;
+      min-height: 115px;
       p {
-        max-width: 381px;
+        // max-width: 381px;
         color: #2C3336;
         font-size: 16px;
         line-height: 1.4;
@@ -35,17 +32,12 @@
       background: #9C4CD0;
     }
     &-header {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       gap: 20px;
     }
   }
   .review__item.visible {
       display: block;
-  }
-  .review__footer-link {
-    img {
-      margin-top: 0px;
-    }
   }
   .btn {
     margin: 0 auto;

@@ -1,5 +1,5 @@
 @media (max-width: 1750px) {
-  .comments {
+  .reviews {
     .review__item {
       min-width: 440px;
     }
@@ -7,11 +7,14 @@
 }
 
 @media (max-width: 576px) {
-  .comments {
+  .reviews, .reviews-hero {
     padding-bottom: 16px;
     gap: 16px;
     h1 {
       font-size: 20px;
+    }
+    &-content {
+      gap: 8px;
     }
     .review__item {
       padding: 16px;

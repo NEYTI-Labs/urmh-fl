@@ -1,11 +1,16 @@
-.comments {
+.reviews, .reviews-hero {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-bottom: 80px;
+  padding-bottom: 80px ;
   h1 {
   font-weight: 600;
   font-size: 56px;
+  }
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .review__item {
     display: none;

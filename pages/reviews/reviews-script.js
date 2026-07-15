@@ -1,24 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const reviews = document.querySelectorAll(".review__item");
-    const button = document.querySelector(".reviews .btn");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const reviews = document.querySelectorAll(".review__item");
+//     const button = document.querySelector(".reviews .btn");
 
-    const step = 12; 
-    let visible = step;
+//     const step = 12; 
+//     let visible = step;
 
-    function updateReviews() {
-        reviews.forEach((review, index) => {
-            review.classList.toggle("visible", index < visible);
-        });
+//     function updateReviews() {
+//         reviews.forEach((review, index) => {
+//             review.classList.toggle("visible", index < visible);
+//         });
 
-        if (visible >= reviews.length) {
-            button.style.display = "none";
-        }
-    }
+//         if (visible >= reviews.length) {
+//             button.style.display = "none";
+//         }
+//     }
 
-    updateReviews();
+//     updateReviews();
 
-    button.addEventListener("click", () => {
-        visible += step;
-        updateReviews();
-    });
-});
+//     button.addEventListener("click", () => {
+//         visible += step;
+//         updateReviews();
+//     });
+// });

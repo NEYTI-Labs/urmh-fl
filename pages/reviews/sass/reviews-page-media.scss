@@ -1,15 +1,15 @@
 @media (max-width: 1750px) {
   .reviews {
     .review__item {
-      min-width: 440px;
+      // min-width: 440px;
     }
   }
 }
 
-@media (max-width: 960px) {
-  .reviews {
-    .review__item {
-      min-width: 420px;
+@media (max-width: 990px) {
+  .reviews, .reviews-hero {
+    &-content {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
   }
 }
@@ -31,10 +31,11 @@
     }
     &-content {
       gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
     .review__item {
       padding: 16px;
-      height: 255px;
+      gap: 10px;
       width: 100%;
       min-width: unset;
       &-icon {

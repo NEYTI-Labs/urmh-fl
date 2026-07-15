@@ -8,19 +8,36 @@
   font-size: 56px;
   }
   &-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(455px, 1fr));
     gap: 16px;
   }
   .review__item {
-    display: none;
     border-radius: 16px;
     padding: 24px;
     background: #fff;
-    height: 276px;
-    min-width: 602px;
+    height: auto;
+    min-width: 100%;
+    gap: 13px;
     &-text {
-      min-height: 115px;
+      padding: 10px;
+      height: 115px;
+      max-height: none;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(137, 137, 137, 0.3) transparent;
+      
+      &::-webkit-scrollbar {
+      height: 1px; // горизонтальный скролл — делаем его тонким
+      }
+
+      &::-webkit-scrollbar-track {
+      background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+      background-color: rgba(137, 137, 137, 0.3);
+      border-radius: 4px;
+      }
       p {
         // max-width: 381px;
         color: #2C3336;
@@ -36,8 +53,8 @@
       gap: 20px;
     }
   }
-  .review__item.visible {
-      display: block;
+  .review__footer-text {
+    width: fit-content;
   }
   .btn {
     margin: 0 auto;

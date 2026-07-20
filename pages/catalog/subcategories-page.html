@@ -10,8 +10,8 @@
   <body>
     {{> _header}}
 
-    <main class="main page-content">
-      <div class="container container-1640">
+    <main class="main main-subcategories page-content">
+      <div class="container container-subcategories">
         <ol class="kroshki">
           <li>
             <a href="/public" title="Главная"> Главная </a>
@@ -74,44 +74,49 @@
                     <li><a href="#">Фасовочно-упаковочное оборудование</a></li>
                   </ul>
                 </nav>
-                <div class="catalog-wrapper__action">
-                  <div class="catalog-sort js-catalog-sort">
-                    <div class="catalog-sort__shadow"></div>
-                    <div class="catalog-sort__current">
-                      <span class="catalog-sort__value">по цене</span>
-                      <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
-                        <path d="M6.5 0.5L3.5 3.05L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
-                      </svg>
-                    </div>
+                <div class="catalog-action__wrapper">
+                  <div class="catalog-action">
+                    <div class="catalog-sort js-catalog-sort">
+                      <div class="catalog-sort__shadow"></div>
+                      <div class="catalog-sort__current">
+                        <span class="catalog-sort__value">по цене</span>
+                        <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+                          <path d="M6.5 0.5L3.5 3.05L0.5 0.5" stroke="#70828A" stroke-linecap="round"/>
+                        </svg>
+                      </div>
 
-                    <div class="catalog-sort__options">
-                      <div class="catalog-sort__option" data-value="price">по цене</div>
-                      <div class="catalog-sort__option" data-value="popular">по популярности</div>
-                      <div class="catalog-sort__option" data-value="new">по новизне</div>
+                      <div class="catalog-sort__options">
+                        <div class="catalog-sort__option" data-value="price">по цене</div>
+                        <div class="catalog-sort__option" data-value="popular">по популярности</div>
+                        <div class="catalog-sort__option" data-value="new">по новизне</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="catalog-view">
-                    <button type="button" class="catalog-view__grid js-catalog-view-grid active">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.5 0H1.5C0.67 0 0 0.67 0 1.5V6.5C0 7.33 0.67 8 1.5 8H6.5C7.33 8 8 7.33 8 6.5V1.5C8 0.67 7.33 0 6.5 0ZM6 6H2V2H6V6Z" fill="#2C3336"/>
-                        <path d="M16.5 0H11.5C10.67 0 10 0.67 10 1.5V6.5C10 7.33 10.67 8 11.5 8H16.5C17.33 8 18 7.33 18 6.5V1.5C18 0.67 17.33 0 16.5 0ZM16 6H12V2H16V6Z" fill="#2C3336"/>
-                        <path d="M6.5 10H1.5C0.67 10 0 10.67 0 11.5V16.5C0 17.33 0.67 18 1.5 18H6.5C7.33 18 8 17.33 8 16.5V11.5C8 10.67 7.33 10 6.5 10ZM6 16H2V12H6V16Z" fill="#2C3336"/>
-                        <path d="M16.5 10H11.5C10.67 10 10 10.67 10 11.5V16.5C10 17.33 10.67 18 11.5 18H16.5C17.33 18 18 17.33 18 16.5V11.5C18 10.67 17.33 10 16.5 10ZM16 16H12V12H16V16Z" fill="#2C3336"/>
-                      </svg>
-                    </button>
-                    <button type="button" class="catalog-view__row js-catalog-view-row">
+                    <div class="catalog-view">
+                      <button type="button" class="catalog-view__grid js-catalog-view-grid active">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.5 0H1.5C0.67 0 0 0.67 0 1.5V6.5C0 7.33 0.67 8 1.5 8H6.5C7.33 8 8 7.33 8 6.5V1.5C8 0.67 7.33 0 6.5 0ZM6 6H2V2H6V6Z" fill="#2C3336"/>
+                          <path d="M16.5 0H11.5C10.67 0 10 0.67 10 1.5V6.5C10 7.33 10.67 8 11.5 8H16.5C17.33 8 18 7.33 18 6.5V1.5C18 0.67 17.33 0 16.5 0ZM16 6H12V2H16V6Z" fill="#2C3336"/>
+                          <path d="M6.5 10H1.5C0.67 10 0 10.67 0 11.5V16.5C0 17.33 0.67 18 1.5 18H6.5C7.33 18 8 17.33 8 16.5V11.5C8 10.67 7.33 10 6.5 10ZM6 16H2V12H6V16Z" fill="#2C3336"/>
+                          <path d="M16.5 10H11.5C10.67 10 10 10.67 10 11.5V16.5C10 17.33 10.67 18 11.5 18H16.5C17.33 18 18 17.33 18 16.5V11.5C18 10.67 17.33 10 16.5 10ZM16 16H12V12H16V16Z" fill="#2C3336"/>
+                        </svg>
+                      </button>
+                      <button type="button" class="catalog-view__row js-catalog-view-row">
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 5H14V7H0V5ZM0 0H14V2H0V0ZM0 10H8V12H0V10ZM10 10H18V12H10V10Z" fill="#2C3336"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <button type="button" class="catalog-filter__mobile-toggle">
                       <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 5H14V7H0V5ZM0 0H14V2H0V0ZM0 10H8V12H0V10ZM10 10H18V12H10V10Z" fill="#2C3336"/>
+                        <path d="M0 0H18V2H0V0Z" fill="#2C3336"/>
+                        <path d="M3 5H15V7H3V5Z" fill="#2C3336"/>
+                        <path d="M6 10H12V12H6V10Z" fill="#2C3336"/>
                       </svg>
                     </button>
                   </div>
-                  <button type="button" class="catalog-filter__mobile-toggle">
-                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 0H18V2H0V0Z" fill="#2C3336"/>
-                      <path d="M3 5H15V7H3V5Z" fill="#2C3336"/>
-                      <path d="M6 10H12V12H6V10Z" fill="#2C3336"/>
-                    </svg>
-                  </button>
+                  <div class="catalog-availability">
+                    В наличии: <span class="catalog-availability__current">18</span> моделей из <span class="catalog-availability__total">35</span>
+                  </div>
                 </div>
                 <div class="catalog-wrapper__products grid">
                   <a href="#" class="product__card">
@@ -121,8 +126,11 @@
                       </div>
                       <div class="product__card-content">
                         <div class="product__card-info">
-                          <h4 class="product__card-name">1 строка</h4>
-                          <div class="product__card-spec">1 строка</div>
+                          <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                          <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                          <div class="product__status-badge product__status-badge--in-stock">
+                            <span>В наличии</span>
+                          </div>
                         </div>
                         <div class="product__card-footer">
                           <div class="product__card-price sale">
@@ -171,6 +179,9 @@
                         <div class="product__card-info">
                           <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
                           <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                          <div class="product__status-badge product__status-badge--in-stock">
+                            <span>В наличии</span>
+                          </div>
                         </div>
                         <div class="product__card-footer">
                           <div class="product__card-price">6 160 224 <span>₽</span></div>
@@ -211,9 +222,58 @@
                            alt="Поступление вакуумного массажёра GRKL-2500">
                     </div>
                     <div class="product__card-content">
+                        <div class="product__card-info">
+                          <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
+                          <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                          <div class="product__status-badge product__status-badge--in-stock">
+                            <span>В наличии</span>
+                          </div>
+                        </div>
+                      <div class="product__card-footer">
+                        <div class="product__card-price">6 160 224 <span>₽</span></div>
+                        <div class="product__card-actions">
+                          <button class="product__card-compare" type="button" aria-label="Сравнить">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-favorite" type="button" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
+                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                  fill="currentColor" />
+                              <path
+                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                  fill="currentColor" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <a href="#" class="product__card">
+                    <div class="product__card-image">
+                      <img src="/images/popular-product-1.png"
+                           alt="Поступление вакуумного массажёра GRKL-2500">
+                    </div>
+                    <div class="product__card-content">
                       <div class="product__card-info">
                         <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
                         <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
+                        <div class="product__status-badge product__status-badge--order">
+                          <span>Под заказ</span>
+                        </div>
                       </div>
                       <div class="product__card-footer">
                         <div class="product__card-price">6 160 224 <span>₽</span></div>
@@ -257,49 +317,10 @@
                       <div class="product__card-info">
                         <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
                         <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
-                      </div>
-                      <div class="product__card-footer">
-                        <div class="product__card-price">6 160 224 <span>₽</span></div>
-                        <div class="product__card-actions">
-                          <button class="product__card-compare" type="button" aria-label="Сравнить">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z" fill="currentColor" />
-                            </svg>
-                          </button>
-                          <button class="product__card-favorite" type="button" aria-label="В избранное">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                  d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
-                                  fill="currentColor" />
-                            </svg>
-                          </button>
-                          <button class="product__card-cart" type="button" aria-label="Добавить в корзину">
-                            <svg width="24" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                  d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
-                                  fill="currentColor" />
-                              <path
-                                  d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
-                                  fill="currentColor" />
-                              <path
-                                  d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
-                                  fill="currentColor" />
-                            </svg>
-                          </button>
+                        <div
+                          class="product__status-badge product__status-badge--expected">
+                          <span>Ожидается к поступлению</span>
                         </div>
-                      </div>
-
-                    </div>
-                  </a>
-                  <a href="#" class="product__card">
-                    <div class="product__card-image">
-                      <img src="/images/popular-product-1.png"
-                           alt="Поступление вакуумного массажёра GRKL-2500">
-                    </div>
-                    <div class="product__card-content">
-                      <div class="product__card-info">
-                        <h4 class="product__card-name">Поступление вакуумного массажёра GRKL-2500</h4>
-                        <div class="product__card-spec">Расчетная производительность (кг/час): до 3600</div>
                       </div>
                       <div class="product__card-footer">
                         <div class="product__card-price">6 160 224 <span>₽</span></div>
@@ -1232,19 +1253,23 @@
                       <div class="catalog-filter__item_options">
                         <label>
                           <input type="checkbox" name="catalogFilter" value="1">
-                          до 250
+                          В наличии
+                          <span class="catalog-filter__count">18</span>
                         </label>
                         <label>
                           <input type="checkbox" name="catalogFilter" value="1">
-                          макс. 180
+                          Ожидается поступление
+                          <span class="catalog-filter__count">6</span>
                         </label>
                         <label>
                           <input type="checkbox" name="catalogFilter" value="1">
-                          макс. 250
+                          Под заказ
+                          <span class="catalog-filter__count">7</span>
                         </label>
                         <label>
                           <input type="checkbox" name="catalogFilter" value="1">
-                          макс. 350
+                          Нет в наличии
+                          <span class="catalog-filter__count">2</span>
                         </label>
                       </div>
                     </div>

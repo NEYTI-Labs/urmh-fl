@@ -52,6 +52,13 @@
 
 @media screen and (max-width: 1020px) {
   .catalog {
+    &-action {
+      &__wrapper {
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
     &-aside {
       position: fixed;
       z-index: 20;
@@ -194,6 +201,9 @@
 
 @media screen and (max-width: 768px) {
   .catalog {
+    &-availability {
+      font-size: 14px;
+    }
     &-categories {
       &__info {
         h3 {
@@ -272,10 +282,24 @@
         }
       }
       &__products {
+        .product {
+        &__status-badge {
+          padding: 5px 7px;
+          font-size: 12px;
+          height: auto;
+          white-space: unset;
+        }
+        }
         &.grid {
           gap: 8px;
           .product__card {
             width: 32%;
+            &-content {
+              gap: 0;
+            }
+            &-footer {
+              margin-top: 8px;
+            }
           }
         }
         &.row {
@@ -484,3 +508,15 @@
     }
   }
 }
+
+@media screen and (max-width: 380px) {
+  .catalog {
+      .product__status-badge {
+        &--expected {
+            width: min-content;
+        }
+      }
+  }
+}
+
+

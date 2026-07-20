@@ -1,4 +1,29 @@
 .product {
+  &__status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 28px;
+    white-space: nowrap;
+    line-height: 1;
+    &--in-stock {
+        //background: rgba(69, 213, 55, 0.15);
+        color: #45D537;
+    }
+
+    &--order {
+        //background: rgba(255, 174, 0, 0.15);
+        color: #FFAE00;
+    }
+
+    &--expected {
+        //background: rgba(255, 50, 73, 0.15);
+        color: #FF3249;
+    }
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -252,5 +277,13 @@
   svg {
       width: 24px;
       height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    &__status-badge {
+      font-size: 14px;
+    }
   }
 }

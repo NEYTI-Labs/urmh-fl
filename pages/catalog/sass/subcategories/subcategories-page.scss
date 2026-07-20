@@ -120,9 +120,28 @@
 
   &-content {
     display: flex;
-    gap: 15px;
+    gap: 18px;
 
     position: relative;
+  }
+  &-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &-availability {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 16px;
+    span {
+      font-weight: 600;
+    }
   }
   &-wrapper {
     flex: 1;
@@ -136,6 +155,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
+        margin: 0;
       }
       a {
         font-size: 16px;
@@ -160,19 +180,48 @@
         }
       }
     }
-    &__action {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
     &__products {
+      .product {
+        &__card {
+        &-name {
+          margin: 0;
+        }
+        &-info {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+      &__status-badge {
+        border-radius: 8px;
+        padding: 4px 8px;
+        font-size: 15px;
+        font-weight: 400;
+        height: 27px;
+        width: fit-content;
+        &--in-stock {
+            background: rgba(69, 213, 55, 0.15);
+        }
+
+        &--order {
+            background: rgba(255, 174, 0, 0.15);
+        }
+
+        &--expected {
+            background: rgba(255, 50, 73, 0.15);
+        }
+      }
+      }
       &.grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 16px;
         .product__card {
           width: 100%;
           max-width: 293px;
+          &-content {
+            gap: 16px;
+          }
         }
       }
       &.row {
@@ -201,6 +250,7 @@
             column-gap: 12px;
             row-gap: 24px;
             padding: 24px;
+            gap: 16px;
           }
           &-info {
             margin: 0;
@@ -406,7 +456,7 @@
   }
 
   &-top {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     &__slider {
       .swiper-wrapper {
         justify-content: space-between;
@@ -539,6 +589,9 @@
         flex-direction: column;
         gap: 8px;
         label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           position: relative;
           padding-left: 28px;
           cursor: pointer;
@@ -666,6 +719,17 @@
         background: #0071E3;
       }
     }
+    &__count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: #e1e1e5;
+      padding: 1px 2.6px;
+      font-weight: 400;
+      font-size: 11px;
+      width: 16px;
+    }
   }
 
   &-adv {
@@ -683,6 +747,12 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.main-subcategories {
+  .container {
+    padding: 0 37.5px;
   }
 }
 

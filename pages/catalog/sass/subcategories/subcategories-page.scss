@@ -120,7 +120,7 @@
 
   &-content {
     display: flex;
-    gap: 18px;
+    gap: 15px;
 
     position: relative;
   }
@@ -220,7 +220,7 @@
       &.grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(293px, 1fr));
-        gap: 16px;
+        gap: 15px;
         .product__card {
           width: 100%;
           &-content {
@@ -754,11 +754,6 @@
   }
 }
 
-.main-subcategories {
-  .container {
-    padding: 0 37.5px;
-  }
-}
 
 .calculator__content {
   overflow: hidden;

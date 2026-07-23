@@ -17,6 +17,8 @@ h4,
 p,
 ul[class],
 ol[class],
+ol,
+ul,
 li,
 figure,
 figcaption,
@@ -115,7 +117,7 @@ body {
 .main:not(
 .main_faq, .leasing-main, .about-main, 
 .dealers-main, .service-main, 
-.searchempty__main, .cartEmpty__main) {
+.searchempty__main, .cartEmpty__main, .delivery__main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
@@ -155,7 +157,7 @@ b {
   font-weight: 600;
 }
 
-ul {
+ul, ol {
   list-style-type: none;
   padding: 0;
 }
@@ -384,7 +386,7 @@ p{
   .swiper-pagination{
     gap: 8px;
   }
-  p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p){
+  p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p){
     font-size: 14px;
   }
   .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn) {

@@ -27,6 +27,7 @@ export default defineConfig({
                 cartEmptyPage: resolve(__dirname, './pages/cart/cartEmpty-page.html'),
                 SolutionPage: resolve(__dirname, './pages/solution/solution-page.html'),
                 reviewsPage: resolve(__dirname, './pages/reviews/reviews-page.html'),
+                deliveryPage: resolve(__dirname, './pages/delivery/delivery-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

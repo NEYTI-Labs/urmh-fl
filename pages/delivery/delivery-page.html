@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+</head>
+
+<body>
+    {{> _header}}
+
+  <main class="main page-content  delivery__main">
+    <div class="container delivery__container">
+        <ol class="kroshki ">
+            <li>
+                <a href="/public" title="Главная"> Главная </a>
+            </li>
+        </ol>
+
+      <section class="delivery">
+        <h1 id="question-1" class="delivery__title">Доставка и оплата</h1>
+        <div class="delivery__wrapper">
+          <div class="delivery__content">
+            <div class="delivery__desc">
+              <p>Доставляем промышленное и упаковочное оборудование по всей России, в Беларусь и Казахстан. Работаем с юридическими и физицескими лицами и предлагаем удобные способы оплаты.</p>
+              <div class="delivery__desc-image">
+                <img src="/images/delivery/delivery_banner.png" alt="">
+              </div>
+            </div>
+            <h3>Способы доставки</h3>
+            <div class="delivery__way">
+              <div class="delivery__way-item">
+                <div class="delivery__way-item_head">
+                  <img src="/images/icons/delivery_item3.svg" alt="">
+                  <div class="delivery__way-item_head-text">
+                    <h4>Самовывоз</h4>
+                    <p>Заберите оборудование самостоятельно с нашего склада</p>
+                  </div>
+                </div>
+                <ul class="delivery__way-item_content">
+                  <li>
+                    <img src="/images/icons/location.png" alt="">
+                    <p>Москва</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/location.png" alt="">
+                    <p>Новосибирск</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/location.png" alt="">
+                    <p>Барнаул</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/location.png" alt="">
+                    <p>Екатеринбург</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/location.png" alt="">
+                    <p>Ростов-на-Дону</p>
+                  </li>
+                  <li>
+                    <a href="#">Все адреса и телефоны</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="delivery__way-item">
+                <div class="delivery__way-item_head">
+                  <img src="/images/icons/delivery_item2.svg" alt="">
+                  <div class="delivery__way-item_head-text">
+                    <h4>Транспортные компании</h3>
+                    <p>Работаем практически со всеми транспортными компаниями</p>
+                  </div>
+                </div>
+                <ul class="delivery__way-item_content">
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>Деловые линии</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>ПЭК</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>СДЭК</p>
+                  </li>
+                  <li class="delivery__way-item_note">
+                    <p>Если у вас есть предпочтения по транспортной компании - сообщите менеджеру при оформлении заказа.</p>
+                    <div class="delivery__way-item_note-icon">
+                      <img src="/images/icons/note.png" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="delivery__way-item">
+                <div class="delivery__way-item_head">
+                  <img src="/images/icons/delivery_item1.svg" alt="">
+                  <div class="delivery__way-item_head-text">
+                    <h4>Курьерская доставка</h4>
+                    <p>Доставка малогабаритного оборудования курьерскими слубждами до двери</p>
+                  </div>
+                </div>
+                <ul class="delivery__way-item_content">
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>СДЭК</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>dpd</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>Boxberry</p>
+                  </li>
+                  <li>
+                    <img src="/images/icons/check_mark.png" alt="">
+                    <p>Яндекс доставка</p>
+                  </li>
+                  <li class="delivery__way-item_icons">
+                    <img src="/images/delivery/delivery_cdek.png" alt="">
+                    <img src="/images/delivery/delivery_dpd.png" alt="">
+                    <div class="delivery__way-item_icons-column">
+                      <img src="/images/delivery/delivery_yandex.png" alt="">
+                      <img src="/images/delivery/delivery_baxberry.png" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="delivery__info">
+              <img src="/images/icons/note_48x48.png" alt="">
+              <p>При заказе на сумму более 50 000 рублей осуществляется бесплатная доставка до терминала транспортной компании. Клиент всегда может запросить дополнительные услуги при отгрузке, например страхование груза, дополнительную упаковку и др.</p>
+            </div>
+
+            <div class="delivery__section">
+              <div class="delivery__payment">
+                <h3 id="question-2">Оплата</h3>
+                <ul>
+                  <li>
+                    <div class="delivery__icon">
+                    <img src="/public/images/icons/delivery_icon1.png" alt="">
+                    </div>
+                    <div class="delivery__payment-text">
+                      <h4>Оплата по счету</h4>
+                      <p>Оплата оборудования производится на основании счета, преимущественно по безналичному расчёту.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="delivery__icon">
+                    <img src="/public/images/icons/delivery_icon2.png" alt="">
+                    </div>
+                    <div class="delivery__payment-text">
+                      <h4>Личный кабинет</h4>
+                      <p>Вы можете самостоятельно оформить заказ через личный кабинет</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="delivery__icon">
+                    <img src="/public/images/icons/delivery_icon3.png" alt="">
+                    </div>
+                    <div class="delivery__payment-text">
+                      <h4>Рассрочка</h4>
+                      <p>Рассрочка предоставляется по согласованию. Уточняйте условия у менеджера.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="delivery__icon">
+                    <img src="/public/images/icons/delivery_icon4.png" alt="">
+                    </div>
+                    <div class="delivery__payment-text">
+                      <h4>Лизинг</h4>
+                      <p>Поможем оформить лизинг оборудование на выгодных условиях</p>
+                    </div>
+                    <a href="#">Подробнее</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="delivery__steps">
+                <h3>Как оформить заказ</h3>
+                <ol>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon5.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Выберите оборудование</h3>
+                  </li>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon6.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Оставьте заявку</h3>
+                  </li>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon7.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Получите коммерческое предложение</h3>
+                  </li>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon1.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Оплатите счёт</h3>
+                  </li>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon8.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Отгрузка оборудования</h3>
+                  </li>
+                  <li>
+                      <div class="delivery__steps-icons">
+                        <div class="delivery__icon">
+                            <img src="/images/icons/delivery_icon9.png" alt="">
+                        </div>
+                        <img class="delivery__steps-icons_arrow" src="/images/icons/delivery_steps.png" alt="">
+                      </div>
+                      <h3>Получение оборудования</h3>
+                  </li>
+                </ol>
+              </div>
+              <div class="delivery__process">
+                <div class="delivery__process-steps">
+                  <h3>Как мы подготавливаем оборудование к отправке</h3>
+                  <ul>
+                    <li>
+                      <div class="delivery__process-image">
+                        <img src="/public/images/delivery/delivery_img1.png" alt="">
+                        <span class="delivery__process-image_num">
+                          1
+                        </span>
+                      </div>
+                      <div class="delivery__process-text">
+                        <p>Проверяем работоспособность</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery__process-image">
+                        <img src="/public/images/delivery/delivery_img2.png" alt="">
+                        <span class="delivery__process-image_num">
+                          2
+                        </span>
+                      </div>
+                      <div class="delivery__process-text">
+                        <p>Надежно упаковываем</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery__process-image">
+                        <img src="/public/images/delivery/delivery_img3.png" alt="">
+                        <span class="delivery__process-image_num">
+                          3
+                        </span>
+                      </div>
+                      <div class="delivery__process-text">
+                        <p>Устанавливаем доп. защиту</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="delivery__process-image">
+                        <img src="/public/images/delivery/delivery_img4.png" alt="">
+                        <span class="delivery__process-image_num">
+                          4
+                        </span>
+                      </div>
+                      <div class="delivery__process-text">
+                        <p>Передаём полный пакет документов</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="delivery__process-chek">
+                  <h3>Проверка оборудования при получении</h3>
+                  <ul>
+                    <li>
+                      <img src="/public/images/icons/check_mark_beliy.png" alt="">
+                      <p>Проверьте упаковку на отсутствие повреждений</p>
+                    </li>
+                    <li>
+                      <img src="/public/images/icons/check_mark_beliy.png" alt="">
+                      <p>Проверьте комплектность</p>
+                    </li>
+                    <li>
+                      <img src="/public/images/icons/check_mark_beliy.png" alt="">
+                      <p>Убедитесь в отсутствии механических повреждений</p>
+                    </li>
+                    <li>
+                      <img src="/public/images/icons/check_mark_beliy.png" alt="">
+                      <p>При обнаружении повреждений составьте акт с перевозчиком и сообщите менеджеру</p>
+                    </li>
+                  </ul>
+                  <div class="delivery__process-chek_image">
+                    <img src="/public/images/delivery/delivery_img5.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="delivery__return">
+                <img src="/public/images/icons/note_48x48.png" alt="">
+                <div class="delivery__return-content">
+                  <h3>Политика возврата товаров</h3>
+                  <div class="delivery__return-text">
+                  <p>Ознакомиться с политикой возврата товаров можно в документе <a href="#">по ссылке</a></p>
+                  <p>Задать свои вопросы по оплате и доставке вы можете прямо сейчас по бесплатному номеру <a href="tel:8 (800) 333-82-20">8 (800) 333-82-20</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="delivery__aside">
+              <nav class="delivery__nav">
+                  <ul>
+                      <li>
+                          <a href="#question-1" class="delivery__nav-link active">
+                              <div class="delivery__nav-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 20C5.16667 20 4.45833 19.7083 3.875 19.125C3.29167 18.5417 3 17.8333 3 17H1V6C1 5.45 1.19583 4.97917 1.5875 4.5875C1.97917 4.19583 2.45 4 3 4H17V8H20L23 12V17H21C21 17.8333 20.7083 18.5417 20.125 19.125C19.5417 19.7083 18.8333 20 18 20C17.1667 20 16.4583 19.7083 15.875 19.125C15.2917 18.5417 15 17.8333 15 17H9C9 17.8333 8.70833 18.5417 8.125 19.125C7.54167 19.7083 6.83333 20 6 20ZM6 18C6.28333 18 6.52083 17.9042 6.7125 17.7125C6.90417 17.5208 7 17.2833 7 17C7 16.7167 6.90417 16.4792 6.7125 16.2875C6.52083 16.0958 6.28333 16 6 16C5.71667 16 5.47917 16.0958 5.2875 16.2875C5.09583 16.4792 5 16.7167 5 17C5 17.2833 5.09583 17.5208 5.2875 17.7125C5.47917 17.9042 5.71667 18 6 18ZM3 15H3.8C4.08333 14.7 4.40833 14.4583 4.775 14.275C5.14167 14.0917 5.55 14 6 14C6.45 14 6.85833 14.0917 7.225 14.275C7.59167 14.4583 7.91667 14.7 8.2 15H15V6H3V15ZM18 18C18.2833 18 18.5208 17.9042 18.7125 17.7125C18.9042 17.5208 19 17.2833 19 17C19 16.7167 18.9042 16.4792 18.7125 16.2875C18.5208 16.0958 18.2833 16 18 16C17.7167 16 17.4792 16.0958 17.2875 16.2875C17.0958 16.4792 17 16.7167 17 17C17 17.2833 17.0958 17.5208 17.2875 17.7125C17.4792 17.9042 17.7167 18 18 18ZM17 13H21.25L19 10H17V13Z" fill="#2C3336" />
+                              </svg>
+                          </div>  
+                          <div class="delivery__nav-text">
+                              <h2 class="delivery__nav-title">Доставка и оплата</h2>
+                              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.707031 16.707L8.70703 8.70703L0.707031 0.707031" stroke="currentColor" stroke-width="2" />
+                              </svg>
+                          </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#question-2" class="delivery__nav-link ">
+                            <div class="delivery__nav-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 12H18V16H16V12Z" fill="#2C3336" />
+                                <path d="M21 7H20V4C20 3.45 19.55 3 19 3H5C3.35 3 2 4.35 2 6V18C2 
+                                20.2 3.79 21 5 21H21C21.55 21 22 20.55 22 20V8C22 7.45 21.55 7 21 
+                                7ZM5 5H18V7H5C4.45 7 4 6.55 4 6C4 5.45 4.45 5 5 5ZM20 19H5.01C4.5
+                                5 18.99 4 18.81 4 18V8.82C4.31 8.93 4.65 9 5 9H20V19Z" fill="currentColor" />
+                              </svg>
+                            </div>  
+                            <div class="delivery__nav-text">
+                                <h2 class="delivery__nav-title">Оплата</h2>
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.707031 16.707L8.70703 8.70703L0.707031 0.707031"  stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>  
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#question-3" class="delivery__nav-link">
+                            <div class="delivery__nav-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 13.5C20 11.02 17.98 9 15.5 9C13.02 9 11 11.02 11 13.5C11 15.98 13.02 18 15.5 18C16.38 18 17.19 17.74 17.89 17.3L20.3 19.71L21.71 18.3L19.3 15.89C19.74 15.2 20 14.38 20 13.5ZM13 13.5C13 12.837 13.2634 12.2011 13.7322 11.7322C14.2011 11.2634 14.837 11 15.5 11C16.163 11 16.7989 11.2634 17.2678 11.7322C17.7366 12.2011 18 12.837 18 13.5C18 14.163 17.7366 14.7989 17.2678 15.2678C16.7989 15.7366 16.163 16 15.5 16C14.837 16 14.2011 15.7366 13.7322 15.2678C13.2634 14.7989 13 14.163 13 13.5ZM3 5H21V7H3V5ZM3 11H9V13H3V11ZM3 17H9V19H3V17Z" fill="#2C3336" />
+                              </svg>
+                            </div>  
+                            <div class="delivery__nav-text">
+                                <h2 class="delivery__nav-title">Условия сотрудничества</h2>
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.707031 16.707L8.70703 8.70703L0.707031 0.707031" stroke="#2C3336" stroke-width="2" />
+                                </svg>
+                            </div>  
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+              <div class="delivery__feedback">
+                  <h3 class="delivery__aside_title">
+                      Остались вопросы?
+                  </h3>
+                  <form class="delivery__feedback-form"  id="feedback_main_form" action="">
+                      <input type="text" placeholder="Ваше имя" class="input-field" required>
+                      <input type="tel" placeholder="Телефон" required />
+                      
+
+                      <button type="submit" class="delivery__feedback_link">Получить консультацию</button>
+
+                      <div class="feedback-popup_privacy delivery__feedback-privacy">
+                          <input type="checkbox" id="delivery__feedback" required="">
+                          <label for="delivery__feedback_checkbox">
+                          <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 6.5L5.34483 11L15 1" stroke="white" stroke-width="2"></path>
+                          </svg>
+                          </label>
+                          <span>
+                              Отправляя форму, я соглашаюсь с политикой обработки персональных данных и даю согласие на <a href="#">обработку персональных данных.</a>
+                          </span>
+                      </div>
+                  </form>
+                  <img src="/images/assets/assets-consultation.png" alt="">
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

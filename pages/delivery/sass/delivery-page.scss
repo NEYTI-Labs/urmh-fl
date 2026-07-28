@@ -199,10 +199,12 @@
         gap: 16px;
         border-radius: 16px;
         padding: 24px;
+        max-height: 177px;
         background: #f7f7f8;
         h3 {
           font-weight: 600;
           font-size: 18px;
+          line-height: 1.28;
         }
         &:last-child .delivery__steps-icons_arrow {
           display: none;

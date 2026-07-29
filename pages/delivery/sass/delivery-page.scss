@@ -1,14 +1,5 @@
 .delivery {
   padding-bottom: 80px;
-  h1 {
-    margin-bottom: 32px;
-    font-weight: 600;
-    font-size: 56px;
-  }
-  h3 {
-    font-weight: 500;
-    font-size: 32px;
-  }
   h4 {
     font-weight: 600;
     font-size: 18px;
@@ -54,7 +45,12 @@
   }
   &__way {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 24px;
+    &-items {
+      display: flex;
+      gap: 16px;
+    }
     &-item {
       flex: 1;
       display: flex;
@@ -81,6 +77,11 @@
         border-radius: 16px;
         padding: 16px;
         background: #fff;
+        ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        }
         li {
           display: flex;
           align-items: center;
@@ -112,6 +113,7 @@
         }
       }
       &_icons {
+        flex: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -233,7 +235,7 @@
         font-weight: 600;
         font-size: 18px;
       }
-      ul {
+      ol {
         display:grid;
         grid-template-columns:repeat(4,1fr);
         gap:16px;
@@ -249,6 +251,7 @@
       position: relative;
       img {
       object-fit:cover;
+      border-radius: 16px;
       width: 100%;
       }
       span {
@@ -271,7 +274,6 @@
       }
     }
     &-text {
-      max-width:120px;
       p {
         font-weight: 400;
         font-size: 16px;
@@ -332,7 +334,6 @@
       flex-direction: column;
       gap: 8px;
       h3 {
-        font-weight: 500;
         font-size: 24px;
       }
     }
@@ -358,6 +359,10 @@
       position: sticky;
       top: 150px; 
       align-self: flex-start; 
+      &_title {
+        font-weight: 600;
+        line-height: 103%;
+      }
   }
   &__nav {
       box-sizing: border-box;
@@ -398,15 +403,13 @@
       }
       &-icon {
         transition: all 0.3s ease;
-          padding: 8px;
-          border-radius: 8px; 
-          background: #e2e3e9;
-          width: 40px;
-          height: 40px;
-          svg {
-              width: 24px;
-              height: 24px;
-          }
+        padding: 8px;
+        border-radius: 8px; 
+        background: #e2e3e9;
+        svg {
+            width: 24px;
+            display: block;
+        }
       }
       &-text {
           display: flex;
@@ -436,10 +439,6 @@
         overflow: hidden;
 
         position: relative;
-        h3 {
-        font-weight: 600;
-        line-height: 103%;
-        }
         img {
         z-index: 1;
         position: absolute;
@@ -471,23 +470,8 @@
                 }
             }
         }
-        &_link {
-        display: inline-block;
-        font-weight: 500;
-        font-size: 16px;
-        max-height: 48px;
-        height: auto;
-        width: auto;
-        color: #fff;
-        background: #0071e3;
-
-        padding: 14px 24px;
-        border: none;
-        border-radius: 16px;
-        transition: all 0.3s ease;
-        &:hover{
-          background: #1087FE;
-        }
+        .btn {
+          padding: 12.5px 24px;
         }
     }
 

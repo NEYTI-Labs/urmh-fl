@@ -2,7 +2,9 @@
 @media  (max-width: 1750px) {
   .delivery {
     &__way {
-      flex-direction: column;
+      &-items {
+        flex-direction: column;
+      }
       &-item {
         &_icons {
             justify-content: flex-start;
@@ -90,24 +92,15 @@
 @media (max-width: 768px) {
   .delivery {
     padding-bottom: 16px;
-    h1 {
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-    h3 {
-      font-weight: 600;
-      font-size: 18px;
-    }
     h4 {
       font-size: 14px;
     }
     &__content {
-      gap: 16px;
+      gap: 32px;
       padding: 16px;
       border-radius: 16px;
     }
     &__desc {
-      margin-bottom: 16px;
       gap: 97px;
       padding: 16px 24px;
       p {
@@ -120,12 +113,12 @@
       }
     }
     &__info {
-      margin-top: 16px;
       p {
         padding: 0;
       }
     }
     &__section {
+      margin-top: 0;
       gap: 32px;
     }
     &__payment {
@@ -135,7 +128,7 @@
     }
     &__process {
       &-steps {
-      ul {
+      ol {
         column-gap: 8px;
         row-gap: 16px;
         li {
@@ -206,7 +199,6 @@
         padding: 16px;
         gap: 16px;
         h3 {
-        font-size: 18px;
         span {
             font-weight: 500;
         }
@@ -224,12 +216,12 @@
                 font-size: 14px;
             }
         }
-        &_link {
+        .btn {
         margin-top: 8px;
         min-width: 100%;
-        font-size: 14px;
         padding: 11px 24px;
-        max-height: 40px;
+        font-size: 14px;
+        line-height: normal;
         }
         &-privacy {
             &.feedback-popup_privacy label {
@@ -254,7 +246,10 @@
 @media (max-width: 550px)  {
   .delivery {
     &__way {
-      gap: 8px;
+      gap: 16px;
+      &-items {
+        gap: 8px;
+      }
       &-item {
         gap: 16px;
         padding: 16px;
@@ -317,7 +312,8 @@
       ul {
         grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
         li {
-          padding: 16px 16px 52px;
+          padding: 16px;
+          min-height: 208px;
           a {
             margin-top: 20px;
             font-size: 14px;
@@ -393,7 +389,7 @@
   .delivery {
     &__process  {
       &-steps {
-        ul {
+        ol {
           grid-template-columns:repeat(2,1fr);
         }
       }

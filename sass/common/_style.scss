@@ -166,11 +166,20 @@ h2, .page__title_xl {
   font-size: 56px;
   color: #2C3336;
 }
+  h3 {
+    font-weight: 500;
+    font-size: 32px;
+  }
 h4{
   font-weight: 500;
   font-size: 24px;
   line-height: 120%;
   color: #2C3336;
+}
+.page-heading {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 56px;
 }
 p{
   font-weight: 400;
@@ -333,6 +342,14 @@ p{
   .solution__banner h4, .feedback-accordion h4){
     font-size: 18px;
   }
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .page-heading {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
   .page__title {
     font-size: 36px;
   }
@@ -350,7 +367,7 @@ p{
         height: 11px;
     }
   }
-  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn) {
+  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn) {
     font-size: 14px;
     padding: 8px 20px;
     line-height: normal;
@@ -389,7 +406,7 @@ p{
   p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p){
     font-size: 14px;
   }
-  .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn) {
+  .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn) {
     padding: 11px 16px;
   }
 }

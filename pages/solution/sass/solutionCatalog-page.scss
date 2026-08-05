@@ -1,0 +1,78 @@
+.solutionCatalog {
+  padding-bottom: 80px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  &__image {
+    margin: auto;
+    img {
+      object-fit: cover;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    border-radius: 20px;
+    padding: 24px;
+    background: #fff;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+    &-icon {
+      padding: 8px;
+      border-radius: 8px;
+      background: #e2e3e9;
+      img {
+        max-width: none;
+      }
+    }
+    &-name {
+      font-weight: 400;
+      font-size: 18px;
+      color: #70828a;
+      white-space: nowrap;
+    }
+    &-value {
+      font-weight: 500;
+      font-size: 18px;
+    }
+    &-dots {
+      flex: 1;
+      border-bottom: 2px dotted #cdd1d2;
+      margin-bottom: -10px;
+    }
+    &-price {
+       flex: 0 0 248px;
+      font-size: 24px;
+      font-weight: 100;
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      .primary-btn {
+        flex: 1;
+        text-align: center;
+        padding: 13.5px 24px;
+      }
+    }
+  }
+}

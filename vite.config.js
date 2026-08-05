@@ -28,6 +28,7 @@ export default defineConfig({
                 SolutionPage: resolve(__dirname, './pages/solution/solution-page.html'),
                 reviewsPage: resolve(__dirname, './pages/reviews/reviews-page.html'),
                 deliveryPage: resolve(__dirname, './pages/delivery/delivery-page.html'),
+                solutionCatalogPage: resolve(__dirname, './pages/solution/solutionCatalog-page.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

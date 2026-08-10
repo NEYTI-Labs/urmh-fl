@@ -11,8 +11,10 @@
     gap: 16px;
   }
   &__image {
+    max-width: 554px;
     margin: auto;
     img {
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -24,6 +26,11 @@
     border-radius: 20px;
     padding: 24px;
     background: #fff;
+
+    max-width: 602px;
+    h3 {
+      line-height: 1.28;
+    }
     &-info {
       display: flex;
       flex-direction: column;

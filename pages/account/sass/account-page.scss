@@ -1,0 +1,182 @@
+.account {
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-width: 500px;
+    max-width: 500px;
+    .page-heading {
+      margin: 0;
+    }
+    .success-title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+    }
+    .success-text {
+      font-size: 18px;
+    }
+    h4 {
+      line-height: 1.29;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+  .success__wrapper {
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+    input{
+      width: 100%;
+      background: #f7f7f8;
+      border: 1px solid #e1e1e5;
+      padding: 12.5px 16px;
+      border-radius: 16px;
+      font-size: 18px;
+      line-height: 140%;
+      outline: none;
+
+      &::placeholder{
+          color: #70828a;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .btn {
+      margin-top: 8px;
+    }
+    &_privacy{
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+      position: relative;
+
+      input[type="checkbox"]{
+          width: 4px;
+          height: 4px;
+          background: transparent;
+      }
+      label{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          height: 20px;
+          border-radius: 4px;
+          border: 1px solid #e1e1e5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #f7f7f8;
+          cursor: pointer;
+          transition: background 0.3s ease;
+          svg{
+            display: none;
+          }
+      }
+      input[type="checkbox"]:checked + label{
+        background: #0071E3;
+        svg{
+          display: block;
+        }
+      }
+      span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.28;
+        color: #70828a;
+      }
+    }
+  }
+  &__btn {
+    padding: 12.5px 24px;
+    border: 1px solid #e1e1e5;
+    border-radius: 16px;
+    background: transparent;
+
+    line-height: 1.33;
+    font-weight: 400;
+    font-size: 16px;
+    color: #70828a;
+    transition: 0.3s ease;
+    &:hover {
+      border: 1px solid #0071E3;
+      color: #0071E3;
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      border: 1px solid #e1e1e5;
+      border-radius: 16px;
+      padding: 11.1px 16px;
+
+      font-weight: 400;
+      font-size: 16px;
+      color: #70828a;
+      white-space: nowrap;
+      transition: 0.3s ease;
+      svg {
+        width: 24px;
+        height: 24px;
+        color: black;
+        transition: 0.3s ease;
+      }
+      &:hover {
+        border: 1px solid #0071E3;
+        color: #0071E3;
+        svg {
+          color: #0071E3;
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      color: #70828a;
+    }
+    &_link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        color: #0071e3;
+      }
+    }
+  }
+}

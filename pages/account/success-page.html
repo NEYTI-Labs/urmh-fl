@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content  account__main">
+    <div class="container account__container">
+    <ol class="kroshki kroshki__account">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="account">
+      <div class="account__wrapper success__wrapper">
+          <img class="account__img" src="/public/images/icons/successfully.png" alt="">
+          <h1 class="success-title">Вы успешно зарегистрировались</h1>
+          <p class="success-text">Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам на электронную почту.</p>
+          <a href="login-page.html" class="btn">Авторизоваться</a>
+      </div>
+    </section>
+    </div>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    </body>
+    </html>

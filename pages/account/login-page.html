@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content  account__main">
+    <div class="container account__container">
+    <ol class="kroshki kroshki__account">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="account">
+      <div class="account__wrapper">
+        <h1 class="page-heading">Авторизация</h1>
+        <div class="account__content">
+          <form class="account__form" action="">
+              <input type="text" placeholder="Логин" required>
+              <input type="password" placeholder="Пароль" required>
+
+              <div class="account__form_privacy">
+              <input type="checkbox"  id="feedbackCheck" >
+              <label for="feedbackCheck">
+                  <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 6.50049L5.34483 11.0005L15 1.00049" stroke="white" stroke-width="2"/>
+                  </svg>
+              </label>
+              <span>Запомнить меня на этом компьютере</span>
+              </div>
+              <button class="btn" type="submit">Войти</button>
+          </form>
+          <div class="account__actions">
+            <a href="reset-page.html">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 20.9996C10.76 20.9996 13 18.7596 13 15.9996C13 
+                14.9796 12.69 14.0396 12.17 13.2496L15.5 9.91957L17.29 11.7096L18.7 10.2996L16.91 8.50957L18 7.41957L20.29 9.70957L21.7 
+                8.29957L19.41 6.00957L20.7 4.71957L19.29 3.30957L10.75 11.8496C9.96 11.3296 9.01 11.0196 8 11.0196C5.24 11.0196 3 13.2596 3 
+                16.0196C3 18.7796 5.24 21.0196 8 21.0196V20.9996ZM8 12.9996C9.65 12.9996 11 14.3496 11 15.9996C11 17.6496 9.65 18.9996 8 18.9996C6.35 
+                18.9996 5 17.6496 5 15.9996C5 14.3496 6.35 12.9996 8 12.9996Z" fill="currentColor" />
+              </svg>
+              <span>Забыли пароль?</span>
+            </a>
+            <a href=" register-page.html">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 11H19V8H17V11H14V13H17V16H19V13H22V11ZM4 8C4 10.28 5.72 12 8 12C10.28 12 12 10.28 12 8C12 5.72 10.28 4 8 4C5.72 4 4 5.72 4 8ZM10 8C10 9.18 9.18 10 8 10C6.82 10 6 9.18 6 8C6 6.82 6.82 6 8 6C9.18 6 10 6.82 10 8ZM3 20H13C13.55 20 14 19.55 14 19V18C14 15.24 11.76 13 9 13H7C4.24 13 2 15.24 2 18V19C2 19.55 2.45 20 3 20ZM7 15H9C10.65 15 12 16.35 12 18H4C4 16.35 5.35 15 7 15Z" fill="currentColor" />
+              </svg>
+              <span>Регистрация</span>
+            </a>
+          </div>
+        </div>
+        <div class="account__footer">
+          <span>Техническая поддержка</span>
+          <div class="account__footer_link">
+            <img src="/public/images/icons/account-icon1.png" alt="">
+            <a href="mailto:support@hmru.ru">support@hmru.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    </body>
+    </html>

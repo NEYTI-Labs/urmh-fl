@@ -117,7 +117,7 @@ body {
 .main:not(
 .main_faq, .leasing-main, .about-main, 
 .dealers-main, .service-main, 
-.searchempty__main, .cartEmpty__main, .delivery__main) {
+.searchempty__main, .cartEmpty__main, .delivery__main, .account__main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
@@ -230,7 +230,10 @@ p{
     min-width: 0;
   }
   &-error {
-        padding: 32px 0;
+    padding: 32px 0;
+  }
+  &__account {
+    padding: 32px 0;
   }
 }
 
@@ -323,7 +326,7 @@ p{
   font-size: 46px;
  }
  h4:not(.calculator__content-items h4, .result__content-calculation h4, .calculator__content-form h4, .calculator__content-form h4,
- .solution__banner h4, .feedback-accordion h4 ){
+ .solution__banner h4, .feedback-accordion h4, .account h4 ){
   font-size: 20px;
  }
   .kroshki {
@@ -339,7 +342,7 @@ p{
     font-size: 32px;
   }
   h4:not(.cart h4, .calculator__content-items h4, .result__content-calculation h4,.result__content-banner h4, .calculator__content-form h4,
-  .solution__banner h4, .feedback-accordion h4){
+  .solution__banner h4, .feedback-accordion h4, .account h4){
     font-size: 18px;
   }
   h3 {
@@ -367,7 +370,7 @@ p{
         height: 11px;
     }
   }
-  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn) {
+  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .account .btn) {
     font-size: 14px;
     padding: 8px 20px;
     line-height: normal;
@@ -389,7 +392,8 @@ p{
     font-size: 22px;
   }
   h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4, .calculator__content-items h4, .result__content-calculation h4,
-   .result__content-banner h4, .calculator__content-form h4, .solution__info_link h4, .solution__products_left h4, .solution__banner h4, .feedback-accordion h4){
+   .result__content-banner h4, .calculator__content-form h4, .solution__info_link h4, .solution__products_left h4, 
+   .solution__banner h4, .feedback-accordion h4, .account h4){
     font-size: 14px;
   }
   .page__title {
@@ -403,10 +407,11 @@ p{
   .swiper-pagination{
     gap: 8px;
   }
-  p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p){
+  p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p, 
+  .account p){
     font-size: 14px;
   }
-  .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn) {
+  .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .account .btn) {
     padding: 11px 16px;
   }
 }

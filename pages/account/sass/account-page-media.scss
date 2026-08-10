@@ -85,3 +85,18 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .account {
+    &__form {
+      &_privacy{
+        label{
+          top: 25%;
+        }
+        span {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

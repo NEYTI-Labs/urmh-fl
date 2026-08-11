@@ -3,13 +3,51 @@
     &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
+    &__card {
+      max-width: 100%;
+    }
   }
 }
 
 @media (max-width: 990px) {
   .solutionCatalog {
+    &__card {
+      &-info {
+        li {
+          &:first-child {
+            .solutionCatalog__card-value {
+              max-width: 70px;
+            }
+          }
+        }
+      }
+      &-value {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      }
+      &-price {
+        flex: 0 0 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .solutionCatalog {
     &__cards {
       grid-template-columns: repeat(1, 1fr);
+    }
+    &__card {
+      &-info {
+        li {
+          &:first-child {
+            .solutionCatalog__card-value {
+              max-width: none;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -46,11 +84,6 @@
       }
       &-name, &-value {
         font-size: 14px;
-      }
-      &-value {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       }
       &-price {
         flex: 0 0 179px;
@@ -90,6 +123,9 @@
     &__card {
       &-info {
         li {
+            .solutionCatalog__card-value {
+              max-width: 60px;
+            }
           &:first-child {
             .solutionCatalog__card-value {
               max-width: 50px;

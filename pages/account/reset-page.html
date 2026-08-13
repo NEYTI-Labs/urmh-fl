@@ -10,24 +10,24 @@
     <body>
     {{> _header}}
 
-    <main class="main page-content  account__main">
-    <div class="container account__container">
-    <ol class="kroshki kroshki__account">
+    <main class="main page-content  auth__main">
+    <div class="container auth__container">
+    <ol class="kroshki kroshki__auth">
         <li>
         <a href="/public" title="Главная"> Главная </a>
         </li>
     </ol>
-    <section class="account">
-      <div class="account__wrapper">
+    <section class="auth">
+      <div class="auth__wrapper">
         <h1 class="page-heading">Запрос пароля</h1>
-        <div class="account__content">
+        <div class="auth__content">
           <h4>Выслать контрольную строку</h4>
-          <form class="account__form account__form--large-gap"  action="">
+          <form class="auth__form auth__form--large-gap"  action="">
             <input type="text" placeholder="Логин или электронная почта" required>
             <p>Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам на электронную почту.</p>
             <button class="btn btn--large-gap" type="submit">Выслать</button>
           </form>
-          <button class="account__btn" onclick="history.back(); return false;">Вернуться назад</button>
+          <button class="auth__btn" onclick="history.back(); return false;">Вернуться назад</button>
         </div>
       </div>
     </section>

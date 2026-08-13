@@ -30,10 +30,10 @@ export default defineConfig({
                 deliveryPage: resolve(__dirname, './pages/delivery/delivery-page.html'),
                 solutionCatalogPage: resolve(__dirname, './pages/solution/solutionCatalog-page.html'),
                 solutionCatalogPage: resolve(__dirname, './pages/solution/solutionCatalog-page.html'),
-                loginPage: resolve(__dirname, './pages/account/login-page.html'),
-                registerPage: resolve(__dirname, './pages/account/register-page.html'),
-                resetPage: resolve(__dirname, './pages/account/reset-page.html'),
-                successPage: resolve(__dirname, './pages/account/success-page.html')
+                loginPage: resolve(__dirname, './pages/auth/login-page.html'),
+                registerPage: resolve(__dirname, './pages/auth/register-page.html'),
+                resetPage: resolve(__dirname, './pages/auth/reset-page.html'),
+                successPage: resolve(__dirname, './pages/auth/success-page.html')
             },
             output: {
                 entryFileNames: 'assets/[name].js',

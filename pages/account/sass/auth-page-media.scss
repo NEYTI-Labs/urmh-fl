@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .account {
+  .auth {
     padding-bottom: 40px;
     h1 {
       line-height: 1.3;
@@ -87,7 +87,7 @@
 }
 
 @media (max-width: 360px) {
-  .account {
+  .auth {
     &__form {
       &_privacy{
         label{

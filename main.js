@@ -1502,6 +1502,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// ---------------------tablet-search---------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabletSearchBtn = document.querySelector('.header__search-tablet');
+    const headerBottomMiddle = document.querySelector('.header__bottom-middle');
+    const searchClose = document.querySelector('.search-close');
+
+    if (!tabletSearchBtn || !headerBottomMiddle || !searchClose) return;
+
+    tabletSearchBtn.addEventListener('click', () => {
+        headerBottomMiddle.classList.add('tablet-search-active');
+        document.querySelector('#search-input')?.focus();
+    });
+
+    searchClose.addEventListener('click', () => {
+        headerBottomMiddle.classList.remove('tablet-search-active');
+    });
+});
 
 // ---------------------mobile-search---------------------
 

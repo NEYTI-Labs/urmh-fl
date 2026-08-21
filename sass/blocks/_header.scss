@@ -242,7 +242,6 @@
       right: 0px;
       background: #FF3249;
       border-radius: 50%;
-
     }
 
     &-dropdown{
@@ -292,6 +291,25 @@
         background-color: #2C3336; 
 
       }
+    }
+  }
+  &__solutions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    border-radius: 16px;
+    padding: 15.7px 24px;
+    background: #f7f7f8;
+    cursor: pointer;
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.79;
     }
   }
 
@@ -372,7 +390,15 @@
         cursor: pointer;
       }
     }
-    
+    .search-submit {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &-tablet {
+      display: none;
+    }
   }
   &__links {
     display: flex;

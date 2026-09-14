@@ -302,14 +302,27 @@
     padding: 15.7px 24px;
     background: #f7f7f8;
     cursor: pointer;
+    transition: all 0.3s ease;
     &-icon {
       width: 24px;
       height: 24px;
+      transition: all 0.3s ease;
+    }
+    &:active, &:hover {
+      background: #ebf5ff;
+
+      .header__solutions-icon {
+        color: #0071e3;
+      }
+      .header__solutions-text {
+        color: #0071e3;
+      }
     }
     &-text {
       font-weight: 500;
       font-size: 16px;
       line-height: 1.79;
+      transition: all 0.3s ease;
     }
   }
 

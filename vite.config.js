@@ -33,7 +33,9 @@ export default defineConfig({
                 loginPage: resolve(__dirname, './pages/auth/login-page.html'),
                 registerPage: resolve(__dirname, './pages/auth/register-page.html'),
                 resetPage: resolve(__dirname, './pages/auth/reset-page.html'),
-                successPage: resolve(__dirname, './pages/auth/success-page.html')
+                successPage: resolve(__dirname, './pages/auth/success-page.html'),
+                favoritesPage: resolve(__dirname, './pages/favorites/favorites-page.html'),
+                favoritesEmptyPage: resolve(__dirname, './pages/favoritesEmpty/favoritesEmpty-page.html')
             },
             output: {
                 entryFileNames: 'assets/[name].js',

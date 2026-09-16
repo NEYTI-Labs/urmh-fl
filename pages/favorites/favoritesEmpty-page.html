@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content favoritesEmpty__main">
+    <div class="container favoritesEmpty__container">
+    <ol class="kroshki">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="favoritesEmpty">
+        <div class="favoritesEmpty__head">
+            <h1 class="page-heading">Избранное</h1>
+        </div>
+        <div class="favoritesEmpty__content">
+            <div class="favoritesEmpty__image">
+                <img src="/public/images/favoritesEmpty.png" alt="">
+            </div>
+            <div class="favoritesEmpty__text">
+                <h4>Здесь пока пусто</h4>
+                <p>Добавляйте интересующее оборудование в избранное, чтобы быстро находить его позже</p>
+            </div>
+            <a href="#" class="btn">Перейти в каталог</a>
+        </div>
+    </section>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    </body>
+    </html>

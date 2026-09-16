@@ -1,0 +1,138 @@
+.favorites {
+    padding-bottom: 80px;
+    &-head {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &-wrapper {
+        display: flex;
+        align-items:flex-start;
+        gap: 16px;
+    }
+    &-content {
+      overflow: hidden;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &-action {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-view {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &__row, &__grid {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: background .3s ease, opacity .3s ease;
+        path {
+            transition: fill .3s ease;
+        }
+        &:not(&.active) {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+        }
+        &.active {
+            pointer-events: none;
+            background: #0071E3;
+            svg path {
+            fill: #fff;
+            }
+        }
+        &:not(&.active):hover {
+            opacity: 0.8;
+        }
+        }
+        &__btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 8px;
+            border: none;
+            padding: 10px 16px 10px 12px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06);
+            background: #fff;
+            font-weight: 400;
+            font-size: 16px;
+            color: #2c3336;
+            transition: all .3s ease;
+            svg {
+                width: 24px;
+                height: 24px;
+                color: #2c3336;
+                transition: all .3s ease;
+            }
+            &:hover {
+                background: #0071E3;
+                color: #fff;
+                svg {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+        &.grid {
+            .product__card {
+            width: 100%;
+            max-width: 293px;
+            flex:1;
+            }
+        }
+        &.row {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .product__card {
+            border-radius: 16px;
+            background: white;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0;
+            &-image {
+                width: 180px;
+                height: 180px;
+                padding: 30px;
+            }
+            &-content {
+                width: 100%;
+                display: flex;
+                flex-direction: row ;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                column-gap: 12px;
+                row-gap: 24px;
+                padding: 24px;
+            }
+            &-info {
+                margin: 0;
+            }
+            &-footer {
+                align-self: auto;
+                margin: 0;
+                margin-left: auto;
+
+                gap: 24px;
+            }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 @media (max-width: 1020px) {
-  .product__card-swiper:not(.cart__card-swiper) {
+  .product__card-swiper:not(.cart__card-swiper, .product__card-swiper) {
     overflow: visible !important;
   }
 }

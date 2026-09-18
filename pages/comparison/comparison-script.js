@@ -6,19 +6,14 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 document.addEventListener('DOMContentLoaded', () => {
 
 const categoriesSlider = new Swiper('.comparison-categories_mobile', {
-  slidesPerView: 'auto',
-  spaceBetween: 8,
-  freeMode: true,
-  grabCursor: true,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    freeMode: true,
+    grabCursor: true,
 });
 
 const productSliderElement = document.querySelector('.product__card-swiper');
-
-const productSlidesCount = productSliderElement.querySelectorAll('.swiper-slide').length;
-
 const productSlider = new Swiper(productSliderElement, {
-    slidesPerView: Math.min(productSlidesCount, 5),
-    spaceBetween: 16,
     watchOverflow: true,
 
     navigation: {
@@ -36,53 +31,75 @@ const productSlider = new Swiper(productSliderElement, {
             slidesPerView: 2,
             spaceBetween: 8,
         },
+
         768: {
+            slidesPerView: 2,
             spaceBetween: 16,
         },
+
         1024: {
             slidesPerView: 3,
+            spaceBetween: 16,
         },
+
         1350: {
             slidesPerView: 4,
+            spaceBetween: 16,
         },
+
         1650: {
             slidesPerView: 5,
+            spaceBetween: 16,
         },
     },
 });
 
 const comparisonSliders = document.querySelectorAll('.comparison-info__swiper');
-
 const infoSliders = [...comparisonSliders].map((slider) => {
-
     return new Swiper(slider, {
-
-        slidesPerView: 5,
-
-        spaceBetween: 16,
-
         allowTouchMove: false,
 
         breakpoints: {
             0: {
                 slidesPerView: 2,
-                spaceBetween: 8 
+                spaceBetween: 8,
             },
-            768: { 
-                spaceBetween: 16 
-            },
-            1024: { 
-                slidesPerView: 3,
-            },
-            1350: { 
-                slidesPerView: 4,
-            },
-            1650: { 
-                slidesPerView: 5,
-            }
-        }
-    });
 
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+
+            1350: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
+
+            1650: {
+                slidesPerView: 5,
+                spaceBetween: 16,
+            },
+        },
+    });
+});
+
+let resizeTimer;
+
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        productSlider.update();
+
+        infoSliders.forEach((slider) => {
+            slider.update();
+        });
+    }, 100);
 });
 
 productSlider.on('slideChange', () => {

@@ -1,0 +1,245 @@
+@media (max-width: 1450px) {
+    .comparison {
+        &-head {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .comparison {
+        &-head {
+            flex-direction: row;
+            align-items: center;
+        }
+        &-actions {
+                position: fixed;
+                top: 30%;
+                left: 15%;
+                z-index: 12;
+                width: 70%;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                border-radius: 16px;
+                padding: 16px;
+
+                box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.12);
+                background: #f7f7f8;
+                display: none;
+
+                &.active {
+                    display: flex;
+                }
+
+                &_mobile {
+                    display: flex;
+                }
+        }
+
+        &-btn {
+            width: 100%;
+        }
+
+        .comparison-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 11;
+
+            background: rgba(0, 0, 0, 0.4);
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison {
+        padding-bottom: 16px;
+        gap: 16px;
+        &-title {
+            font-size: 22px;
+        }
+        &-categories {
+            display: none;
+            &_mobile.swiper {
+                display: block;
+                overflow: visible;
+                margin-left: unset;
+                margin-right: unset;
+                ul {
+                margin: 0;  
+                .swiper-slide {
+                    width: auto;
+                }
+                li {
+                    a {
+                        display: flex;
+                        gap: 8px;
+                        font-size: 16px;
+                        padding: 8.5px 16.5px;
+                        border-radius: 16px;
+                        border: 1px solid #E1E1E1;
+                        transition: background-color .3s ease;
+                        white-space: nowrap;
+                        height: 40px;
+                        span {
+                            border-radius: 8px;
+                            padding: 2px 7px;
+                            background: #e1e1e5;
+                            font-size: 14px;
+                            color: #70828a;
+                        }
+                        &.active {
+                        border-color: #0071E3;
+                        background: #0071E3;
+                        color: white;
+                        font-weight: 500;
+                        &:hover {
+                            background: #1087FE;
+                        }
+                        }
+                        &:hover {
+                        background: #ededed;
+                        }
+                    }
+                }
+                }
+            }
+        }
+        &-actions {
+            &_close {
+            width: 14px;
+            height: 14px;
+            outline: none;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            position: absolute;
+            top: 5px;
+            right: 15px;
+
+            display: block;
+            }
+        }
+        &-switch {
+            order: 4;
+            &__text {
+                display: none;
+
+                &--mobile {
+                    display: block;
+                }
+            }
+        }
+        &-btn {
+            &_icon {
+                display: none;
+                &-mobile {
+                    display: block;
+                    fill: none;
+                }
+            }
+            &:nth-last-of-type(4) {
+                margin-top: 15px;
+            }
+        }
+        &-products {
+            gap: 16px;
+            .product__card-swiper {
+                order: 1;
+            }
+            .product__card {
+                border-radius: 16px;
+                padding: 8px;
+                gap: 10px;
+            }
+            .product__card-image {
+                height: 144px;
+            }
+            .product__card-content {
+                gap: 10px;
+            }
+            .product__card-footer {
+                margin-top: 0;
+            }
+            .product__card-pagination {
+                order: 2;
+                gap: 8px;
+            }
+        }
+        &-info {
+            gap: 16px;
+             order: 3;
+            &__item {
+                gap: 8px;
+            }
+            &__head {
+                justify-content: space-between;
+            }
+            &__title {
+                font-size: 18px;
+            }
+            &__row {
+                flex-direction: column;
+                align-items: stretch;
+                &--dots {
+                    gap: 27.1px;
+                }
+                &::before {
+                    opacity: 0;
+                }
+            }
+            &__name {
+                flex: none;
+                white-space: nowrap;
+                &::after {
+                    display: none;
+                }
+            }
+            &__value {
+                display: flex;
+                align-items: baseline;
+                min-width: fit-content;
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    flex: 1;
+                    border-bottom: 1px dotted #70828a;
+                    margin-left: 8px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .comparison {
+        &-info {
+            &__value {
+                &-text {
+                display: block;
+                max-width: 128px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .comparison {
+        &-actions {
+            max-width: 246px;
+        }
+    }
+}

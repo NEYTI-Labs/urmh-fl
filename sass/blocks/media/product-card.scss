@@ -69,7 +69,7 @@
     height: 167.5px;
   }
   .product__card-swiper {
-    .product__card-image{
+    .product__card-image:not(.comparison-products .product__card-image){
       height: 188px;
     }
   }

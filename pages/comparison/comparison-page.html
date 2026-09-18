@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content comparison__main">
+    <div class="container comparison__container">
+    <ol class="kroshki">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="comparison">
+        <div class="comparison-head">
+            <h1 class="comparison-title">Сравнение товаров</h1>
+            <div class="comparison-actions">
+                <div class="comparison-switch">
+                    <label class="comparison-switch__control">
+                        <input class="comparison-switch__input" type="checkbox">
+                        <span class="comparison-switch__slider"></span>
+                    </label>
+
+                    <span class="comparison-switch__text">Показывать только различия</span>
+                    <span class="comparison-switch__text comparison-switch__text--mobile">Показать аналоги</span>
+                </div>
+
+                <button class="comparison-btn " type="button">
+                    <svg class="comparison-btn_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 6V4C17 2.9 16.1 2 15 2H9C7.9 2 7 2.9 7 4V6H2V8H4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8H22V6H17ZM9 4H15V6H9V4ZM6 20V8H18V20H6Z" fill="currentcolor" />
+                    <path d="M9 10H11V18H9V10ZM13 10H15V18H13V10Z" fill="currentcolor" />
+                    </svg>
+                    <svg class="comparison-btn_icon comparison-btn_icon-mobile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.3274L13.3274 12L19 17.6726L17.6726 19L12 13.3274L6.3274 19L5 17.6726L10.6726 12L5 6.3274L6.3274 5L12 10.6726L17.6726 5L19 6.3274Z" fill="black" />
+                    </svg>
+                    <span>Удалить всё</span>
+                </button>
+
+                <button class="comparison-btn" type="button">
+                    <svg class="comparison-btn_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 8C18.8807 8 20 6.8807 20 5.5C20 4.11929 18.8807 3 17.5 3C16.1193 3 15 4.11929 15 5.5C15 6.8807 16.1193 8 17.5 8Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M6.5 14.5C7.8807 14.5 9 13.3807 9 12C9 10.6193 7.8807 9.5 6.5 9.5C5.1193 9.5 4 10.6193 4 12C4 13.3807 5.1193 14.5 6.5 14.5Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M15.0024 6.78711L8.67188 10.6226" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.67188 13.2817L15.3421 17.2232" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.5 16C18.8807 16 20 17.1193 20 18.5C20 19.8807 18.8807 21 17.5 21C16.1193 21 15 19.8807 15 18.5C15 17.1193 16.1193 16 17.5 16Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="comparison-btn_icon comparison-btn_icon-mobile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 8C18.8807 8 20 6.8807 20 5.5C20 4.11929 18.8807 3 17.5 3C16.1193 3 15 4.11929 15 5.5C15 6.8807 16.1193 8 17.5 8Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M6.5 14.5C7.8807 14.5 9 13.3807 9 12C9 10.6193 7.8807 9.5 6.5 9.5C5.1193 9.5 4 10.6193 4 12C4 13.3807 5.1193 14.5 6.5 14.5Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M15.0024 6.78735L8.67188 10.6228" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.67188 13.282L15.3421 17.2235" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.5 16C18.8807 16 20 17.1193 20 18.5C20 19.8807 18.8807 21 17.5 21C16.1193 21 15 19.8807 15 18.5C15 17.1193 16.1193 16 17.5 16Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span>Поделиться</span>
+                </button>
+
+                <button class="comparison-btn " type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 11H19V13H13V19H11V13H5V11H11V5H13V11Z" fill="currentcolor" />
+                    </svg>
+                    <span>Добавить товар</span>
+                </button>
+
+                <button class="comparison-actions_close ">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z"
+                            fill="#70828A" />
+                    </svg>
+                </button>
+            </div>
+            <div class="comparison-overlay"></div>
+            <button type="button" class="comparison-actions_mobile">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H18V2H0V0Z" fill="#2C3336" />
+                    <path d="M3 5H15V7H3V5Z" fill="#2C3336" />
+                    <path d="M6 10H12V12H6V10Z" fill="#2C3336" />
+                </svg>
+            </button>
+        </div>
+        <div class="comparison-content">
+            <nav class="comparison-categories">
+                <ul>
+                    <li><a href="#" >Пищевое оборудование <span>3</span></a></li>
+                    <li><a href="#">Маркировочное и этикетировочное оборудование <span>2</span></a></li>
+                </ul>
+            </nav>
+            <nav class="comparison-categories_mobile swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#" >Пищевое оборудование <span>3</span></a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">Маркировочное и этикетировочное оборудование <span>2</span></a>
+                    </li>
+                </ul>
+            </nav>  
+            <div class="comparison-products">
+
+                <div class="product__card-slider">
+
+                    <div class="product__card-swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <a href="#" class="product__card">
+                                    <div class="product__card-image">
+                                    <img src="/images/popular-product-1.png"
+                                    alt="Поступление вакуумного массажёра GRKL-2500">
+                                    </div>
+                                    <div class="product__card-content">
+                                    <div class="product__card-info">
+                                    <h4 class="product__card-name">Поступление вакуумного массажёра
+                                    GRKL-2500</h4>
+                                    </div>
+                                    <div class="product__card-footer">
+                                    <div class="product__card-price">6 160 224 <span>₽</span></div>
+                                    <div class="product__card-actions">
+                                    <button class="card__action" type="button"
+                                        aria-label="Сравнить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4V20H11V4L13 4ZM19 8V20H17V8H19ZM7 13L7 20H5L5 13L7 13Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="card__action" type="button"
+                                        aria-label="В избранное">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 22V4C20 2.897 19.103 2 18 2H6C4.897 2 4 2.897 4 4V22L12 17.428L20 22ZM6 10V4H18V18.553L12 15.125L6 18.553V10Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    <button class="product__card-cart" type="button"
+                                        aria-label="Добавить в корзину">
+                                        <svg width="24" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.322 7.431C22.23 7.29808 22.1072 7.18943 21.964 7.11436C21.8209 7.0393 21.6616 7.00006 21.5 7H7.833L6.679 4.23C6.52769 3.86523 6.27147 3.55359 5.94282 3.33462C5.61418 3.11564 5.22791 2.99918 4.833 3H2.5V5H4.833L9.577 16.385C9.65299 16.5672 9.78118 16.7228 9.94542 16.8322C10.1097 16.9416 10.3026 17 10.5 17H18.5C18.917 17 19.29 16.741 19.437 16.352L22.437 8.352C22.4937 8.20063 22.5129 8.03776 22.4928 7.87735C22.4728 7.71695 22.4142 7.56379 22.322 7.431ZM17.807 15H11.167L8.667 9H20.057L17.807 15Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M11 21C11.8284 21 12.5 20.3284 12.5 19.5C12.5 18.6716 11.8284 18 11 18C10.1716 18 9.5 18.6716 9.5 19.5C9.5 20.3284 10.1716 21 11 21Z"
+                                                fill="currentColor" />
+                                            <path
+                                                d="M18 21C18.8284 21 19.5 20.3284 19.5 19.5C19.5 18.6716 18.8284 18 18 18C17.1716 18 16.5 18.6716 16.5 19.5C16.5 20.3284 17.1716 21 18 21Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product__card-nav">
+                        <button class="product__card-nav-btn product__card-prev" type="button"
+                            aria-label="Предыдущий">
+                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 8L7 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="product__card-nav-btn product__card-next" type="button"
+                            aria-label="Следующий">
+                            <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 8L1 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="comparison-info">
+                    <div class="comparison-info__item">
+                        <div class="comparison-info__head">
+                            <h2 class="comparison-info__title">Характеристики</h2>
+                            <button class="comparison-info__head_btn btn" aria-expanded="true" type="button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.9998L7.5 15.7998L6 14.1998L12 7.7998L18 14.1998L16.5 15.7998L12 10.9998Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="comparison-info__content">
+                            <div class="comparison-info__swiper swiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Производительность</span>
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Форматы флаконов</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Кол-во персонала</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Производительность</span>
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Форматы флаконов</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Кол-во персонала</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Производительность</span>
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Форматы флаконов</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Кол-во персонала</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text comparison-info__value--accent">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text comparison-info__value--accent">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text comparison-info__value--accent">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text comparison-info__value--accent">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text comparison-info__value--accent">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="comparison-info__item">
+                        <div class="comparison-info__head">
+                            <h2 class="comparison-info__title">Общие параметры</h2>
+                            <button class="comparison-info__head_btn btn" aria-expanded="true" type="button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.9998L7.5 15.7998L6 14.1998L12 7.7998L18 14.1998L16.5 15.7998L12 10.9998Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="comparison-info__content">
+                            <div class="comparison-info__swiper swiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Производительность</span>
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Форматы флаконов</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Кол-во персонала</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="comparison-info__item comparison-info__item--hidden">
+                        <div class="comparison-info__head">
+                            <h2 class="comparison-info__title">Что-то еще</h2>
+                            <button class="comparison-info__head_btn btn" aria-expanded="true" type="button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.9998L7.5 15.7998L6 14.1998L12 7.7998L18 14.1998L16.5 15.7998L12 10.9998Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="comparison-info__content">
+                            <div class="comparison-info__swiper swiper">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Производительность</span>
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value-text">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Форматы флаконов</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row">
+                                            <span class="comparison-info__name">Кол-во персонала</span>
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="comparison-info__specifications comparison-info__specifications--names">
+                                         <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span   span class="comparison-info__value-text comparison-info__value--accent">до 60 флаконов/мин</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                            <span class="comparison-info__value-text">10-500 мл</span>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="comparison-info__row comparison-info__row--dots">
+                                            <span class="comparison-info__value">
+                                                <span class="comparison-info__value">2-3 человека</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="product__card-pagination"></div>
+            </div>
+        </div>
+    </section>  
+    </div>
+    </main>
+
+
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./comparison-script.js"></script>
+    </body>
+    </html>

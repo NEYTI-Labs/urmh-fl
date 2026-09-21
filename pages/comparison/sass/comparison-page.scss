@@ -58,6 +58,8 @@
         align-items: center;
         gap: 8px;
         padding: 8px 16px 8px 12px;
+        cursor: pointer;
+        user-select: none;
 
         &__control {
             display: block;
@@ -250,6 +252,13 @@
         display: flex;
         flex-direction: column;
         gap: 36px;
+        // режим «только различия»: строки и блоки без различий скрыты во всех колонках
+        &--diff-only {
+            .comparison-info__row--same,
+            .comparison-info__item--same {
+                display: none;
+            }
+        }
         &__item {
             display: flex;
             flex-direction: column;
@@ -335,19 +344,6 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        &--hidden {
-            .comparison-info__name,
-            .comparison-info__value {
-                display: none;
-            }
-
-            &.comparison-info__row--dots::before {
-                content: '';
-                flex: 1;
-                padding-bottom: 18px;
-                border-bottom: 1px dotted #70828a;
-            }
-        }
         &--dots {
             align-items: end;
             &::before {

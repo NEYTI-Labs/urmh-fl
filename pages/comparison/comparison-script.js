@@ -165,18 +165,38 @@ shareButton?.addEventListener('click', () => {
     navigator.clipboard.writeText(window.location.href);
 });
 
+// строка одинаковая, если у всех товаров совпадает значение;
+// такие строки помечаются во всех колонках сразу, чтобы строки не разъезжались
+const markSameRows = () => {
+    document.querySelectorAll('.comparison-info__item').forEach((item) => {
+        const slides = item.querySelectorAll('.comparison-info__swiper .swiper-slide');
+        const columns = [...slides].map((slide) => [...slide.querySelectorAll('.comparison-info__row')]);
+        const rowsCount = Math.max(0, ...columns.map((rows) => rows.length));
+        let hasDifferences = false;
+
+        for (let i = 0; i < rowsCount; i++) {
+            const rows = columns.map((column) => column[i]).filter(Boolean);
+            const values = rows.map((row) => {
+                const value = row.querySelector('.comparison-info__value');
+                return value ? value.textContent.replace(/\s+/g, ' ').trim() : '';
+            });
+            const isSame = new Set(values).size <= 1;
+
+            rows.forEach((row) => row.classList.toggle('comparison-info__row--same', isSame));
+            hasDifferences ||= !isSame;
+        }
+
+        item.classList.toggle('comparison-info__item--same', !hasDifferences);
+    });
+};
+
+markSameRows();
+
+const comparisonInfo = document.querySelector('.comparison-info');
 const comparisonSwitch = document.querySelector('.comparison-switch__input');
 
 comparisonSwitch?.addEventListener('change', () => {
-    const rows = document.querySelectorAll('.comparison-info__row');
-
-    rows.forEach((row) => {
-        row.classList.toggle(
-            'comparison-info__row--hidden',
-            comparisonSwitch.checked &&
-            !row.classList.contains('comparison-info__row--different')
-        );
-    });
+    comparisonInfo.classList.toggle('comparison-info--diff-only', comparisonSwitch.checked);
 
     infoSliders.forEach((slider) => {
         slider.update();

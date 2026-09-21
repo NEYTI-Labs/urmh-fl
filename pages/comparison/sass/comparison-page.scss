@@ -139,6 +139,29 @@
     &-overlay {
         display: none;
     }
+    &-toast {
+        position: fixed;
+        left: 50%;
+        bottom: 32px;
+        z-index: 100;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background: #2c3336;
+        box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.12);
+        color: #fff;
+        font-size: 16px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 16px);
+        transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
+    }
     &-content {
         display: flex;
         flex-direction: column;

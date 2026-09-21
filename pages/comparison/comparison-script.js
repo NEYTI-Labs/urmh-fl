@@ -161,8 +161,58 @@ closeButton.addEventListener('click', () => {
 
 const shareButton = document.querySelector('.js-share-btn');
 
-shareButton?.addEventListener('click', () => {
-    navigator.clipboard.writeText(window.location.href);
+const toast = document.createElement('div');
+toast.className = 'comparison-toast';
+toast.setAttribute('role', 'status');
+toast.setAttribute('aria-live', 'polite');
+document.body.append(toast);
+
+let toastTimer;
+
+const showToast = (text) => {
+    toast.textContent = text;
+    toast.classList.add('active');
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+        toast.classList.remove('active');
+    }, 2000);
+};
+
+// navigator.clipboard доступен только по https и на localhost и может быть запрещён браузером,
+// поэтому при отказе пробуем запасной вариант
+const copyText = async (text) => {
+    if (navigator.clipboard && window.isSecureContext) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return;
+        } catch {
+            // переходим к запасному варианту
+        }
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.append(textarea);
+    textarea.select();
+
+    const isCopied = document.execCommand('copy');
+    textarea.remove();
+
+    if (!isCopied) {
+        throw new Error('copy failed');
+    }
+};
+
+shareButton?.addEventListener('click', async () => {
+    try {
+        await copyText(window.location.href);
+        showToast('Скопировано!');
+    } catch {
+        showToast('Не удалось скопировать ссылку');
+    }
 });
 
 // строка одинаковая, если у всех товаров совпадает значение;

@@ -61,6 +61,10 @@
     .comparison {
         padding-bottom: 16px;
         gap: 16px;
+        &-toast {
+            bottom: 72px;
+            font-size: 14px;
+        }
         &-title {
             font-size: 22px;
         }

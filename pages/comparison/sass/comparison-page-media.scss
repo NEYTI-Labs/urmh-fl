@@ -96,15 +96,21 @@
                         }
                         &.active {
                         border-color: #0071E3;
-                        background: #0071E3;
-                        color: white;
+                        color: #0071E3;
                         font-weight: 500;
+                        span {
+                            background: #0071E3;
+                            color: white;
+                        }
                         &:hover {
-                            background: #1087FE;
+                            background: transparent;
+                            color: #0071E3;
                         }
                         }
                         &:hover {
-                        background: #ededed;
+                            border-color: #0071E3;
+                            background: #0071E3;
+                            color: white;
                         }
                     }
                 }
@@ -160,7 +166,8 @@
                 gap: 10px;
             }
             .product__card-image {
-                height: 144px;
+                height: 179.5px;
+                max-width: 179.5px;
             }
             .product__card-content {
                 gap: 10px;
@@ -220,7 +227,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .comparison {
         &-info {
             &__value {
@@ -236,10 +243,16 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     .comparison {
         &-actions {
             max-width: 246px;
+        }
+        &-products {
+            .product__card-image {
+                height: 145px;
+                max-width: 145px;
+            }
         }
     }
 }

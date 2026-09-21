@@ -142,6 +142,29 @@ closeButton.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
+const shareButton = document.querySelector('.js-share-btn');
+
+shareButton?.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href);
+});
+
+const comparisonSwitch = document.querySelector('.comparison-switch__input');
+
+comparisonSwitch?.addEventListener('change', () => {
+    const rows = document.querySelectorAll('.comparison-info__row');
+
+    rows.forEach((row) => {
+        row.classList.toggle(
+            'comparison-info__row--hidden',
+            comparisonSwitch.checked &&
+            !row.classList.contains('comparison-info__row--different')
+        );
+    });
+
+    infoSliders.forEach((slider) => {
+        slider.update();
+    });
+});
 });
 
 

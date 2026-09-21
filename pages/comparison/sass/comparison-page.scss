@@ -170,15 +170,21 @@
                 }
                 &.active {
                 border-color: #0071E3;
-                background: #0071E3;
-                color: white;
+                color: #0071E3;
                 font-weight: 500;
+                span {
+                    background: #0071E3;
+                    color: white;
+                }
                 &:hover {
-                    background: #1087FE;
+                    background: transparent;
+                    color: #0071E3;
                 }
                 }
                 &:hover {
-                background: #ededed;
+                    border-color: #0071E3;
+                    background: #0071E3;
+                    color: white;
                 }
             }
         }
@@ -225,6 +231,9 @@
             height: 205px;
             max-width: 205px;
             margin: 0 auto;
+            img {
+                height: 100%;
+            }
         }
         .product__card-name {
             margin-bottom: 0;
@@ -319,15 +328,34 @@
         }
         &__row {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         gap: 8px;
+        &--hidden {
+            .comparison-info__name,
+            .comparison-info__value {
+                display: none;
+            }
+
+            &.comparison-info__row--dots::before {
+                content: '';
+                flex: 1;
+                padding-bottom: 18px;
+                border-bottom: 1px dotted #70828a;
+            }
+        }
         &--dots {
+            align-items: end;
             &::before {
                 content: '';
                 flex: 1;
                 border-bottom: 1px dotted #70828a;
             }
         }
+        }
+        &__swiper {
+            .swiper-wrapper {
+                align-items: center;
+            }
         }
         &__name {
             display: flex;

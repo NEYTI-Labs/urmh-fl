@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const products = document.querySelector('.favorites__products');
 
 const btnGrid = document.querySelector('.js-favorites-view-grid');
@@ -20,3 +22,4 @@ if (products && btnGrid && btnRow) {
         btnGrid.classList.remove('active');
     });
 }
+});

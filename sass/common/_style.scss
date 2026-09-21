@@ -109,7 +109,7 @@ body {
   &.faq__container, &.assets__container, &.leasing__container,
   &.about__container, &.dealers__container, &.service__container, 
   &.search__container, &.searchempty__container, &.cart__container, 
-  &.cartEmpty__container, &.favorites__container, &.favoritesEmpty__container, &.comparison__container {
+  &.cartEmpty__container,  &.favoritesEmpty__container{
     padding: 0 40px;
   }
 }

@@ -24,6 +24,15 @@
         gap: 8px;
         .product__card {
         width: 32%;
+        &-content {
+          gap: 8px;
+        }
+        &-name {
+          line-height: 1.286;
+        }
+        &-footer {
+          margin: 0;
+        }
         }
     }
     &.row {
@@ -36,7 +45,6 @@
             padding: 8px;
         }
         &-footer {
-            margin: 0;
             width: 100%;
             gap: 8px;
         }
@@ -66,4 +74,15 @@
     }
   }
 }
+
+@media screen and (max-width: 455px) {
+  .favorites {
+    &-content {
+        .product__card-image {
+          height: 195px;
+        }
+    }
+  }
+}
+
 

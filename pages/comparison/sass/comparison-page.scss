@@ -377,24 +377,14 @@
         }
         &:has(.comparison-info__name) {
             align-items: end;
-            position: relative;
             &::before {
                 content: '';
                 order: 1;
                 flex: 1;
                 border-bottom: 1px dotted #70828a;
             }
-            .comparison-info__name {
-                order: 0;
-                flex: 0 30 auto;
-                width: fit-content;
-                max-width: 60%;
-                white-space: normal;
-            }
             .comparison-info__value {
                 order: 2;
-                flex: 0 1 auto;
-                min-width: 0;
             }
         }
         }
@@ -416,6 +406,7 @@
             font-size: 15px;
             line-height: 1.27;
             color: #70828a;
+            white-space: nowrap;
             transition-property: transform;
         }
         &__value {

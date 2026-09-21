@@ -37,17 +37,17 @@ const productSlider = new Swiper(productSliderElement, {
             spaceBetween: 16,
         },
 
-        1024: {
+        1055: {
             slidesPerView: 3,
             spaceBetween: 16,
         },
 
-        1350: {
+        1390: {
             slidesPerView: 4,
             spaceBetween: 16,
         },
 
-        1650: {
+        1725: {
             slidesPerView: 5,
             spaceBetween: 16,
         },
@@ -87,17 +87,17 @@ const infoSliders = [...comparisonSliders].map((slider) => {
                 spaceBetween: 16,
             },
             
-            1024: {
+            1055: {
                 slidesPerView: 3,
                 spaceBetween: 16,
             },
 
-            1350: {
+            1390: {
                 slidesPerView: 4,
                 spaceBetween: 16,
             },
 
-            1650: {
+            1725: {
                 slidesPerView: 5,
                 spaceBetween: 16,
             },

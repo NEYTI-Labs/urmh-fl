@@ -1,0 +1,35 @@
+.comparisonEmpty {
+  padding-bottom: 100px;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        .page-heading {
+            margin-bottom: 0;
+        }
+    }
+  &__content {
+    padding: 205px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    margin: auto;
+    max-width: 500px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h4 {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -109,7 +109,7 @@ body {
   &.faq__container, &.assets__container, &.leasing__container,
   &.about__container, &.dealers__container, &.service__container, 
   &.search__container, &.searchempty__container, &.cart__container, 
-  &.cartEmpty__container,  &.favoritesEmpty__container{
+  &.cartEmpty__container,  &.favoritesEmpty__container, &.comparisonEmpty__container{
     padding: 0 40px;
   }
 }
@@ -117,7 +117,7 @@ body {
 .main:not(
 .main_faq, .leasing-main, .about-main, 
 .dealers-main, .service-main, 
-.searchempty__main, .cartEmpty__main, .delivery__main, .auth__main, .favoritesEmpty__main, .comparison__main) {
+.searchempty__main, .cartEmpty__main, .delivery__main, .auth__main, .favoritesEmpty__main, .comparison__main, .comparisonEmpty__main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО

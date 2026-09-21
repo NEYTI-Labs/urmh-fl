@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content comparisonEmpty__main">
+    <div class="container comparisonEmpty__container">
+    <ol class="kroshki">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="comparisonEmpty">
+        <div class="comparisonEmpty__head">
+            <h1 class="page-heading">Сравнение товаров</h1>
+            <div class="comparison-actions">
+                <div class="comparison-switch">
+                    <label class="comparison-switch__control">
+                        <input class="comparison-switch__input" type="checkbox">
+                        <span class="comparison-switch__slider"></span>
+                    </label>
+
+                    <span class="comparison-switch__text">Показывать только различия</span>
+                    <span class="comparison-switch__text comparison-switch__text--mobile">Показать аналоги</span>
+                </div>
+
+                <button class="comparison-btn js-share-btn" type="button">
+                    <svg class="comparison-btn_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 8C18.8807 8 20 6.8807 20 5.5C20 4.11929 18.8807 3 17.5 3C16.1193 3 15 4.11929 15 5.5C15 6.8807 16.1193 8 17.5 8Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M6.5 14.5C7.8807 14.5 9 13.3807 9 12C9 10.6193 7.8807 9.5 6.5 9.5C5.1193 9.5 4 10.6193 4 12C4 13.3807 5.1193 14.5 6.5 14.5Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M15.0024 6.78711L8.67188 10.6226" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.67188 13.2817L15.3421 17.2232" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.5 16C18.8807 16 20 17.1193 20 18.5C20 19.8807 18.8807 21 17.5 21C16.1193 21 15 19.8807 15 18.5C15 17.1193 16.1193 16 17.5 16Z" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="comparison-btn_icon comparison-btn_icon-mobile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 8C18.8807 8 20 6.8807 20 5.5C20 4.11929 18.8807 3 17.5 3C16.1193 3 15 4.11929 15 5.5C15 6.8807 16.1193 8 17.5 8Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M6.5 14.5C7.8807 14.5 9 13.3807 9 12C9 10.6193 7.8807 9.5 6.5 9.5C5.1193 9.5 4 10.6193 4 12C4 13.3807 5.1193 14.5 6.5 14.5Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M15.0024 6.78735L8.67188 10.6228" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.67188 13.282L15.3421 17.2235" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.5 16C18.8807 16 20 17.1193 20 18.5C20 19.8807 18.8807 21 17.5 21C16.1193 21 15 19.8807 15 18.5C15 17.1193 16.1193 16 17.5 16Z" stroke="#333333" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span>Поделиться</span>
+                </button>
+
+                <button class="comparison-btn " type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 11H19V13H13V19H11V13H5V11H11V5H13V11Z" fill="currentcolor" />
+                    </svg>
+                    <span>Добавить товар</span>
+                </button>
+
+                <button class="comparison-actions_close ">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z"
+                            fill="#70828A" />
+                    </svg>
+                </button>
+            </div>
+            <div class="comparison-overlay"></div>
+            <button type="button" class="comparison-actions_mobile">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H18V2H0V0Z" fill="#2C3336" />
+                    <path d="M3 5H15V7H3V5Z" fill="#2C3336" />
+                    <path d="M6 10H12V12H6V10Z" fill="#2C3336" />
+                </svg>
+            </button>
+        </div>
+        <div class="comparisonEmpty__content">
+            <div class="comparisonEmpty__image">
+                <img src="/public/images/favoritesEmpty.png" alt="">
+            </div>
+            <div class="comparisonEmpty__text">
+                <h4>Здесь пока пусто</h4>
+                <p>Добавьте интересующее оборудование, чтобы сравнить его характеристики</p>
+            </div>
+            <a href="#" class="btn">Перейти в каталог</a>
+        </div>
+    </section>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./comparison-script.js"></script>
+    </body>
+    </html>

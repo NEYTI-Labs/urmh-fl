@@ -56,8 +56,25 @@ const productSlider = new Swiper(productSliderElement, {
 
 const comparisonSliders = document.querySelectorAll('.comparison-info__swiper');
 const infoSliders = [...comparisonSliders].map((slider) => {
+    // названия строк компенсируют сдвиг слайдера и остаются на месте
+    const names = slider.querySelectorAll('.comparison-info__name');
+
     return new Swiper(slider, {
         allowTouchMove: false,
+
+        on: {
+            setTranslate(swiper, translate) {
+                names.forEach((name) => {
+                    name.style.transform = `translateX(${-translate}px)`;
+                });
+            },
+
+            setTransition(swiper, duration) {
+                names.forEach((name) => {
+                    name.style.transitionDuration = `${duration}ms`;
+                });
+            },
+        },
 
         breakpoints: {
             0: {

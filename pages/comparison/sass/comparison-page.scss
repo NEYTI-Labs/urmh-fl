@@ -322,6 +322,11 @@
                 height: auto;
             }
 
+            // слайд с названиями строк поверх остальных, иначе их пунктир рисуется поверх названий
+            .swiper-slide:has(.comparison-info__name) {
+                z-index: 2;
+            }
+
             .comparison-info__specifications {
                 width: 100%;
             }
@@ -351,6 +356,18 @@
                 border-bottom: 1px dotted #70828a;
             }
         }
+        &:has(.comparison-info__name) {
+            align-items: end;
+            &::before {
+                content: '';
+                order: 1;
+                flex: 1;
+                border-bottom: 1px dotted #70828a;
+            }
+            .comparison-info__value {
+                order: 2;
+            }
+        }
         }
         &__swiper {
             .swiper-wrapper {
@@ -358,20 +375,20 @@
             }
         }
         &__name {
-            display: flex;
-            align-items: baseline;
-            flex: 1;
-            min-width: 0;
+            position: relative;
+            z-index: 2;
+            flex: none;
+            // фон с запасом вниз: при дробном масштабе экрана пунктир соседнего слайда
+            // округляется на пиксель ниже и выглядывает из-под названия
+            padding: 0 8px 3px 0;
+            margin: 0 -8px -3px 0;
+            background: #f7f7f8;
             font-weight: 400;
             font-size: 15px;
             line-height: 1.27;
             color: #70828a;
-            &::after {
-                content: '';
-                flex: 1;
-                border-bottom: 1px dotted currentColor;
-                margin: 0 8px;
-            }
+            white-space: nowrap;
+            transition-property: transform;
         }
         &__value {
             font-weight: 400;

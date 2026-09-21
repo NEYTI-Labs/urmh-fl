@@ -201,13 +201,14 @@
                 &::before {
                     opacity: 0;
                 }
-            }
-            &__name {
-                flex: none;
-                white-space: nowrap;
-                &::after {
+                &:has(.comparison-info__name)::before {
                     display: none;
                 }
+            }
+            &__name {
+                align-self: flex-start;
+                padding-bottom: 0;
+                margin-bottom: 0;
             }
             &__value {
                 display: flex;

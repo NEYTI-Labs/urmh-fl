@@ -179,15 +179,12 @@ const showToast = (text) => {
     }, 2000);
 };
 
-// navigator.clipboard доступен только по https и на localhost и может быть запрещён браузером,
-// поэтому при отказе пробуем запасной вариант
 const copyText = async (text) => {
     if (navigator.clipboard && window.isSecureContext) {
         try {
             await navigator.clipboard.writeText(text);
             return;
         } catch {
-            // переходим к запасному варианту
         }
     }
 
@@ -215,8 +212,6 @@ shareButton?.addEventListener('click', async () => {
     }
 });
 
-// строка одинаковая, если у всех товаров совпадает значение;
-// такие строки помечаются во всех колонках сразу, чтобы строки не разъезжались
 const markSameRows = () => {
     document.querySelectorAll('.comparison-info__item').forEach((item) => {
         const slides = item.querySelectorAll('.comparison-info__swiper .swiper-slide');

@@ -160,24 +160,35 @@ closeButton.addEventListener('click', () => {
 });
 
 const shareButton = document.querySelector('.js-share-btn');
+const shareNotification = document.getElementById('share-notification');
 
-const toast = document.createElement('div');
-toast.className = 'comparison-toast';
-toast.setAttribute('role', 'status');
-toast.setAttribute('aria-live', 'polite');
-document.body.append(toast);
+shareButton.addEventListener('click', () => {
+    const urlToCopy = window.location.href;
 
-let toastTimer;
+    navigator.clipboard.writeText(urlToCopy)
+        .then(() => showShareNotification())
+        .catch((err) => {
+            console.log('Ошибка при копировании:', err);
+            const tempInput = document.createElement('input');
+            tempInput.value = urlToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showShareNotification();
+            } catch (e) {
+                console.log('Fallback тоже не сработал:', e);
+            }
+            document.body.removeChild(tempInput);
+        });
+});
 
-const showToast = (text) => {
-    toast.textContent = text;
-    toast.classList.add('active');
-
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-        toast.classList.remove('active');
+function showShareNotification() {
+    shareNotification.style.display = 'block';
+    setTimeout(() => {
+        shareNotification.style.display = 'none';
     }, 2000);
-};
+}
 
 const copyText = async (text) => {
     if (navigator.clipboard && window.isSecureContext) {

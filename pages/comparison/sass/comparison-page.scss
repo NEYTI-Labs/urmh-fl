@@ -111,6 +111,7 @@
         }
     }
     &-btn {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -122,6 +123,20 @@
         font-weight: 400;
         font-size: 16px;
         transition: all 0.3s ease;
+        #share-notification {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0071E3;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            z-index: 1;
+        }
         &_icon {
             width: 24px;
             height: 24px;

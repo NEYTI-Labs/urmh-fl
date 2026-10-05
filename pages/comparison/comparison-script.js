@@ -5,12 +5,27 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
-const categoriesSlider = new Swiper('.comparison-categories_mobile', {
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    freeMode: true,
-    grabCursor: true,
-});
+let categoriesSlider;
+
+function initCategoriesSlider() {
+    if (window.innerWidth <= 767 && !categoriesSlider) {
+        categoriesSlider = new Swiper('.comparison-categories', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            freeMode: true,
+            grabCursor: true,
+        });
+    }
+
+    if (window.innerWidth > 767 && categoriesSlider) {
+        categoriesSlider.destroy(true, true);
+        categoriesSlider = null;
+    }
+}
+
+initCategoriesSlider();
+
+window.addEventListener('resize', initCategoriesSlider);
 
 const productSliderElement = document.querySelector('.product__card-swiper');
 const productSlider = new Swiper(productSliderElement, {
@@ -251,13 +266,24 @@ markSameRows();
 const comparisonInfo = document.querySelector('.comparison-info');
 const comparisonSwitch = document.querySelector('.comparison-switch__input');
 
+const updateSwitchIndicator = () => {
+    mobileButton?.classList.toggle('active', comparisonSwitch?.checked);
+};
+
 comparisonSwitch?.addEventListener('change', () => {
-    comparisonInfo.classList.toggle('comparison-info--diff-only', comparisonSwitch.checked);
+    comparisonInfo.classList.toggle(
+        'comparison-info--diff-only',
+        comparisonSwitch.checked
+    );
+
+    updateSwitchIndicator();
 
     infoSliders.forEach((slider) => {
         slider.update();
     });
 });
+
+updateSwitchIndicator();
 });
 
 

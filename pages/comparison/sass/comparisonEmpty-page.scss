@@ -1,8 +1,12 @@
 .comparisonEmpty {
   padding-bottom: 100px;
+  .comparison-title {
+    flex: none;
+  }
     &__head {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 16px;
         align-items: center;
     }

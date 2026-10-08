@@ -3,13 +3,6 @@
   .comparison-title {
     flex: none;
   }
-    &__head {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
-    }
   &__content {
     padding: 205px 0;
     display: flex;

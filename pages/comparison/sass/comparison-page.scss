@@ -266,7 +266,8 @@
         }
         .product__card-prev,.product__card-next {
             position: absolute;
-            top: 40%;
+            top: 50%;
+            transform: translateY(-50%);
             z-index: 10;
         }
         .product__card-prev {
@@ -284,7 +285,7 @@
         }
         .product__card-image {
             padding: 0;
-            height: auto;
+            height: 205px;
             margin: 0 auto;
             img {
                 height: auto;
@@ -435,7 +436,7 @@
             line-height: 1.27;
             color: #70828a;
             display: block;
-            max-width: 161px;
+            max-width: 171px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;

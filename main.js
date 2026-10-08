@@ -554,6 +554,10 @@ document.addEventListener('DOMContentLoaded', function(){
 // ----------------------------benefits-popup----------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const benefitsPopup = document.querySelector('.popup-benefits');
+    if (!benefitsPopup) {
+        return;
+    }
+
     const openBtns = document.querySelectorAll('.show-benefits-popup');
     const closeBtn = document.querySelector('.popup-benefits .close-popup');
     const continueBtn = document.querySelector('.popup-benefits_link');
@@ -576,7 +580,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (closeBtn) {
         closeBtn.addEventListener('click', closePopup);
+    }
 
     benefitsPopup.addEventListener('click', (e) => {
         if (e.target === benefitsPopup) {
@@ -1540,6 +1546,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ----------------------------test-popup----------------------------
 document.addEventListener('DOMContentLoaded', function(){
     const testPopup = document.querySelector('.test-popup')
+    if (!testPopup) return
     const testPopupShowBtns = document.querySelectorAll('.show-test-popup')
     const testCloseFormBtn = document.querySelector('.test-popup .close-popup')
     const testForm = document.querySelector('#test-popup form')
@@ -1613,6 +1620,7 @@ document.addEventListener('DOMContentLoaded', function(){
 document.addEventListener('DOMContentLoaded', function(){
     const offerCalculatorPopupShowBtns = document.querySelectorAll('.show-popup-main')
     const offerCalculatorPopup = document.querySelector('#popup-main')
+    if (!offerCalculatorPopup) return
     const offerCalculatorCloseFormBtn =
         offerCalculatorPopup.querySelector('.close-popup')
     const offerCalculatorForm =
@@ -1689,6 +1697,7 @@ document.addEventListener('DOMContentLoaded', function(){
 // ----------------------------clear-popup----------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const clearPopup = document.querySelector('.clear-popup');
+    if (!clearPopup) return
     const clearPopupShowBtns = document.querySelectorAll('.show-clear-popup');
     const clearPopupCloseBtn = document.querySelector('.clear-popup .close-popup');
     const cancelBtn = document.querySelector('.clear-popup_buttons .btn:last-child');
@@ -1795,6 +1804,7 @@ window.addEventListener('resize', () => {
 // ----------------------------calculator-popup----------------------------
     document.addEventListener('DOMContentLoaded', function(){
         const calculatorPopup = document.querySelector('.calculator-popup')
+        if (!calculatorPopup) return
         const calculatorPopupShowBtns = document.querySelectorAll('.show-calculator-popup')
         const calculatorCloseFormBtn = document.querySelector('.calculator-popup .close-popup')
         const calculatorForm = document.querySelector('#calculator-popup form')

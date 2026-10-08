@@ -1,31 +1,5 @@
-// @media (max-width: 1450px) {
-//     .comparisonEmpty {
-//         &__head {
-//             flex-direction: column;
-//             align-items: start;
-//         }
-//     }
-// }
-
-@media (max-width: 900px) {
-    .comparisonEmpty {
-        &__head {
-            .comparison-actions {
-              display: flex;
-              position: unset;
-              box-shadow: none;
-              width: auto;
-              padding: 0;
-            }
-        }
-    }
-}
-
 @media (max-width: 768px) {
   .comparisonEmpty {
-    &__head {
-      gap: 8px;
-    }
     padding-bottom: 24px;
     &__content {
       padding: 15px 0 16px;

@@ -21,7 +21,6 @@
     }
     &__products {
     &.grid {
-        gap: 8px;
         .product__card {
         width: 32%;
         &-content {
@@ -70,6 +69,11 @@
         .product__card {
           width: calc(50% - 4px);
         }
+      }
+    }
+    &__products {
+      &.grid {
+        gap: 8px;
       }
     }
   }

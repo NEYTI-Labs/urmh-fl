@@ -261,19 +261,15 @@ document.addEventListener('DOMContentLoaded', () => {
             testingPopupOverlay.addEventListener('click', closeTestingPopup);
         }
 
-        // Закрытие по клавише ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && testingPopup.classList.contains('product-testing-popup--active')) {
                 closeTestingPopup();
             }
         });
 
-        // Обработка отправки формы
         if (testingPopupForm) {
             testingPopupForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                // Здесь можно добавить логику отправки формы
-                console.log('Форма тестирования отправлена');
                 closeTestingPopup();
             });
         }
@@ -599,9 +595,7 @@ function copyText() {
                 notification.style.display = "none";
             }, 2000);
         }
-    } catch (err) {
-        console.log('Ошибка при копировании:', err);
-    }
+    } catch (err) {}
 }
 
 // Настройка

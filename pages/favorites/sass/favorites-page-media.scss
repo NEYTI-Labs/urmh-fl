@@ -22,7 +22,7 @@
     &__products {
     &.grid {
         .product__card {
-        width: 32%;
+        min-width: 173px;
         &-content {
           gap: 8px;
         }
@@ -62,12 +62,13 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 585px) {
   .favorites {
     &-content {
       .favorites__products.grid {
         .product__card {
           width: calc(50% - 4px);
+          min-width: auto;
         }
       }
     }

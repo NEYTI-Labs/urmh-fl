@@ -5,8 +5,9 @@ Swiper.use([Navigation, Pagination, Controller, EffectFade, Autoplay, Thumbs]);
 
 document.addEventListener('DOMContentLoaded', () => {
     const productSliderElement = document.querySelector('.orders-card__swiper');
-const productSlider = new Swiper(productSliderElement, {
+    const productSlider = new Swiper(productSliderElement, {
     watchOverflow: true,
+    loop: true,
 
     navigation: {
         nextEl: '.product__card-next',
@@ -14,7 +15,7 @@ const productSlider = new Swiper(productSliderElement, {
     },
 
     pagination: {
-        el: '.product__card-pagination',
+        el: '.orders-card__slider_pagger',
         clickable: true,
     },
 

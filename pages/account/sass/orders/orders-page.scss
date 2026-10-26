@@ -302,6 +302,16 @@
                 height: auto;
             }
         }
+        &__slider_pagger {
+            padding-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            fill: #e1e1e5;
+
+            width: 100%;
+        }
         &__image {
             margin-bottom: 24px;
             display: flex;

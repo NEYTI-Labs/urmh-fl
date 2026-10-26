@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./sass/orders/index.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HMRU</title>
+    </head>
+    <body>
+    {{> _header}}
+
+    <main class="main page-content account__main">
+    <div class="container account__container">
+    <ol class="kroshki">
+        <li>
+        <a href="/public" title="Главная"> Главная </a>
+        </li>
+    </ol>
+    <section class="orders">
+        <div class="account-top">
+            <h1 class="page-heading">Личный кабинет</h1>
+            <button type="button" class="account-nav__actions">
+                <img src="/public/images/icons/menu.png" alt="">
+            </button>
+        </div>
+        <div class="account-wrapper">
+            <div class="account-overlay"></div>
+            <div class="account-sidebar">
+                <nav class="account-nav">
+                <button class="account-nav__close" type="button" aria-label="Закрыть меню">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z"
+                            fill="#70828A" />
+                    </svg>
+                </button>
+                    <ul class="account-nav__list">
+                        <li class="account-nav__item">
+                            <a class="account-nav__link" href="#">
+                                <img src="/public/images/icons/accountMenu1.png" alt="">
+                                <span>Дешборд</span>
+                            </a>
+                        </li>
+                        <li class="account-nav__item account-nav__item--has-sub is-open">
+                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="true">
+                                <div class="account-nav__link_name">
+                                    <img src="/public/images/icons/stats-1.png" alt="">
+                                    <span>Заказы</span>
+                                </div>
+                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                </svg>
+                            </button>
+
+                            <div class="account-nav__sub">
+                                <ul class="account-nav__sub-list">
+                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
+                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="account-nav__item account-nav__item--has-sub">
+                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                                <div class="account-nav__link_name">
+                                <img src="/public/images/icons/accountMenu4.png" alt="">
+                                <span>Документы</span>
+                                </div>
+
+                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                </svg>
+                            </button>
+                            <div class="account-nav__sub">
+                                <ul class="account-nav__sub-list">
+                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
+                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="account-nav__item account-nav__item--has-sub">
+                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                                <div class="account-nav__link_name">
+                                <img src="/public/images/icons/accountMenu5.png" alt="">
+                                <span>Программа лояльности</span>
+                                </div>
+                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                </svg>
+                            </button>
+                            <div class="account-nav__sub">
+                                <ul class="account-nav__sub-list">
+                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
+                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="account-nav__item account-nav__item--has-sub">
+                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                                <div class="account-nav__link_name">
+                                <img src="/public/images/icons/accountMenu6.png" alt="">
+                                <span>Компания</span>
+                                </div>
+                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                </svg>
+                            </button>
+                            <div class="account-nav__sub">
+                                <ul class="account-nav__sub-list">
+                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
+                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="account-nav__item account-nav__item--has-sub">
+                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                                <div class="account-nav__link_name">
+                                <img src="/public/images/icons/accountMenu7.png" alt="">
+                                <span>Настройки</span>
+                                </div>
+                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                </svg>
+                            </button>
+                            <div class="account-nav__sub">
+                                <ul class="account-nav__sub-list">
+                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
+                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="account-nav__item">
+                            <a class="account-nav__link" href="#">
+                                <img src="/public/images/icons/accountMenu8.png" alt="">
+                                <span>Выйти из кабинета</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="orders-content">
+                <div class="account-balance">
+                    <div class="account-balance__top">
+                        <span class="account-balance__points">4850 баллов</span>
+                        <p>Доступно для списания по <a href="#">программе лояльности</a></p>
+                    </div>
+                    <button class="account-balance__btn">
+                        Потратить баллы
+                        <img src="/public/images/icons/balance.png" alt="">
+                    </button>
+                    <div class="account-balance__notes">
+                        <div class="account-balance__note">
+                            <span class="account-balance__note-value">+1250 баллов</span>
+                            <p>Будет зачислено за следующий заказ</p>
+                        </div>
+                        <div class="account-balance__note">
+                            <div class="account-balance__note-top">
+                                <span class="account-balance__note-value">4850 баллов</span>
+                                <span class="account-balance__note-data">до 23.12.2026</span>
+                            </div>
+                            <p>сгорят, если не использовать</p>
+                            <div class="account-balance__note-icon">
+                                <img src="/public/images/icons/balance-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-balance__banner">
+                        <img src="/public/images/balance-banner.png" alt="">
+                    </div>
+                </div>
+                <div class="orders-notifications">
+                    <div class="account-block__top">
+                        <h4>Уведомления</h4>
+                        <a class="account-link" href="#">
+                            Все уведомления
+                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.353516 0.353516L7.85352 7.85352L0.353516 15.3535" stroke="#0071E3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="orders-notifications__list">
+                        <li class="orders-notifications__item">
+                            <span class="orders-notifications__icon">
+                                <img src="/public/images/icons/info.png" alt="">
+                            </span>
+                            <div class="orders-notifications__text">
+                                <a href="#">Заказ №2311 - изменён статус</a>
+                                <p>Готовится к отгрузке</p>
+                            </div>
+                            <div class="orders-notifications__date">
+                                <span>15.09.2026</span>
+                                <span>10:43</span>
+                            </div>
+                        </li>
+                        <li class="orders-notifications__item">
+                            <span class="orders-notifications__icon">
+                                <img src="/public/images/icons/info.png" alt="">
+                            </span>
+                            <div class="orders-notifications__text">
+                                <a href="#">Заказ №2311 - изменён статус</a>
+                                <p>Готовится к отгрузке</p>
+                            </div>
+                            <div class="orders-notifications__date">
+                                <span>15.09.2026</span>
+                                <span>10:43</span>
+                            </div>
+                        </li>
+                        <li class="orders-notifications__item">
+                            <span class="orders-notifications__icon">
+                                <img src="/public/images/icons/tool.png" alt="">
+                            </span>
+                            <div class="orders-notifications__text">
+                                <a href="#">Заказ №2311 - изменён статус</a>
+                                <p>Принято в работу</p>
+                            </div>
+                            <div class="orders-notifications__date">
+                                <span>15.09.2026</span>
+                                <span>10:43</span>
+                            </div>
+                        </li>
+                        <li class="orders-notifications__item">
+                            <span class="orders-notifications__icon">
+                                <img src="/public/images/icons/info.png" alt="">
+                            </span>
+                            <div class="orders-notifications__text">
+                                <a href="#">Заказ №2311 - изменён статус</a>
+                                <p>Готовится к отгрузке</p>
+                            </div>
+                            <div class="orders-notifications__date">
+                                <span>15.09.2026</span>
+                                <span>10:43</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="orders-stats">
+                    <li class="orders-stats__item">
+                        <span class="account-icon">
+                        <img src="/public/images/icons/stats-1.png" alt="">
+                        </span>
+                        <div class="orders-stats__content">
+                            <div class="orders-stats__info">
+                            <span class="orders-stats__value">2</span>
+                            <p>Активных заказа</p>
+                            </div>
+                            <a class="account-link" href="#">
+                            <span>Все заказы</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 4L15.5 11.5L8 19" stroke="#0071E3" />
+                            </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="orders-stats__item">
+                        <span class="account-icon">
+                        <img src="/public/images/icons/stats-2.png" alt="">
+                        </span>
+                        <div class="orders-stats__content">
+                            <div class="orders-stats__info">
+                            <span class="orders-stats__value">12</span>
+                            <p>Единиц оборудования</p>
+                            </div>
+                            <a class="account-link" href="#">
+                            <span>Перейти в парк</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 4L15.5 11.5L8 19" stroke="#0071E3" />
+                            </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="orders-stats__item">
+                        <span class="account-icon">
+                        <img src="/public/images/icons/stats-2.png" alt="">
+                        </span>
+                        <div class="orders-stats__content">
+                            <div class="orders-stats__info">
+                                <span class="orders-stats__value">3</span>
+                                <p>Документа на скачивание</p>
+                            </div>
+                            <a class="account-link" href="#">
+                            <span>Все документы</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 4L15.5 11.5L8 19" stroke="#0071E3" />
+                            </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="orders-manager">
+                <div class="account-block__top orders-manager__top">
+                    <h4 class="orders-manager__title">Персональный менеджер</h4>
+                    <a class="account-link" href="#">
+                        Написать менеджеру
+
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 19H11V15H18V11H22V19H19.5L18 20.5L16.5 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+                        <path d="M2 3H18V15H8.5L6.5 17L4.5 15H2V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+                        <path d="M6 11H9" stroke-width="2" stroke-linecap="round" stroke="currentColor" />
+                        <path d="M6 7H12" stroke-width="2" stroke-linecap="round" stroke="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="orders-manager__body">
+                    <img class="orders-manager__img" src="/public/images/manager.png" alt="Иванов Иван">
+                    <div class="orders-manager__content">
+                        <div class="orders-manager__info">
+                            <p class="orders-manager__name">Иванов Иван</p>
+                            <p class="orders-manager__role">Менеджер по работе с клиентами</p>
+                        </div>
+                    <div class="orders-manager__contacts">
+                        <div class="orders-manager__contact">
+                        <span class="orders-manager__icon"><img src="/public/images/icons/phone.png" alt=""></span>
+                        <div class="orders-manager__details">
+                            <span>Телефон:</span>
+                            <a href="tel:+73833734503">8 383 373-45-03</a>
+                        </div>
+                        </div>
+                        <div class="orders-manager__contact">
+                        <span class="orders-manager__icon"><img src="/public/images/icons/mail.png" alt=""></span>
+                        <div class="orders-manager__details">
+                            <span>Электронная почта:</span>
+                            <a href="mailto:nsk4@hmru.ru">nsk4@hmru.ru</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <a class="account-link account-link__mobile" href="#">
+                    Написать менеджеру
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.5 19H11V15H18V11H22V19H19.5L18 20.5L16.5 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+                    <path d="M2 3H18V15H8.5L6.5 17L4.5 15H2V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+                    <path d="M6 11H9" stroke-width="2" stroke-linecap="round" stroke="currentColor" />
+                    <path d="M6 7H12" stroke-width="2" stroke-linecap="round" stroke="currentColor" />
+                    </svg>
+                </a>
+                </div>
+                <div class="orders-preview">
+                <div class="account-block__top">
+                    <h4 class="orders-preview__title">Последние заказы</h4>
+                    <a class="account-link" href="#">
+                        Все заказы 
+                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.353516 0.353516L7.85352 7.85352L0.353516 15.3535" stroke="#0071E3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <table class="orders-preview__table">
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата</th>
+                        <th>Сумма</th>
+                        <th>Статус</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="orders-preview__row">
+                        <td>00000</td>
+                        <td class="orders-preview__date">15.09.2026</td>
+                        <td>540 000 ₽</td>
+                        <td>
+                        <span class="orders-preview__status orders-preview__status--shipping">
+                            <img src="/public/images/icons/table1.png" alt="">
+                            Готовится к отгрузке
+                        </span>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="orders-preview__row">
+                        <td>00000</td>
+                        <td class="orders-preview__date">15.09.2026</td>
+                        <td>1 540 000 ₽</td>
+                        <td>
+                        <span class="orders-preview__status orders-preview__status--completed">
+                            <img src="/public/images/icons/table2.png" alt="">
+                            Завершен
+                        </span>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="orders-preview__row">
+                        <td>00000</td>
+                        <td class="orders-preview__date">15.09.2026</td>
+                        <td>12 000 ₽</td>
+                        <td>
+                        <span class="orders-preview__status orders-preview__status--pending">
+                            <img src="/public/images/icons/table3.png" alt="">
+                            Ожидает оплаты
+                        </span>
+                        </td>
+                        <td>
+                        <button class="btn">Оплатить</button>
+                        </td>
+                    </tr>
+
+                    <tr class="orders-preview__row">
+                        <td>00000</td>
+                        <td class="orders-preview__date">15.09.2026</td>
+                        <td>54 000 ₽</td>
+                        <td>
+                        <span class="orders-preview__status orders-preview__status--shipped">
+                            <img src="/public/images/icons/table4.png" alt="">
+                            Отгружен
+                        </span>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="orders-preview__row">
+                        <td>00000</td>
+                        <td class="orders-preview__date">15.09.2026</td>
+                        <td>40 000 ₽</td>
+                        <td>
+                        <span class="orders-preview__status orders-preview__status--completed">
+                            <img src="/public/images/icons/table2.png" alt="">
+                            Завершен
+                        </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="orders-parts">
+                    <div class="account-block__top">
+                        <h4 class="orders-parts__title">Запчасти для вашего оборудования</h4>
+                        <a class="account-link" href="#">
+                            Все товары
+                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.353516 0.353516L7.85352 7.85352L0.353516 15.3535" stroke="#0071E3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul class="orders-parts__list">
+                        <li class="orders-parts__item">
+                            <div class="orders-parts__image">
+                                <img src="/public/images/parts1.png" alt="">
+                            </div>
+                            <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                            <div class="orders-parts__bottom">
+                                <span class="orders-parts__price"><b>60 224</b> ₽</span>
+                                <button class="orders-parts__btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                                    <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
+                                    <path d="M9.5 21C10.3284 21 11 20.3284 11 19.5C11 18.6716 10.3284 18 9.5 18C8.67157 18 8 18.6716 8 19.5C8 20.3284 8.67157 21 9.5 21Z" fill="currentColor" />
+                                    <path d="M16.5 21C17.3284 21 18 20.3284 18 19.5C18 18.6716 17.3284 18 16.5 18C15.6716 18 15 18.6716 15 19.5C15 20.3284 15.6716 21 16.5 21Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="orders-parts__item">
+                            <div class="orders-parts__image">
+                                <img src="/public/images/parts2.png" alt="">
+                            </div>
+                            <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                            <div class="orders-parts__bottom">
+                                <span class="orders-parts__price"><b>3 655</b> ₽</span>
+                                <button class="orders-parts__btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                                    <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
+                                    <path d="M9.5 21C10.3284 21 11 20.3284 11 19.5C11 18.6716 10.3284 18 9.5 18C8.67157 18 8 18.6716 8 19.5C8 20.3284 8.67157 21 9.5 21Z" fill="currentColor" />
+                                    <path d="M16.5 21C17.3284 21 18 20.3284 18 19.5C18 18.6716 17.3284 18 16.5 18C15.6716 18 15 18.6716 15 19.5C15 20.3284 15.6716 21 16.5 21Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="orders-parts__item">
+                            <div class="orders-parts__image">
+                                <img src="/public/images/parts3.png" alt="">
+                            </div>
+                            <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                            <div class="orders-parts__bottom">
+                                <span class="orders-parts__price"><b>3 691</b> ₽</span>
+                                <button class="orders-parts__btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                                    <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
+                                    <path d="M9.5 21C10.3284 21 11 20.3284 11 19.5C11 18.6716 10.3284 18 9.5 18C8.67157 18 8 18.6716 8 19.5C8 20.3284 8.67157 21 9.5 21Z" fill="currentColor" />
+                                    <path d="M16.5 21C17.3284 21 18 20.3284 18 19.5C18 18.6716 17.3284 18 16.5 18C15.6716 18 15 18.6716 15 19.5C15 20.3284 15.6716 21 16.5 21Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="orders-parts__item">
+                            <div class="orders-parts__image">
+                                <img src="/public/images/parts4.png" alt="">
+                            </div>
+                            <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                            <div class="orders-parts__bottom">
+                                <span class="orders-parts__price"><b>3 195</b> ₽</span>
+                                <button class="orders-parts__btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                                    <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
+                                    <path d="M9.5 21C10.3284 21 11 20.3284 11 19.5C11 18.6716 10.3284 18 9.5 18C8.67157 18 8 18.6716 8 19.5C8 20.3284 8.67157 21 9.5 21Z" fill="currentColor" />
+                                    <path d="M16.5 21C17.3284 21 18 20.3284 18 19.5C18 18.6716 17.3284 18 16.5 18C15.6716 18 15 18.6716 15 19.5C15 20.3284 15.6716 21 16.5 21Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="orders-products">
+                    <div class="orders-products__top">
+                        <h4>Ваше оборудование</h4>
+                        <a href="#" class="account-link">
+                            <span class="account-link__desc">Весь парк оборудования</span>
+                            <span class="account-link__mobile">Весь парк</span>
+                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.353516 0.353516L7.85352 7.85352L0.353516 15.3535" stroke="#0071E3" />
+                            </svg>
+                        </a>
+                        <div class="product__card-nav">
+                            <button class="product__card-nav-btn product__card-prev" type="button"
+                                aria-label="Предыдущий">
+                                <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 1L1 8L7 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="product__card-nav-btn product__card-next" type="button"
+                                aria-label="Следующий">
+                                <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 8L1 15" stroke="#2C3336" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="orders-card__slider">
+
+                        <div class="orders-card__swiper swiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <a href="#" class="orders-card">
+                                        <div class="orders-card__image">
+                                        <img src="/images/popular-product-1.png"
+                                        alt="Поступление вакуумного массажёра GRKL-2500">
+                                        </div>
+                                        <div class="orders-card__content">
+                                        <div class="orders-card__info">
+                                        <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                        <p>Вакуумный упаковщик</p>
+                                        </div>
+                                        <div class="orders-card__footer">
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Серийный номер</span>
+                                                <span class="orders-card__value">500FD341A43DX</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Дата покупки</span>
+                                                <span class="orders-card__value">15.09.2026</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Гарантия</span>
+                                                <span class="orders-card__value">до 15.09.2028</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Филиал</span>
+                                                <span class="orders-card__value">Новосибирск</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="orders-card">
+                                        <div class="orders-card__image">
+                                        <img src="/images/popular-product-1.png"
+                                        alt="Поступление вакуумного массажёра GRKL-2500">
+                                        </div>
+                                        <div class="orders-card__content">
+                                        <div class="orders-card__info">
+                                        <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                        <p>Вакуумный упаковщик</p>
+                                        </div>
+                                        <div class="orders-card__footer">
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Серийный номер</span>
+                                                <span class="orders-card__value">500FD341A43DX</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Дата покупки</span>
+                                                <span class="orders-card__value">15.09.2026</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Гарантия</span>
+                                                <span class="orders-card__value">до 15.09.2028</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Филиал</span>
+                                                <span class="orders-card__value">Новосибирск</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="orders-card">
+                                        <div class="orders-card__image">
+                                        <img src="/images/popular-product-1.png"
+                                        alt="Поступление вакуумного массажёра GRKL-2500">
+                                        </div>
+                                        <div class="orders-card__content">
+                                        <div class="orders-card__info">
+                                        <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                        <p>Вакуумный упаковщик</p>
+                                        </div>
+                                        <div class="orders-card__footer">
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Серийный номер</span>
+                                                <span class="orders-card__value">500FD341A43DX</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Дата покупки</span>
+                                                <span class="orders-card__value">15.09.2026</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Гарантия</span>
+                                                <span class="orders-card__value">до 15.09.2028</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Филиал</span>
+                                                <span class="orders-card__value">Новосибирск</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="orders-card">
+                                        <div class="orders-card__image">
+                                        <img src="/images/popular-product-1.png"
+                                        alt="Поступление вакуумного массажёра GRKL-2500">
+                                        </div>
+                                        <div class="orders-card__content">
+                                        <div class="orders-card__info">
+                                        <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                        <p>Вакуумный упаковщик</p>
+                                        </div>
+                                        <div class="orders-card__footer">
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Серийный номер</span>
+                                                <span class="orders-card__value">500FD341A43DX</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Дата покупки</span>
+                                                <span class="orders-card__value">15.09.2026</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Гарантия</span>
+                                                <span class="orders-card__value">до 15.09.2028</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Филиал</span>
+                                                <span class="orders-card__value">Новосибирск</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="orders-card">
+                                        <div class="orders-card__image">
+                                        <img src="/images/popular-product-1.png"
+                                        alt="Поступление вакуумного массажёра GRKL-2500">
+                                        </div>
+                                        <div class="orders-card__content">
+                                        <div class="orders-card__info">
+                                        <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                        <p>Вакуумный упаковщик</p>
+                                        </div>
+                                        <div class="orders-card__footer">
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Серийный номер</span>
+                                                <span class="orders-card__value">500FD341A43DX</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Дата покупки</span>
+                                                <span class="orders-card__value">15.09.2026</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Гарантия</span>
+                                                <span class="orders-card__value">до 15.09.2028</span>
+                                            </div>
+                                            <div class="orders-card__spec">
+                                                <span class="orders-card__label">Филиал</span>
+                                                <span class="orders-card__value">Новосибирск</span>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="orders-banner">
+                    <img src="/public/images/catalog/adversing-banner.png" alt="">
+                    <button>
+                        <img src="/public/images/icons/krestik.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    </main>
+
+    {{> _footer}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./account-script.js"></script>
+    </body>
+    </html>

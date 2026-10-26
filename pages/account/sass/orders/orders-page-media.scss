@@ -1,0 +1,263 @@
+@media (max-width: 1650px) {
+    .orders {
+        &-manager,
+        &-stats,
+        &-parts,
+        &-preview {
+            grid-column: 1 / -1;
+        }
+        &-manager {
+            &__contacts {
+                justify-content: flex-start;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .orders {
+        &-notifications{
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+@media (max-width: 768px)  {
+    .orders {
+        padding-bottom: 16px;
+        &-notifications {
+            padding: 16px;
+            &__list {
+                gap: 8px;
+            }
+            &__item {
+                gap: 8px;
+                padding-bottom: 8px;
+                flex-wrap: wrap;
+            }
+            &__icon {
+                order: 1;
+            }
+            &__text {
+                max-height: 36px;
+                order: 2;
+                a {
+                    font-size: 14px;
+                }
+            }
+            &__date {
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 8px;
+            order: 3;
+            width: 100%;
+            font-size: 12px;
+            line-height: 1.25;
+            }
+        }
+        &-stats {
+            flex-direction: column;
+            gap: 8px;
+            &__item {
+                flex-direction: row;
+                padding: 8px 16px;
+            }
+            &__content {
+                flex-direction: row;
+                .account-link {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            &__value {
+                font-size: 18px;
+            }
+        }
+        &-manager {
+            &__top {
+                .account-link {
+                    display: none;
+                }
+            }
+            &__body {
+                grid-template-columns: 80px minmax(0, 1fr);
+                padding: 16px;
+            }
+            &__content {
+                display: contents;
+            }
+            &__info {
+                align-self: center;
+            }
+            &__contacts {
+                grid-column: 1 / -1;
+                grid-row: 2;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            &__name {
+                font-size: 16px;
+            }
+            &__icon {
+                padding: 8px;
+            }
+            &__details {
+                span, a {
+                    font-size: 14px;
+                }
+            }
+            .account-link__mobile {
+                display: flex;
+                justify-content: center;
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        &-preview {
+            padding: 16px;
+            gap: 16px;
+
+            &__table {
+                thead tr,
+                tbody tr {
+                    display: grid;
+                    grid-template-columns: 47px 1fr auto;
+                    column-gap: 16px;
+                    align-items: center;
+                }
+                thead {
+                    tr {
+                        border-bottom: 1px solid #e1e1e5;
+                    }
+                    th {
+                        font-size: 12px;
+                        padding: 8px;
+                        background: transparent;
+                        border-radius: 0;
+                        &:nth-child(n + 4) {
+                            display: none;
+                        }
+                    }
+                }
+                tbody tr:nth-child(even) td {
+                    background: transparent;
+                }
+
+                tbody tr {
+                    row-gap: 8px;
+                    padding: 8px;
+                    border-bottom: 1px solid #e1e1e5;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+            &__status {
+                font-size: 14px;
+            }
+            &__row {
+                td {
+                    font-size: 14px;
+                    padding: 0;
+                }
+                td:nth-child(3) {
+                    text-align: end;
+                }
+                td:nth-child(5) {
+                    grid-column: 3;
+                    .btn {
+                        padding: 7px 17px;
+                    }
+                }
+            }
+        }
+        &-parts {
+            gap: 16px;
+            padding: 16px;
+            &__list {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .account-block__top {
+                gap: 8px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &__item {
+                gap: 8px;
+            }
+            &__name {
+                font-size: 14px;
+            }
+            &__price {
+                font-size: 18px;
+            }
+            &__btn {
+                padding: 7px;
+            }
+        }
+        &-products {
+            &__top {
+                justify-content: space-between;
+                .account-link {
+                    &__desc {
+                        display: none;
+                    }
+                    &__mobile {
+                        display: block;
+                    }
+                }
+                a {
+                    flex: none;
+                }
+            }
+        }
+        &-card {
+            &__slider {
+            .swiper {
+                overflow: visible;
+            }
+            }
+            &__swiper {
+                .swiper-slide {
+                    border-radius: 16px;
+                    padding: 16px;
+                }
+            }
+            &__image {
+                margin-bottom: 16px;
+            }
+            &__content {
+                gap: 16px;
+            }
+            &__info {
+                padding-bottom: 16px;
+            }
+            &__spec {
+                gap: 16px;
+            }
+            &__label,
+            &__value  {
+                font-size: 13px;
+            }
+            &__label {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &-banner {
+            height: 80.5px;
+            button {
+                display: none;
+            }
+        }
+    }
+}

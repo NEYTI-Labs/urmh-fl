@@ -1,0 +1,295 @@
+.loyalty {
+    padding-bottom: 80px;
+    &-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .account-balance {
+        gap: 32px;
+        align-items: center;
+        flex-direction: row;
+        &__points {
+            font-weight: 500;
+            font-size: 32px;
+        }
+        p {
+            line-height: 1.25;
+        }
+        &__btn {
+            margin-top: 16px;
+        }
+        &__banner {
+            width: 507px;
+            height: 647px;
+            top: -170%;
+        }
+    }
+    &-benefits {
+        display: flex;
+        gap: 16px;
+        &__item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            border-radius: 16px;
+            padding: 24px;
+            background: #fff;
+        }
+        &__text {
+            p {
+                font-size: 16px;
+            }
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+    &-main {
+        display: flex;
+        gap: 16px;
+    }
+    &-history {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        border-radius: 16px;
+        padding: 24px;
+        background: #fff;
+        .account-block__top {
+            align-items: flex-start;
+        }
+    }
+    &-sort {
+        position: relative;
+        width: 168px;
+        font-size: 16px;
+        line-height: 1.375;
+        color: #2C3336;
+
+        &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 113px;
+        border-radius: 16px;
+        min-width: 168px;
+        box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.01);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        }
+
+        &__current {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border: 1px solid #e1e1e5;
+        border-radius: 16px;
+        cursor: pointer;
+
+        svg {
+            transition: transform 0.3s;
+            width: 12px;
+            height: 8px;
+        }
+        }
+        &__options {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        background: #fff;
+        border-radius: 16px;
+
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+        }
+
+        &__option {
+        padding: 8px 16px;
+        line-height: 1.5;
+        cursor: pointer;
+        transition: background 0.15s;
+
+        &:hover {
+            background: #F3F4F6;
+        }
+        }
+
+        &.active {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.01), 0px 8px 20px rgba(0, 0, 0, 0.08);
+
+        .loyalty-sort__current {
+            border-radius: 16px 16px 0 0 ;
+            border-color: transparent;
+        }
+        .loyalty-sort__options {
+            max-height: 500px;
+            opacity: 1;
+
+            border-radius: 0 0 16px 16px;
+        }
+
+        svg {
+            transform: rotate(180deg);
+            color: #0071e3;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+        }
+    }
+    &-table {
+        border-collapse: collapse;
+        width: 100%;
+
+        th:nth-child(1) { width: 107px; }
+        th:nth-child(2) { width: 110px; } 
+        th:nth-child(3) { width: auto; }  
+        th:nth-child(4) { width: 65px; }   
+        th:nth-child(5) { width: 150px; }
+
+        th {
+            padding: 8px;
+            text-align: start;
+            font-weight: 400;
+            color: #70828a;
+            background: #e2e3e9;
+            &:first-child { 
+                border-radius: 8px 0 0 0; 
+                padding: 8px 8px 8px 16px ;
+            }
+            &:last-child  { border-radius: 0 8px 0 0; }
+        }
+
+        td { 
+            padding: 16px 8px;
+            white-space: nowrap; 
+            &:first-child { 
+                padding: 8px 8px 8px 16px ;
+            }
+        }
+        tbody tr:nth-child(even of :not([hidden])) td {
+            background: #f7f7f8;
+        }
+
+        &__muted { 
+            color: #70828a; 
+        }
+        &__order { 
+            font-weight: 500; 
+        }
+        &__points {
+            font-weight: 500;
+            &--plus  { color: #32a727; }
+            &--minus { color: #ff3249; }
+        }
+        &__status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            &--pending {
+                color: #e59d00;
+            }
+            &--shipping {
+                color: #70828a;
+            }
+        }
+    }
+    &-side {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 500px;
+    }
+    &-expire {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        border-radius: 16px;
+        padding: 24px;
+        background: #fff;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        &__value {
+            font-weight: 500;
+        }
+        &__date {
+            color: #70828a;
+        }
+        &__bar {
+            height: 16px;
+            border-radius: 16px;
+            background: #e2e3e9;
+
+            &::before {
+                content: "";
+                display: block;
+                height: 100%;
+                width: var(--progress);
+                border-radius: inherit;
+                background: #0071e3;
+            }
+        }
+    }
+    &-promo {
+        flex: 1;
+        display: flex;     
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        padding: 24px;
+        background: linear-gradient(161.01deg, #f0f1f4 25.83%, #c5c7d3 98.01%);
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        p, &__title, .btn {
+            z-index: 1;
+        }
+        p {
+            flex: 1;
+            max-width: 280px;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 27px;
+            max-width: 350px;
+        }
+        &__img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

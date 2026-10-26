@@ -37,7 +37,9 @@ export default defineConfig({
                 favoritesPage: resolve(__dirname, './pages/favorites/favorites-page.html'),
                 favoritesEmptyPage: resolve(__dirname, './pages/favorites/favoritesEmpty-page.html'),
                 comparisonPage: resolve(__dirname, './pages/comparison/comparison-page.html'),
-                comparisonEmptyPage: resolve(__dirname, './pages/comparison/comparisonEmpty-page.html')
+                comparisonEmptyPage: resolve(__dirname, './pages/comparison/comparisonEmpty-page.html'),
+                ordersPage: resolve(__dirname, './pages/account/orders-page.html'),
+                loyaltyPage: resolve(__dirname, './pages/account/loyalty-page.html')
             },
             output: {
                 entryFileNames: 'assets/[name].js',

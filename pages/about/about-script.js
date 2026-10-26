@@ -167,43 +167,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+document.querySelectorAll('.js-loyalty-sort').forEach(sort => {
+    const current = sort.querySelector('.loyalty-sort__current');
+    const value = sort.querySelector('.loyalty-sort__value');
+    const optionsWrap = sort.querySelector('.loyalty-sort__options');
+    const rows = document.querySelectorAll('.loyalty-table__row');
+    const empty = document.querySelector('.loyalty-history__empty');
 
-    document.querySelectorAll('.js-about-sort').forEach(sort => {
-        const current = sort.querySelector('.about-sort__current');
-        const value = sort.querySelector('.about-sort__value');
-        const optionsWrap = sort.querySelector('.about-sort__options');
+    let selectedOption = optionsWrap.querySelector('.loyalty-sort__option');
 
-        let selectedOption = optionsWrap.querySelector('.about-sort__option');
+    value.textContent = selectedOption.textContent.trim();
+    selectedOption.remove();
 
-        value.textContent = selectedOption.textContent;
-        selectedOption.remove();
+    const applyFilter = type => {
+        let visibleRows = 0;
 
-        current.addEventListener('click', () => {
-            sort.classList.toggle('active');
+        rows.forEach(row => {
+            const show = type === 'all' || row.dataset.type === type;
+
+            row.hidden = !show;
+
+            if (show) visibleRows++;
         });
 
-        optionsWrap.addEventListener('click', e => {
-            const option = e.target.closest('.about-sort__option');
-            if (!option) return;
-            optionsWrap.appendChild(selectedOption);
+        if (empty) {
+            empty.hidden = visibleRows > 0;
+        }
+    };
 
-            selectedOption = option;
-            value.textContent = option.textContent;
-            option.remove();
-
-            sort.classList.remove('active');
-
-            const country = option.dataset.value;
-            const maps = document.querySelectorAll('.about__locations_map-item');
-
-            maps.forEach(map => {
-                map.classList.remove('active');
-
-                if (map.dataset.map === country) {
-                    map.classList.add('active');
-            }
-            });
-        });
+    current.addEventListener('click', () => {
+        sort.classList.toggle('active');
     });
+
+    optionsWrap.addEventListener('click', e => {
+        const option = e.target.closest('.loyalty-sort__option');
+
+        if (!option) return;
+
+        optionsWrap.appendChild(selectedOption);
+
+        selectedOption = option;
+        value.textContent = option.textContent.trim();
+        option.remove();
+
+        sort.classList.remove('active');
+
+        applyFilter(option.dataset.value);
+    });
+
+    document.addEventListener('click', e => {
+        if (!sort.contains(e.target)) {
+            sort.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            sort.classList.remove('active');
+        }
+    });
+
+    applyFilter('all');
+});
 
 });

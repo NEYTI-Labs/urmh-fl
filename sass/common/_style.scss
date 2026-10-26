@@ -109,7 +109,7 @@ body {
   &.faq__container, &.assets__container, &.leasing__container,
   &.about__container, &.dealers__container, &.service__container, 
   &.search__container, &.searchempty__container, &.cart__container, 
-  &.cartEmpty__container {
+  &.cartEmpty__container, &.account__container{
     padding: 0 40px;
   }
 }
@@ -117,7 +117,8 @@ body {
 .main:not(
 .main_faq, .leasing-main, .about-main, 
 .dealers-main, .service-main, 
-.searchempty__main, .cartEmpty__main, .delivery__main, .auth__main, .favoritesEmpty__main, .comparison__main, .comparisonEmpty__main) {
+.searchempty__main, .cartEmpty__main, .delivery__main, .auth__main, .favoritesEmpty__main, .comparison__main,
+ .comparisonEmpty__main, .loyalty__main) {
     min-height: 100vh;
     overflow: hidden;
   // УБРАЛ ДЛЯ ТЕСТА ЕСЛИ ЧТО-ТО ПОЕДЕТ ВЕРНУТЬ ОБРАТНО
@@ -393,7 +394,7 @@ p{
   }
   h4:not(.assets__products_title, .assets__table_title, .about h4, .dealers h4, .service h4, .cartEmpty h4, .cart h4, .calculator__content-items h4, .result__content-calculation h4,
    .result__content-banner h4, .calculator__content-form h4, .solution__info_link h4, .solution__products_left h4, 
-   .solution__banner h4, .feedback-accordion h4, .auth h4, .favoritesEmpty__text h4){
+   .solution__banner h4, .feedback-accordion h4, .auth h4, .favoritesEmpty__text h4, .account h4, .loyalty h4, .orders-card__name){
     font-size: 14px;
   }
   .page__title {
@@ -408,7 +409,7 @@ p{
     gap: 8px;
   }
   p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p, 
-  .auth p, .favoritesEmpty__text p){
+  .auth p, .favoritesEmpty__text p, .account-manager__name){
     font-size: 14px;
   }
   .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .auth .btn, .comparison-info__head .btn) {

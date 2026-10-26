@@ -1,0 +1,250 @@
+.account {
+    padding-bottom: 80px;
+    &-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    &-sidebar {
+        min-width: 293px;
+    }
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        .page-heading {
+            margin-bottom: 0;
+        }
+    }
+    &-overlay {
+        display: none;
+    }
+    &-nav {
+        border-radius: 16px;
+        padding: 16px;
+        background: #fff;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__item--has-sub {
+            border-radius: 12px;
+            transition: background 0.3s ease;
+
+            &.is-open {
+                background: #f7f7f8;
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 12px;
+            background: transparent;
+            font-weight: 500;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #2c3336;
+            &_name {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex: 1;
+            }
+        }
+
+        &__arrow {
+            transition: transform 0.3s ease;
+            color: #70828a;
+        }
+
+        .is-open > &__toggle &__arrow {
+            transform: rotate(180deg);
+            color: #0071e3;
+        }
+
+        &__sub {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease;
+            .is-open > & {
+                grid-template-rows: 1fr;
+                .account-nav__sub-list {
+                    border-top: 1px solid #e1e1e5;
+                    margin: 8px;
+                    // padding: 8px;
+                }
+                .account-nav__sub-link {
+                    padding:8px;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        &__sub-list {
+            min-height: 0;  
+            overflow: hidden;
+        }
+
+        &__sub-link {
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #2c3336;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &.is-active {
+                color: #0071e3;
+            }
+        }
+        &__actions {
+            display: none;
+        }
+        &__close {
+            display: none;
+        }
+    }
+    &-balance {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        overflow: hidden;
+        align-items: flex-start;
+        position: relative;
+        border-radius: 16px;
+        padding: 24px;
+        background: linear-gradient(83.15deg, #c0c0c8 0%, #fff 100%);
+        &__top {
+            z-index: 5;
+            p {
+                color: #59686e;
+                a {
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: #2c3336;
+                }
+            }
+        }
+        &__points {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 130%;
+            z-index: 5;
+        }
+        &__btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 16px;
+            border: none;
+            padding: 12px 24px;
+            background: #2c3336;
+            color: #fff;
+            z-index: 5;
+            transition: all 0.3s ease;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        &__notes {
+            display: flex;
+            gap: 16px;
+            z-index: 5;
+        }
+        &__note {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 16px;
+            padding: 16px;
+            background: #e4e4e7;
+            max-width: 188px;
+            &-value {
+                font-weight: 500;
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+                color: #59686e;
+            }
+            &-top {
+                display: flex;
+                flex-direction: column;
+            }
+            &-data {
+                font-weight: 600;
+                font-size: 14px;
+                color: #59686e;
+            }
+            &-icon {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+            }
+            &:last-child {
+                background: transparent;
+                border: 1px dashed #59686e;
+                max-width: 262px;
+            }
+        }
+        &__banner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            img {
+                border-radius: 16px;
+                height: 100%;
+            }
+        }
+    }
+    &-block__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: #e2e3e9;
+        padding: 12px;
+        img {
+            max-width: none;
+        }
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0071e3;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        svg {
+            width: 8px;
+            height: 15px;
+        }
+        &:hover {
+            color: #1087fe;
+        }
+        &__mobile {
+            display: none;
+        }
+    }
+}

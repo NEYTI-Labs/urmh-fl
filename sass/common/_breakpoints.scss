@@ -1,0 +1,11 @@
+// Общие контрольные точки.
+// $mobile и $tablet продублированы в pages/account/account-script.js
+// (MOBILE_WIDTH / TABLET_WIDTH) — менять одновременно.
+$mobile-small: 400px;
+$mobile: 768px;
+$table-cards: 940px;
+$tablet: 1024px;
+$desktop-small: 1320px;
+$desktop: 1400px;
+$desktop-large: 1570px;
+$desktop-wide: 1650px;

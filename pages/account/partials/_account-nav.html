@@ -1,0 +1,131 @@
+<div class="account-overlay"></div>
+<div class="account-sidebar">
+    <nav class="account-nav" id="account-nav">
+        <button class="account-nav__close" type="button" aria-label="Закрыть меню">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z"
+                    fill="#70828A" />
+            </svg>
+        </button>
+
+        <ul class="account-nav__list">
+            <li class="account-nav__item">
+                <a class="account-nav__link" href="#">
+                    <img src="/images/account/icons/accountMenu1.png" alt="">
+                    <span>Дешборд</span>
+                </a>
+            </li>
+
+            <li class="account-nav__item account-nav__item--has-sub{{#if sectionOrders}} is-open{{/if}}">
+                <button class="account-nav__link account-nav__toggle" type="button"
+                    aria-expanded="{{#if sectionOrders}}true{{else}}false{{/if}}">
+                    <div class="account-nav__link_name">
+                        <img src="/images/account/icons/stats-1.png" alt="">
+                        <span>Заказы</span>
+                    </div>
+                    <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                    </svg>
+                </button>
+
+                <div class="account-nav__sub">
+                    <ul class="account-nav__sub-list">
+                        <li>
+                            <a class="account-nav__sub-link{{#if sectionOrders}} is-active{{/if}}" href="orders-page.html"
+                                {{#if sectionOrders}}aria-current="page"{{/if}}>Текущие заказы</a>
+                            </li>
+                            <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="account-nav__item account-nav__item--has-sub">
+                    <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                        <div class="account-nav__link_name">
+                            <img src="/images/account/icons/accountMenu4.png" alt="">
+                            <span>Документы</span>
+                        </div>
+                        <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                        </svg>
+                    </button>
+
+                    <div class="account-nav__sub">
+                        <ul class="account-nav__sub-list">
+                            <li><a class="account-nav__sub-link" href="#">Счета и оплаты</a></li>
+                            <li><a class="account-nav__sub-link" href="#">Акты и накладные</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="account-nav__item account-nav__item--has-sub{{#if sectionLoyalty}} is-open{{/if}}">
+                    <button class="account-nav__link account-nav__toggle" type="button"
+                        aria-expanded="{{#if sectionLoyalty}}true{{else}}false{{/if}}">
+                        <div class="account-nav__link_name">
+                            <img src="/images/account/icons/accountMenu5.png" alt="">
+                            <span>Программа лояльности</span>
+                        </div>
+                        <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                        </svg>
+                    </button>
+
+                    <div class="account-nav__sub">
+                        <ul class="account-nav__sub-list">
+                            <li>
+                                <a class="account-nav__sub-link{{#if sectionLoyalty}} is-active{{/if}}" href="loyalty-page.html"
+                                    {{#if sectionLoyalty}}aria-current="page"{{/if}}>Баллы и история</a>
+                                </li>
+                                <li><a class="account-nav__sub-link" href="#">Правила программы</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="account-nav__item account-nav__item--has-sub">
+                        <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                            <div class="account-nav__link_name">
+                                <img src="/images/account/icons/accountMenu6.png" alt="">
+                                <span>Компания</span>
+                            </div>
+                            <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                            </svg>
+                        </button>
+
+                        <div class="account-nav__sub">
+                            <ul class="account-nav__sub-list">
+                                <li><a class="account-nav__sub-link" href="#">Реквизиты</a></li>
+                                <li><a class="account-nav__sub-link" href="#">Сотрудники</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="account-nav__item account-nav__item--has-sub">
+                        <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
+                            <div class="account-nav__link_name">
+                                <img src="/images/account/icons/accountMenu7.png" alt="">
+                                <span>Настройки</span>
+                            </div>
+                            <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                            </svg>
+                        </button>
+
+                        <div class="account-nav__sub">
+                            <ul class="account-nav__sub-list">
+                                <li><a class="account-nav__sub-link" href="#">Профиль</a></li>
+                                <li><a class="account-nav__sub-link" href="#">Уведомления</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="account-nav__item">
+                        <a class="account-nav__link" href="#">
+                            <img src="/images/account/icons/accountMenu8.png" alt="">
+                            <span>Выйти из кабинета</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>

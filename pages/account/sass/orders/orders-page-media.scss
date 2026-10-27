@@ -1,4 +1,6 @@
-@media (max-width: 1650px) {
+@use "common/breakpoints" as bp;
+
+@media (max-width: bp.$desktop-wide) {
     .orders {
         &-manager,
         &-stats,
@@ -15,15 +17,18 @@
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: bp.$desktop) {
     .orders {
         &-notifications{
+            grid-column: 1 / -1;
+        }
+        .account-balance {
             grid-column: 1 / -1;
         }
     }
 }
 
-@media (max-width: 768px)  {
+@media (max-width: bp.$mobile)  {
     .orders {
         padding-bottom: 16px;
         &-notifications {

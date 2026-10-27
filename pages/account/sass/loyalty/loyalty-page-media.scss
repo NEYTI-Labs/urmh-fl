@@ -1,4 +1,6 @@
-@media (max-width: 1570px) {
+@use "common/breakpoints" as bp;
+
+@media (max-width: bp.$desktop-large) {
     .loyalty {
         .account-balance {
             align-items: flex-start;
@@ -28,7 +30,7 @@
     }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: bp.$desktop-small) {
     .loyalty {
         .account-balance {
             &__banner {
@@ -44,7 +46,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: bp.$tablet) {
     .loyalty {
         .account-balance {
             align-items: center;
@@ -72,7 +74,7 @@
     }
 }
 
-@media (max-width: 940px) {
+@media (max-width: bp.$table-cards) {
     .loyalty {
         .account-balance {
             align-items: flex-start;
@@ -123,18 +125,18 @@
                 &__status {
                     min-width: 106px;
                 }
-                tbody tr:nth-child(odd of :not([hidden])) {
+                tbody tr {
                     background: #fff;
                 }
 
-                tbody tr:nth-child(even of :not([hidden])) {
+                tbody tr.is-even {
                     background: #f7f7f8;
                 }
         }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: bp.$mobile) {
     .loyalty {
         padding-bottom: 16px;
         &-content {
@@ -229,7 +231,7 @@
     }
 }
 
-@media (max-width: 400px)  {
+@media (max-width: bp.$mobile-small)  {
     .loyalty {
         &-promo {
             min-height: 280px;

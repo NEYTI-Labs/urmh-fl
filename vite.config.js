@@ -4,6 +4,14 @@ import handlebars from 'vite-plugin-handlebars';
 
 
 export default defineConfig({
+    css: {
+        preprocessorOptions: {
+            scss: {
+                // чтобы из любой папки подключать как @use "common/breakpoints"
+                includePaths: [resolve(__dirname, 'sass')],
+            },
+        },
+    },
     build: {
         rollupOptions: {
             input: {
@@ -28,7 +36,6 @@ export default defineConfig({
                 SolutionPage: resolve(__dirname, './pages/solution/solution-page.html'),
                 reviewsPage: resolve(__dirname, './pages/reviews/reviews-page.html'),
                 deliveryPage: resolve(__dirname, './pages/delivery/delivery-page.html'),
-                solutionCatalogPage: resolve(__dirname, './pages/solution/solutionCatalog-page.html'),
                 solutionCatalogPage: resolve(__dirname, './pages/solution/solutionCatalog-page.html'),
                 loginPage: resolve(__dirname, './pages/auth/login-page.html'),
                 registerPage: resolve(__dirname, './pages/auth/register-page.html'),
@@ -55,7 +62,10 @@ export default defineConfig({
     },
     plugins: [
         handlebars({
-            partialDirectory: resolve(__dirname, 'partials'),
+            partialDirectory: [
+                resolve(__dirname, 'partials'),
+                resolve(__dirname, 'pages/account/partials'),
+            ],
         }),
     ],
 })

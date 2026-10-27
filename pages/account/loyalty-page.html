@@ -1,408 +1,291 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./sass/loyalty/index.scss" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HMRU</title>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="./sass/loyalty/index.scss" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HMRU</title>
     </head>
     <body>
-    {{> _header}}
+        {{> _header}}
 
-    <main class="main page-content loyalty__main">
-    <div class="container account__container">
-    <ol class="kroshki">
-        <li>
-        <a href="/public" title="Главная"> Главная </a>
-        </li>
-    </ol>
-    <section class="loyalty">
-        <div class="account-top">
-            <h1 class="page-heading">Личный кабинет</h1>
-            <button type="button" class="account-nav__actions">
-                <img src="/public/images/icons/menu.png" alt="">
-            </button>
-        </div>
-        <div class="account-wrapper">
-            <div class="account-overlay"></div>
-            <div class="account-sidebar">
-                <nav class="account-nav">
-                <button class="account-nav__close" type="button" aria-label="Закрыть меню">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.38462 7L14 12.6154L12.6154 14L7 8.38462L1.38462 14L0 12.6154L5.61538 7L0 1.38462L1.38462 0L7 5.61538L12.6154 0L14 1.38462L8.38462 7Z"
-                            fill="#70828A" />
-                    </svg>
-                </button>
-                    <ul class="account-nav__list">
-                        <li class="account-nav__item">
-                            <a class="account-nav__link" href="#">
-                                <img src="/public/images/icons/accountMenu1.png" alt="">
-                                <span>Дешборд</span>
-                            </a>
-                        </li>
-                        <li class="account-nav__item account-nav__item--has-sub">
-                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="true">
-                                <div class="account-nav__link_name">
-                                    <img src="/public/images/icons/stats-1.png" alt="">
-                                    <span>Заказы</span>
-                                </div>
-                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
-                                </svg>
-                            </button>
-
-                            <div class="account-nav__sub">
-                                <ul class="account-nav__sub-list">
-                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
-                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="account-nav__item account-nav__item--has-sub">
-                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
-                                <div class="account-nav__link_name">
-                                <img src="/public/images/icons/accountMenu4.png" alt="">
-                                <span>Документы</span>
-                                </div>
-
-                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
-                                </svg>
-                            </button>
-                            <div class="account-nav__sub">
-                                <ul class="account-nav__sub-list">
-                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
-                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="account-nav__item account-nav__item--has-sub is-open">
-                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
-                                <div class="account-nav__link_name">
-                                <img src="/public/images/icons/accountMenu5.png" alt="">
-                                <span>Программа лояльности</span>
-                                </div>
-                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
-                                </svg>
-                            </button>
-                            <div class="account-nav__sub">
-                                <ul class="account-nav__sub-list">
-                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
-                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="account-nav__item account-nav__item--has-sub">
-                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
-                                <div class="account-nav__link_name">
-                                <img src="/public/images/icons/accountMenu6.png" alt="">
-                                <span>Компания</span>
-                                </div>
-                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
-                                </svg>
-                            </button>
-                            <div class="account-nav__sub">
-                                <ul class="account-nav__sub-list">
-                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
-                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="account-nav__item account-nav__item--has-sub">
-                            <button class="account-nav__link account-nav__toggle" type="button" aria-expanded="false">
-                                <div class="account-nav__link_name">
-                                <img src="/public/images/icons/accountMenu7.png" alt="">
-                                <span>Настройки</span>
-                                </div>
-                                <svg class="account-nav__arrow" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
-                                </svg>
-                            </button>
-                            <div class="account-nav__sub">
-                                <ul class="account-nav__sub-list">
-                                    <li><a class="account-nav__sub-link is-active" href="#">Текущие заказы</a></li>
-                                    <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="account-nav__item">
-                            <a class="account-nav__link" href="#">
-                                <img src="/public/images/icons/accountMenu8.png" alt="">
-                                <span>Выйти из кабинета</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="loyalty-content">
-                <div class="account-balance">
-                    <div class="account-balance__top">
-                        <span class="account-balance__points">4850 баллов</span>
-                        <p>Доступно для списания</p>
-                        <button class="account-balance__btn">
-                            Потратить баллы
-                            <img src="/public/images/icons/balance.png" alt="">
+        <main class="main page-content loyalty__main">
+            <div class="container account__container">
+                <ol class="kroshki">
+                    <li>
+                        <a href="/public" title="Главная"> Главная </a>
+                    </li>
+                </ol>
+                <section class="loyalty">
+                    <div class="account-top">
+                        <h1 class="page-heading">Личный кабинет</h1>
+                        <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
+                            aria-expanded="false" aria-controls="account-nav">
+                            <img src="/images/account/icons/menu.png" alt="">
                         </button>
                     </div>
-                    <div class="account-balance__notes">
-                        <div class="account-balance__note">
-                            <span class="account-balance__note-value">+1250 баллов</span>
-                            <p>Будет зачислено за следующий заказ</p>
-                        </div>
-                        <div class="account-balance__note">
-                            <div class="account-balance__note-top">
-                                <span class="account-balance__note-value">4850 баллов</span>
-                                <span class="account-balance__note-data">до 23.12.2026</span>
-                            </div>
-                            <p>сгорят, если не использовать</p>
-                            <div class="account-balance__note-icon">
-                                <img src="/public/images/icons/balance-2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account-balance__banner">
-                        <img src="/public/images/balance-banner.png" alt="">
-                    </div>
-                </div>
-                <ul class="loyalty-benefits">
-                    <li class="loyalty-benefits__item">
-                        <span class="account-icon">
-                            <img src="/public/images/icons/account3.png" alt="">
-                        </span>
-                        <div class="loyalty-benefits__text">
-                            <h3 class="loyalty-benefits__title">Копите баллы</h3>
-                            <p>За покупки оборудования и материалов</p>
-                        </div>
-                    </li>
-                    <li class="loyalty-benefits__item">
-                        <span class="account-icon">
-                            <img src="/public/images/icons/account2.png" alt="">
-                        </span>
-                        <div class="loyalty-benefits__text">
-                            <h3 class="loyalty-benefits__title">Используйте баллы</h3>
-                            <p>При оформлении следующих заказов</p>
-                        </div>
-                    </li>
-                    <li class="loyalty-benefits__item">
-                        <span class="account-icon">
-                            <img src="/public/images/icons/accountMenu5.png" alt="">
-                        </span>
-                        <div class="loyalty-benefits__text">
-                            <h3 class="loyalty-benefits__title">Снижайте затраты</h3>
-                            <p>Больше покупок - больше выгода</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="loyalty-main">
-
-                    <div  class="loyalty-history">
-                        <div class="account-block__top">
-                            <h4 class="loyalty-history__title">История начисления и списания</h4>
-                            <div class="loyalty-sort js-loyalty-sort">
-                                <div class="loyalty-sort__shadow"></div>
-                                <div class="loyalty-sort__current">
-                                    <span class="loyalty-sort__value">Все операции</span>
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 0.000117302L5.71 4.30012L1.42 0.000117302L0 1.42012L5.71 7.12012L11.42 1.42012L10 0.000117302Z" fill="currentColor" />
-                                    </svg>
+                    <div class="account-wrapper">
+                        {{> _account-nav sectionLoyalty=true}}
+                        <div class="loyalty-content">
+                            <div class="account-balance">
+                                <div class="account-balance__top">
+                                    <span class="account-balance__points">4850 баллов</span>
+                                    <p>Доступно для списания</p>
+                                    <button class="account-balance__btn">
+                                        Потратить баллы
+                                        <img src="/images/account/icons/balance.png" alt="">
+                                    </button>
                                 </div>
-
-                                <div class="loyalty-sort__options">
-                                    <div class="loyalty-sort__option" data-value="all">Все операции</div>
-                                    <div class="loyalty-sort__option" data-value="accrual">Начисления</div>
-                                    <div class="loyalty-sort__option" data-value="writeoff">Списания</div>
+                                <div class="account-balance__notes">
+                                    <div class="account-balance__note">
+                                        <span class="account-balance__note-value">+1250 баллов</span>
+                                        <p>Будет зачислено за следующий заказ</p>
+                                    </div>
+                                    <div class="account-balance__note">
+                                        <div class="account-balance__note-top">
+                                            <span class="account-balance__note-value">4850 баллов</span>
+                                            <span class="account-balance__note-data">до 23.12.2026</span>
+                                        </div>
+                                        <p>сгорят, если не использовать</p>
+                                        <div class="account-balance__note-icon">
+                                            <img src="/images/account/icons/balance-2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-balance__banner">
+                                    <img src="/images/account/balance-banner.png" alt="">
                                 </div>
                             </div>
-                        </div>
-
-                        <table class="loyalty-table">
-                            <thead>
-                                <tr>
-                                    <th>Дата</th>
-                                    <th>Операция</th>
-                                    <th>Заказ / № документа</th>
-                                    <th>Баллы</th>
-                                    <th>Статус</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="loyalty-table__row" data-type="accrual">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Начислено
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--pending">
-                                            <img src="/public/images/icons/table3.png" alt="">
-                                            Обработка
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="accrual">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Начислено
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="writeoff">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--minus">-5400</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Списано
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="accrual">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Начислено
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--pending">
-                                            <img src="/public/images/icons/table3.png" alt="">
-                                            Обработка
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="accrual">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Начислено
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="writeoff">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--minus">-5400</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Списано
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr class="loyalty-table__row" data-type="accrual">
-                                    <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
-                                    <td class="loyalty-table__muted">Начисление</td>
-                                    <td class="loyalty-table__order">Заказ №2311-125455</td>
-                                    <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
-                                    <td>
-                                        <span class="loyalty-table__status loyalty-table__status--shipping">
-                                            <img src="/public/images/icons/table2.png" alt="">
-                                            Начислено
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div  class="loyalty-side">
-                        <div class="loyalty-expire">
-                            <div class="account-block__top">
-                                <h4 class="loyalty-expire__title">Сроки сгорания баллов</h4>
-                                <a href="" class="loyalty-expire__info" type="button" aria-label="Подробнее">
-                                    <img src="/public/images/icons/important.png" alt="">
-                                </a>
-                            </div>
-
-                            <ul class="loyalty-expire__list">
-                                <li class="loyalty-expire__item">
-                                    <div class="loyalty-expire__row">
-                                        <span class="loyalty-expire__value">4600 баллов</span>
-                                        <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                            <ul class="loyalty-benefits">
+                                <li class="loyalty-benefits__item">
+                                    <span class="account-icon">
+                                        <img src="/images/account/icons/account3.png" alt="">
+                                    </span>
+                                    <div class="loyalty-benefits__text">
+                                        <h3 class="loyalty-benefits__title">Копите баллы</h3>
+                                        <p>За покупки оборудования и материалов</p>
                                     </div>
-                                    <div class="loyalty-expire__bar" style="--progress: 20%"></div>
                                 </li>
-                                <li class="loyalty-expire__item">
-                                    <div class="loyalty-expire__row">
-                                        <span class="loyalty-expire__value">1200 баллов</span>
-                                        <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                                <li class="loyalty-benefits__item">
+                                    <span class="account-icon">
+                                        <img src="/images/account/icons/account2.png" alt="">
+                                    </span>
+                                    <div class="loyalty-benefits__text">
+                                        <h3 class="loyalty-benefits__title">Используйте баллы</h3>
+                                        <p>При оформлении следующих заказов</p>
                                     </div>
-                                    <div class="loyalty-expire__bar" style="--progress: 70%"></div>
                                 </li>
-                                <li class="loyalty-expire__item">
-                                    <div class="loyalty-expire__row">
-                                        <span class="loyalty-expire__value">400 баллов</span>
-                                        <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                                <li class="loyalty-benefits__item">
+                                    <span class="account-icon">
+                                        <img src="/images/account/icons/accountMenu5.png" alt="">
+                                    </span>
+                                    <div class="loyalty-benefits__text">
+                                        <h3 class="loyalty-benefits__title">Снижайте затраты</h3>
+                                        <p>Больше покупок - больше выгода</p>
                                     </div>
-                                    <div class="loyalty-expire__bar" style="--progress: 50%"></div>
                                 </li>
                             </ul>
-                        </div>
+                            <div class="loyalty-main">
 
-                        <div class="loyalty-promo">
-                            <div class="loyalty-promo__content">
-                                <h4 class="loyalty-promo__title">Выбирайте оборудование и расходные материалы</h4>
-                                <p>Используйте накопленные баллы для оплаты следующих заказов</p>
-                                <a class="btn" href="#">Перейти в каталог</a>
+                                <div class="loyalty-history">
+                                    <div class="account-block__top">
+                                        <h4 class="loyalty-history__title">История начисления и списания</h4>
+                                        <div class="loyalty-sort js-loyalty-sort">
+                                            <div class="loyalty-sort__current" role="combobox" tabindex="0" aria-haspopup="listbox"
+                                                aria-expanded="false" aria-controls="loyalty-sort-options" aria-label="Фильтр операций">
+                                                <span class="loyalty-sort__value">Все операции</span>
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 0.000117302L5.71 4.30012L1.42 0.000117302L0 1.42012L5.71 7.12012L11.42 1.42012L10 0.000117302Z" fill="currentColor" />
+                                                </svg>
+                                            </div>
+
+                                            <div class="loyalty-sort__options" id="loyalty-sort-options" role="listbox">
+                                                <div class="loyalty-sort__option" role="option" tabindex="-1" aria-selected="false" data-value="all">Все операции</div>
+                                                <div class="loyalty-sort__option" role="option" tabindex="-1" aria-selected="false" data-value="accrual">Начисления</div>
+                                                <div class="loyalty-sort__option" role="option" tabindex="-1" aria-selected="false" data-value="writeoff">Списания</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table class="loyalty-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Дата</th>
+                                                <th scope="col">Операция</th>
+                                                <th scope="col">Заказ / № документа</th>
+                                                <th scope="col">Баллы</th>
+                                                <th scope="col">Статус</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Начислено
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--pending">
+                                                        <img src="/images/account/icons/table3.png" alt="">
+                                                        Обработка
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Начислено
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="writeoff">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Списание</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--minus">-5400</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Списано
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Начислено
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+1200</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--pending">
+                                                        <img src="/images/account/icons/table3.png" alt="">
+                                                        Обработка
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Начислено
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="writeoff">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Списание</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--minus">-5400</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Списано
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="loyalty-table__row" data-type="accrual">
+                                                <td class="loyalty-table__muted"><time datetime="2026-09-15">15.09.2026</time></td>
+                                                <td class="loyalty-table__muted">Начисление</td>
+                                                <td class="loyalty-table__order">Заказ №2311-125455</td>
+                                                <td class="loyalty-table__points loyalty-table__points--plus">+540</td>
+                                                <td>
+                                                    <span class="loyalty-table__status loyalty-table__status--shipping">
+                                                        <img src="/images/account/icons/table2.png" alt="">
+                                                        Начислено
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div  class="loyalty-side">
+                                    <div class="loyalty-expire">
+                                        <div class="account-block__top">
+                                            <h4 class="loyalty-expire__title">Сроки сгорания баллов</h4>
+                                            <a href="" class="loyalty-expire__info" type="button" aria-label="Подробнее">
+                                                <img src="/images/account/icons/important.png" alt="">
+                                            </a>
+                                        </div>
+
+                                        <ul class="loyalty-expire__list">
+                                            <li class="loyalty-expire__item">
+                                                <div class="loyalty-expire__row">
+                                                    <span class="loyalty-expire__value">4600 баллов</span>
+                                                    <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                                                </div>
+                                                <div class="loyalty-expire__bar" style="--progress: 20%"></div>
+                                            </li>
+                                            <li class="loyalty-expire__item">
+                                                <div class="loyalty-expire__row">
+                                                    <span class="loyalty-expire__value">1200 баллов</span>
+                                                    <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                                                </div>
+                                                <div class="loyalty-expire__bar" style="--progress: 70%"></div>
+                                            </li>
+                                            <li class="loyalty-expire__item">
+                                                <div class="loyalty-expire__row">
+                                                    <span class="loyalty-expire__value">400 баллов</span>
+                                                    <span class="loyalty-expire__date">до <time datetime="2026-10-06">06.10.2026</time></span>
+                                                </div>
+                                                <div class="loyalty-expire__bar" style="--progress: 50%"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="loyalty-promo">
+                                        <div class="loyalty-promo__content">
+                                            <h4 class="loyalty-promo__title">Выбирайте оборудование и расходные материалы</h4>
+                                            <p>Используйте накопленные баллы для оплаты следующих заказов</p>
+                                            <a class="btn" href="#">Перейти в каталог</a>
+                                        </div>
+                                        <img class="loyalty-promo__img" src="/images/account/loyalty-promo.png" alt="">
+                                    </div>
+                                </div>
+
                             </div>
-                            <img class="loyalty-promo__img" src="/public/images/loyalty-promo.png" alt="">
                         </div>
                     </div>
-
-                </div>
+                </section>
             </div>
-        </div>
-    </section>
-    </div>
-    </main>
+        </main>
 
-    {{> _footer}}
+        {{> _footer}}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="./account-script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="./account-script.js"></script>
     </body>
-    </html>
+</html>

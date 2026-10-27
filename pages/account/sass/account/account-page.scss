@@ -1,5 +1,9 @@
+// блокировка прокрутки под мобильным меню кабинета
+body.account-locked {
+    overflow: hidden;
+}
+
 .account {
-    padding-bottom: 80px;
     &-wrapper {
         display: flex;
         align-items: flex-start;

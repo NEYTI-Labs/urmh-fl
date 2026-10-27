@@ -1,14 +1,6 @@
+@use "common/breakpoints" as bp;
 
-
-@media (max-width: 1400px) {
-    .account {
-        &-balance{
-            grid-column: 1 / -1;
-        }
-    }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: bp.$tablet) {
     .account {
         &-sidebar {
             position: relative;
@@ -70,16 +62,10 @@
     }
 }
 
-@media (max-width: 768px)  {
+@media (max-width: bp.$mobile)  {
     .account {
-        padding-bottom: 16px;
         &-top {
             margin-bottom: 16px;
-            .account-nav__actions {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
         }
         &-block__top h4{
             line-height: 1.28;

@@ -81,6 +81,9 @@
                 justify-content: center;
             }
         }
+        &-block__top h4{
+            line-height: 1.28;
+        }
         &-wrapper {
             display: block;
         }
@@ -137,6 +140,11 @@
         &-balance {
             gap: 32px;
             padding: 16px;
+            &__top {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
             &__points {
                 font-weight: 500;
                 font-size: 24px;

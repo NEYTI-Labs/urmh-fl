@@ -162,6 +162,9 @@
                 padding: 8px 16px;
             }
             &__title {
+                line-height: 1.36;
+            }
+            &__title {
                 font-size: 14px;
             }
         }
@@ -229,15 +232,16 @@
 @media (max-width: 400px)  {
     .loyalty {
         &-promo {
+            min-height: 280px;
             p {
-                max-width: 180px;
+                max-width: 170px;
             }
             &__img {
                 position: absolute;
                 bottom: 0px;
                 right: 0px;
-                width: 222px;
-                height: 222px;
+                width: 242px;
+                height: 242px;
             }
         }
     }

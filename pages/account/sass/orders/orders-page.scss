@@ -161,12 +161,37 @@
     &-preview {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 20px;
         border-radius: 16px;
         padding: 24px;
         background: #fff;
+        &__scroll {
+            min-width: 0;
+            max-height: 350px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 3px;
+                height: 3px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: rgba(227, 227, 232, 0.47);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #d2d2d7;
+                border-radius: 2px;
+            }
+        }
         &__table {
+            width: 100%;
             border-collapse: collapse;
+            thead th {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+            }
             th {
             padding: 7.6px;
             text-align: start;
@@ -228,15 +253,20 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 16px;
+            height: 100%;
         }
         &__image {
-            flex: 1;
+            aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 20px;
             padding: 16px;
             background: #f7f7f8;
+            img {
+                // убирает белую подложку фотографии на сером фоне
+                mix-blend-mode: darken;
+            }
         }
         &__item {
             display: flex;
@@ -252,6 +282,8 @@
             -webkit-line-clamp: 3;
         }
         &__bottom {
+            // цена всегда у нижнего края карточки, даже если название короче
+            margin-top: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;

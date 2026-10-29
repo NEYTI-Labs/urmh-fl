@@ -128,6 +128,12 @@
             padding: 16px;
             gap: 16px;
 
+            // на мобильной раскладке карточка и так во всю ширину,
+            // вложенный скролл тут только мешает
+            &__scroll {
+                max-height: none;
+            }
+
             &__table {
                 thead tr,
                 tbody tr {
@@ -141,6 +147,7 @@
                         border-bottom: 1px solid #e1e1e5;
                     }
                     th {
+                        position: static;
                         font-size: 12px;
                         padding: 8px;
                         background: transparent;

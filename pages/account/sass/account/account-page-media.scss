@@ -9,6 +9,7 @@
         }
 
         &-nav {
+            --nav-expanded-width: 293px;
             position: absolute;
             top: 0;
             left: 0;
@@ -19,30 +20,44 @@
             transition:
                 width 0.4s ease,
                 box-shadow 0.4s ease;
-            &__link_name span,
-            &__arrow {
+
+            // содержимое всегда шириной раскрытого меню: при сворачивании оно
+            // не переливается влево, а просто обрезается панелью
+            &__list {
+                width: calc(var(--nav-expanded-width) - 32px);
+            }
+
+            &__link span,
+            &__arrow,
+            &__sub-link {
                 opacity: 0;
-                transition: opacity 0.15s ease; 
+                transition: opacity 0.15s ease;
             }
 
             &.is-expanded {
-                width: 293px;                   
+                width: var(--nav-expanded-width);
                 box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.01);
 
-                .account-nav__link_name span,
-                .account-nav__arrow {
+                .account-nav__link span,
+                .account-nav__arrow,
+                .account-nav__sub-link {
                     opacity: 1;
                     transition: opacity 0.25s ease 0.15s; 
                 }
                 .account-nav__close {
-                        position: absolute;
-                        right: 16px;
-                        top: 16px;
-                        display: flex;
-                        background: transparent;
-                        border:  none;
-                        margin-left: auto
-                    }
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    padding: 0;
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
             }
             &:not(.is-expanded) {
                 .account-nav__sub {
@@ -50,11 +65,33 @@
                 }
 
                 .account-nav__item--has-sub.is-open {
-                    // background: #f7f7f8;
+                    // фон во всю ширину пункта уезжал бы за край свёрнутой
+                    // панели, поэтому подсвечиваем только иконку
+                    background: transparent;
+
+                    > .account-nav__toggle {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            aspect-ratio: 1;
+                            border-radius: 12px;
+                            background: #f7f7f8;
+                        }
+
+                        > * {
+                            position: relative;
+                        }
+                    }
 
                     .account-nav__sub-list {
                         border-top: none;
                         padding: 0;
+                        margin: 0;
                     }
                 }
             }
@@ -105,6 +142,11 @@
                 opacity 0.3s ease,
                 transform 0.3s ease,
                 visibility 0.3s ease;
+
+            // на мобильной модалке ширину не фиксируем — она тянется по экрану
+            &__list {
+                width: auto;
+            }
 
             &.is-expanded {
                 width: calc(100% - 32px);

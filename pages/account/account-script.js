@@ -80,11 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
         closeButton?.addEventListener('click', closeMenu);
         overlay?.addEventListener('click', closeMenu);
 
+        const closeSection = btn => {
+            btn.closest('.account-nav__item').classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+        };
+
         navToggles.forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.closest('.account-nav__item');
-                const isOpen = item.classList.toggle('is-open');
-                btn.setAttribute('aria-expanded', String(isOpen));
+
+                if (item.classList.contains('is-open')) return;
+
+                item.classList.add('is-open');
+                btn.setAttribute('aria-expanded', 'true');
+
+                navToggles.forEach(other => other !== btn && closeSection(other));
             });
         });
 

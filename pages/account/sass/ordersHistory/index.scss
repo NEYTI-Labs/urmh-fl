@@ -1,0 +1,8 @@
+@use "common/breakpoints" as bp;
+
+@use "./ordersHistory-page.scss";
+@use "./ordersHistory-page-media.scss";
+
+//account-style
+@use "../account/account-page.scss";
+@use "../account/account-page-media.scss" with ($nav-collapse: bp.$tablet-wide);

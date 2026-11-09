@@ -1,6 +1,6 @@
 <div class="account-overlay"></div>
 <div class="account-sidebar">
-    <nav class="account-nav" id="account-nav">
+    <nav class="account-nav" id="account-nav" data-nav-collapse="{{navCollapse}}">
         <button class="account-nav__close" type="button" aria-label="Закрыть меню">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -32,10 +32,13 @@
                 <div class="account-nav__sub">
                     <ul class="account-nav__sub-list">
                         <li>
-                            <a class="account-nav__sub-link{{#if sectionOrders}} is-active{{/if}}" href="orders-page.html"
-                                {{#if sectionOrders}}aria-current="page"{{/if}}>Текущие заказы</a>
+                                <a class="account-nav__sub-link{{#if pageOrders}} is-active{{/if}}" href="orders-page.html"
+                                    {{#if pageOrders}}aria-current="page"{{/if}}>Текущие заказы</a>
                             </li>
-                            <li><a class="account-nav__sub-link" href="#">История заказов</a></li>
+                            <li>
+                                <a class="account-nav__sub-link{{#if pageOrdersHistory}} is-active{{/if}}" href="ordersHistory-page.html"
+                                    {{#if pageOrdersHistory}}aria-current="page"{{/if}}>История заказов</a>
+                            </li>
                         </ul>
                     </div>
                 </li>

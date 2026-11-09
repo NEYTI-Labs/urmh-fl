@@ -53,8 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('.account-nav__actions');
     const closeButton = document.querySelector('.account-nav__close');
     const overlay = document.querySelector('.account-overlay');
+    const tabletWidth = Number(nav?.dataset.navCollapse) || TABLET_WIDTH;
     const mobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`);
-    const tablet = window.matchMedia(`(max-width: ${TABLET_WIDTH}px)`);
+    const tablet = window.matchMedia(`(max-width: ${tabletWidth}px)`);
 
     if (nav) {
         const navToggles = nav.querySelectorAll('.account-nav__toggle');
@@ -246,4 +247,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.orders-table__toggle, .ordersHistory-table__toggle');
+    if (!btn) return;
+
+    const details = btn.closest('tr').nextElementSibling;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.setAttribute('aria-label', isOpen ? 'Показать товары' : 'Скрыть товары');
+
+    details.classList.toggle('is-open', !isOpen);
+});
 });

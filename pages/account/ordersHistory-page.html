@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="./sass/ordersHistory/index.scss" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HMRU</title>
+    </head>
+    <body>
+        {{> _header}}
+
+        <main class="main page-content ordersHistory__main">
+            <div class="container account__container">
+                <ol class="kroshki">
+                    <li>
+                        <a href="/public" title="Главная"> Главная </a>
+                    </li>
+                </ol>
+                <section class="ordersHistory">
+                    <div class="account-top">
+                        <h1 class="page-heading">Личный кабинет</h1>
+                        <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
+                            aria-expanded="false" aria-controls="account-nav">
+                            <img src="/images/account/icons/menu.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="account-wrapper">
+                        {{> _account-nav sectionOrders=true pageOrdersHistory=true navCollapse=1160}}
+                        <div class="ordersHistory-content">
+                            <div class="ordersHistory-table">
+                                <h4 class="ordersHistory-table__title">Активные заказы</h4>
+
+                                    <table class="ordersHistory-table__table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">№</th>
+                                                <th scope="col">Дата</th>
+                                                <th scope="col">Статус</th>
+                                                <th scope="col" >Сумма</th>
+                                                <th scope="col">Статус</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="ordersHistory-table__item">
+                                            <tr class="ordersHistory-table__row">
+                                                <td>00000</td>
+                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td>
+                                                    <div class="ordersHistory-table__state">
+                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipping">
+                                                            <img src="/images/account/icons/table1.svg" alt="">
+                                                            Готовится к отгрузке
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                                <td>
+                                                <div class="ordersHistory-table__payment">
+                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                    <button class="ordersHistory-table__toggle" type="button">
+                                                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                        </svg>
+                                                    </button> 
+                                                </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="ordersHistory-table__details">
+                                                <td colspan="5">
+                                                    <div class="ordersHistory-table__details-content">
+                                                        <div class="ordersHistory-table__details-inner">
+                                                            <div class="ordersHistory-table__info">
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <g clip-path="url(#clip0_6001_21440)">
+                                                                            <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                            <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                        </g>
+                                                                        <defs>
+                                                                            <clipPath id="clip0_6001_21440">
+                                                                            <rect width="16" height="16" fill="white" />
+                                                                            </clipPath>
+                                                                        </defs>
+                                                                        </svg>
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <img src="/images/account/icons/change.svg" alt="">
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <table class="ordersHistory-table__goods">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Изобр.</th>
+                                                                        <th scope="col">Наименование</th>
+                                                                        <th scope="col">Количество</th>
+                                                                        <th scope="col">Склад отгрузки</th>
+                                                                        <th scope="col">Цена / шт</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="ordersHistory-table__total">
+                                                                        <td colspan="4">
+                                                                            <div class="ordersHistory-table__total-info">
+                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="ordersHistory-table__item">
+                                            <tr class="ordersHistory-table__row">
+                                                <td>00000</td>
+                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td>
+                                                    <div class="ordersHistory-table__state">
+                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipping">
+                                                            <img src="/images/account/icons/table1.svg" alt="">
+                                                            Готовится к отгрузке
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td>
+                                                <div class="ordersHistory-table__payment">
+                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                    <button class="ordersHistory-table__toggle" type="button">
+                                                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                        </svg>
+                                                    </button> 
+                                                </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="ordersHistory-table__details" >
+                                                <td colspan="5">
+                                                    <div class="ordersHistory-table__details-content">
+                                                        <div class="ordersHistory-table__details-inner">
+                                                            <div class="ordersHistory-table__info">
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <g clip-path="url(#clip0_6001_21440)">
+                                                                            <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                            <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                        </g>
+                                                                        <defs>
+                                                                            <clipPath id="clip0_6001_21440">
+                                                                            <rect width="16" height="16" fill="white" />
+                                                                            </clipPath>
+                                                                        </defs>
+                                                                        </svg>
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <img src="/images/account/icons/change.svg" alt="">
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <table class="ordersHistory-table__goods">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Изобр.</th>
+                                                                        <th scope="col">Наименование</th>
+                                                                        <th scope="col">Количество</th>
+                                                                        <th scope="col">Склад отгрузки</th>
+                                                                        <th scope="col">Цена / шт</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="ordersHistory-table__total">
+                                                                        <td colspan="4">
+                                                                            <div class="ordersHistory-table__total-info">
+                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="ordersHistory-table__item">
+                                            <tr class="ordersHistory-table__row">
+                                                <td>00000</td>
+                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td>
+                                                    <div class="ordersHistory-table__state">
+                                                        <span class="ordersHistory-table__status ordersHistory-table__status--pending">
+                                                            <img src="/images/account/icons/table3.svg" alt="">
+                                                            Ожидает оплаты
+                                                        </span>
+
+                                                        <a class="ordersHistory-table__docs"
+                                                        href="/images/account/parts1.png" download>
+                                                            <img src="/images/account/icons/document.svg" alt="">
+                                                            Документы
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td>
+                                                <div class="ordersHistory-table__payment">
+                                                    <button class="ordersHistory-table__pay">Оплатить</button>
+
+                                                    <button class="ordersHistory-table__toggle" type="button">
+                                                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                        </svg>
+                                                    </button> 
+                                                </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="ordersHistory-table__details" >
+                                                <td colspan="5">
+                                                    <div class="ordersHistory-table__details-content">
+                                                        <div class="ordersHistory-table__details-inner">
+                                                            <div class="ordersHistory-table__info">
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <g clip-path="url(#clip0_6001_21440)">
+                                                                            <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                            <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                        </g>
+                                                                        <defs>
+                                                                            <clipPath id="clip0_6001_21440">
+                                                                            <rect width="16" height="16" fill="white" />
+                                                                            </clipPath>
+                                                                        </defs>
+                                                                        </svg>
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <img src="/images/account/icons/change.svg" alt="">
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <table class="ordersHistory-table__goods">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Изобр.</th>
+                                                                        <th scope="col">Наименование</th>
+                                                                        <th scope="col">Количество</th>
+                                                                        <th scope="col">Склад отгрузки</th>
+                                                                        <th scope="col">Цена / шт</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="ordersHistory-table__total">
+                                                                        <td colspan="4">
+                                                                            <div class="ordersHistory-table__total-info">
+                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="ordersHistory-table__item">
+                                            <tr class="ordersHistory-table__row">
+                                                <td>00000</td>
+                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td>
+                                                    <div class="ordersHistory-table__state">
+                                                        <span class="ordersHistory-table__status ordersHistory-table__status--pending">
+                                                            <img src="/images/account/icons/table3.svg" alt="">
+                                                            Ожидает оплаты
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                                <td>
+                                                <div class="ordersHistory-table__payment">
+                                                    <button class="ordersHistory-table__pay">Оплатить</button>
+
+                                                    <button class="ordersHistory-table__toggle" type="button">
+                                                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                        </svg>
+                                                    </button> 
+                                                </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="ordersHistory-table__details" >
+                                                <td colspan="5">
+                                                    <div class="ordersHistory-table__details-content">
+                                                        <div class="ordersHistory-table__details-inner">
+                                                            <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            </div>
+                                                            <table class="ordersHistory-table__goods">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Изобр.</th>
+                                                                        <th scope="col">Наименование</th>
+                                                                        <th scope="col">Количество</th>
+                                                                        <th scope="col">Склад отгрузки</th>
+                                                                        <th scope="col">Цена / шт</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="ordersHistory-table__total">
+                                                                        <td colspan="4">
+                                                                            <div class="ordersHistory-table__total-info">
+                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="ordersHistory-table__item">
+                                            <tr class="ordersHistory-table__row">
+                                                <td>00000</td>
+                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td>
+                                                    <div class="ordersHistory-table__state">
+                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipped">
+                                                            <img src="/images/account/icons/table4.svg" alt="">
+                                                            Отгружен
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td>
+                                                <div class="ordersHistory-table__payment">
+                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                    <button class="ordersHistory-table__toggle" type="button">
+                                                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                        </svg>
+                                                    </button> 
+                                                </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="ordersHistory-table__details" >
+                                                <td colspan="5">
+                                                    <div class="ordersHistory-table__details-content">
+                                                        <div class="ordersHistory-table__details-inner">
+                                                            <div class="ordersHistory-table__info">
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <g clip-path="url(#clip0_6001_21440)">
+                                                                            <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                            <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                        </g>
+                                                                        <defs>
+                                                                            <clipPath id="clip0_6001_21440">
+                                                                            <rect width="16" height="16" fill="white" />
+                                                                            </clipPath>
+                                                                        </defs>
+                                                                        </svg>
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                                <div class="ordersHistory-table__info-item">
+                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                        <img src="/images/account/icons/change.svg" alt="">
+                                                                        Изменить
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                            <table class="ordersHistory-table__goods">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Изобр.</th>
+                                                                        <th scope="col">Наименование</th>
+                                                                        <th scope="col">Количество</th>
+                                                                        <th scope="col">Склад отгрузки</th>
+                                                                        <th scope="col">Цена / шт</th>                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        </td>
+                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td>
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            Новосибирск
+                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="ordersHistory-table__total">
+                                                                        <td colspan="4">
+                                                                            <div class="ordersHistory-table__total-info">
+                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+
+                            <div class="ordersHistory-table ordersHistory-table--completed">
+                                <h4 class="ordersHistory-table__title">Завершенные заказы</h4>
+
+                                <table class="ordersHistory-table__table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">№</th>
+                                            <th scope="col">Дата</th>
+                                            <th scope="col">Статус</th>
+                                            <th scope="col" >Сумма</th>
+                                            <th scope="col">Статус</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details">
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock-date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details">
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+
+                                                    <a class="ordersHistory-table__docs"
+                                                    href="/images/account/parts1.png" download>
+                                                        <img src="/images/account/icons/document.svg" alt="">
+                                                        Документы
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details" >
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details">
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details">
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="ordersHistory-table__item">
+                                        <tr class="ordersHistory-table__row">
+                                            <td>00000</td>
+                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td>
+                                                <div class="ordersHistory-table__state">
+                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                        <img src="/images/account/icons/table2.svg" alt="">
+                                                        Завершен
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td>
+                                            <div class="ordersHistory-table__payment">
+                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+
+                                                <button class="ordersHistory-table__toggle" type="button">
+                                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
+                                                    </svg>
+                                                </button> 
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="ordersHistory-table__details">
+                                            <td colspan="5">
+                                                <div class="ordersHistory-table__details-content">
+                                                    <div class="ordersHistory-table__details-inner">
+                                                        <div class="ordersHistory-table__info">
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
+                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_6001_21440)">
+                                                                        <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
+                                                                        <path d="M15.752 10C15.6536 10.3827 15.5251 10.7609 15.375 11.1211C15.1759 11.5984 14.9294 12.0547 14.6387 12.4824C13.7715 13.771 12.5469 14.7784 11.1152 15.3809C10.6267 15.581 10.1219 15.7406 9.60938 15.8447C8.55247 16.0609 7.43973 16.0608 6.38281 15.8447C5.87033 15.7406 5.35741 15.581 4.87695 15.3809C4.39963 15.1818 3.94339 14.9352 3.51562 14.6445C3.0912 14.3563 2.69044 14.0273 2.33008 13.667H2.34668C2.21055 13.5389 2.08203 13.3951 1.96191 13.251L0 15.2129V10.4082H4.80469L3.09863 12.1143C3.22675 12.2584 3.34728 12.3942 3.4834 12.5303C3.77169 12.8185 4.09237 13.0832 4.42871 13.3154C4.77292 13.5475 5.13336 13.7472 5.51758 13.9072C6.71288 14.4135 8.0341 14.5453 9.30566 14.2842C9.71398 14.1961 10.1225 14.0673 10.5068 13.9072C10.891 13.7471 11.2515 13.5475 11.5957 13.3154C11.932 13.0832 12.2527 12.8185 12.541 12.5303C12.8291 12.2422 13.0931 11.922 13.3252 11.5859C13.5574 11.2416 13.7578 10.8804 13.918 10.4961C13.9874 10.3333 14.0482 10.1675 14.1035 10H15.752Z" fill="currentColor" />
+                                                                    </g>
+                                                                    <defs>
+                                                                        <clipPath id="clip0_6001_21440">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    </svg>
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                            <div class="ordersHistory-table__info-item">
+                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
+                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
+                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                                    <img src="/images/account/icons/change.svg" alt="">
+                                                                    Изменить
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <table class="ordersHistory-table__goods">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Изобр.</th>
+                                                                    <th scope="col">Наименование</th>
+                                                                    <th scope="col">Количество</th>
+                                                                    <th scope="col">Склад отгрузки</th>
+                                                                    <th scope="col">Цена / шт</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                    </td>
+                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td>
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        Новосибирск
+                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="ordersHistory-table__total">
+                                                                    <td colspan="4">
+                                                                        <div class="ordersHistory-table__total-info">
+                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
+                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        {{> _footer}}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="./account-script.js"></script>
+    </body>
+</html>

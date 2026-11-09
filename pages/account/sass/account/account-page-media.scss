@@ -1,6 +1,8 @@
 @use "common/breakpoints" as bp;
 
-@media (max-width: bp.$tablet) {
+$nav-collapse: bp.$tablet !default;
+
+@media (max-width: $nav-collapse)  {
     .account {
         &-sidebar {
             position: relative;

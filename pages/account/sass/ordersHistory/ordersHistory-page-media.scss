@@ -1,0 +1,372 @@
+@use "common/breakpoints" as bp;
+
+@media (max-width: bp.$desktop-small) {
+    .ordersHistory {
+        .ordersHistory-table__info-item {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: bp.$table-cards) {
+    .ordersHistory-table {
+
+        &__table,
+        &__table > tbody {
+            display: block;
+            width: 100%;
+        }
+
+        &__table > thead {
+            > tr {
+                display: grid;
+                grid-template-columns: 47px 73px 1fr;
+                column-gap: 16px;
+                padding: 8px;
+            }
+
+            > tr > th:nth-child(1) { width: auto; }
+            > tr > th:nth-child(2) { width: auto; }
+            > tr > th:nth-child(4) { width: auto; }
+
+            > tr > th {
+                width: auto; 
+                padding: 0;
+            }
+
+            > tr > th:nth-child(3),
+            > tr > th:nth-child(5) {
+                display: none;
+            }
+        }
+
+        &__row {
+            display: grid;
+            grid-template-columns: auto auto 1fr auto;
+            align-items: center;
+            column-gap: 16px;
+            row-gap: 12px;
+            padding: 8px;
+
+            td {
+                padding: 0;
+            }
+            td:nth-child(3),
+            td:nth-child(5) {
+                display: contents;
+            }
+            td:nth-child(1) {
+                grid-row: 1;
+                grid-column: 1;
+            }
+        }
+        &__date {
+            grid-row: 1;
+            grid-column: 2;
+        }
+        &__sum {
+            grid-row: 1;
+            grid-column: 3;
+            text-align: left;
+        }
+        &__state,
+        &__payment {
+            display: contents;
+        }
+        &__toggle {
+            grid-row: 1;
+            grid-column: 4;
+            justify-self: end;
+        }
+        &__status {
+            grid-row: 2;
+            grid-column: 1 / 4;
+        }
+        &__pay {
+            grid-row: 2;
+            grid-column: 4;
+            justify-self: end;
+        }
+
+        &__docs {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            justify-self: start;
+        }
+
+        &__details {
+            display: block;
+
+            > td {
+                display: block;
+            }
+
+            &.is-open > td {
+                padding-top: 0;
+            }
+        }
+
+        &__info {
+            gap: 8px;
+            margin-bottom: 8px;
+
+            &-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                padding: 8px;
+            }
+            &-text {
+                margin-bottom: 6px;
+            }
+        }
+
+        &__goods {
+            > tbody,
+            > tfoot {
+                display: block;
+                width: 100%;
+            }
+            > thead {
+                display: none;
+            }       
+            > tbody > tr {
+                display: grid;
+                grid-template-columns: 84px 1fr;   
+                column-gap: 16px;
+                row-gap: 8px;
+                align-items: start;
+                padding: 8px;
+                border-top: 1px solid #ececf0;
+
+                > td:nth-child(n) {
+                    display: block;
+                    width: auto;      
+                    min-width: 0;
+                    max-width: none;
+                    padding: 0;
+                    border: none;
+                    white-space: normal;
+                }
+
+                > td:nth-child(1) {
+                    grid-row: 1 / span 4;
+                }
+
+                > td:nth-child(2) { grid-column: 2; grid-row: 1;}
+                > td:nth-child(3) { grid-column: 2; grid-row: 2; }
+                > td:nth-child(4) { grid-column: 2; grid-row: 3; }
+                > td:nth-child(5) { grid-column: 2; grid-row: 4; text-align: left; }
+            }
+            > tfoot > tr {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 16px;
+                margin: 8px 0;
+                padding: 8px;
+                border-radius: 8px;
+                background: #f7f7f8;
+
+                > td:nth-child(n) {
+                    display: block;
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: bp.$mobile) {
+    .ordersHistory {
+        padding-bottom: 16px;
+
+        &-table {
+            gap: 16px;
+            padding: 16px;
+            &__table > thead {
+                > tr {
+                    font-size: 12px;
+                    line-height: 1.25;
+                }
+            }
+            &__row {
+                grid-template-columns: auto auto minmax(0, 1fr) auto 24px;
+                row-gap: 8px;
+                td {
+                    line-height: 1.75;
+                }
+                td,
+                span {
+                    font-size: 14px;
+                }
+            }
+            &__toggle {
+                grid-column: 5;
+            }
+            &__pay {
+                grid-column: 4 / 6;
+            }
+            &__info {
+                &-item {
+                    line-height: 1.28;
+                    gap: 0;
+                }
+                &-label {
+                    font-size: 12px;
+                }
+                &-text {
+                    margin-bottom: 12px;
+                }
+                &-text, &-btn {
+                    font-size: 14px;
+                }
+            }
+            &__img {
+                width: 48px;
+                height: 48px;
+            }
+            &__goods {
+                > tbody > tr  {
+                    grid-template-columns: 80px 1fr;   
+                    line-height: 1.28;
+                    column-gap: 8px;
+                    > td {
+                        font-size: 14px;
+                    }
+                    &:first-child {
+                        border-top: 0;
+                    }
+                }
+                > tfoot > tr {
+                    justify-content: center;
+                    gap: 8px;
+                }
+            }
+            &__pay {
+                padding: 7px 17px;
+                font-size: 14px;
+                line-height: 1.28;
+                &--paid {
+                    padding: 6px 14.6px;
+                }
+            }
+            &__stock {
+                &--label {
+                    display: block;
+                }
+                &--date {
+                    display: none;
+                }
+            }
+            &__total {
+                &-info {
+                    line-height: 1.27;
+                }
+                &-title {
+                    font-size: 14px;
+                }
+                &-count {
+                    font-size: 12px;
+                }
+            }
+            &__price {
+                font-size: 14px;
+            }
+            &__docs {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: bp.$mobile-xs) {
+    .ordersHistory {
+        &-table {
+            padding: 12px;
+            &__table > thead > tr {
+                grid-template-columns: 44px 66px minmax(0, 1fr);
+                column-gap: 8px;
+                padding: 8px 4px;
+            }
+
+            &__row {
+                grid-template-columns: 44px 66px minmax(0, 1fr) auto 24px;
+                column-gap: 8px;
+                row-gap: 6px;
+                padding: 8px 4px;
+
+                td,
+                span {
+                    font-size: 13px;
+                }
+            }
+            &__sum {
+                grid-column: 3 / 5;
+            }
+            &__status,
+            &__docs {
+                white-space: normal;
+                min-width: 0;
+                gap: 6px;
+                line-height: 1.2;
+
+                img {
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            &__pay {
+                padding: 6px 12px;
+                font-size: 13px;
+
+                &--paid {
+                    padding: 5px 11px;
+                }
+            }
+            &__info {
+                gap: 6px;
+
+                &-item {
+                    padding: 8px 6px;
+                }
+
+                &-label {
+                    font-size: 11px;
+                }
+
+                &-text,
+                &-btn {
+                    font-size: 13px;
+                }
+            }
+
+            &__goods {
+                > tbody > tr {
+                    grid-template-columns: 48px minmax(0, 1fr); 
+                    padding: 8px 4px;
+
+                    > td {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &__stock-date,
+            &__total-count {
+                font-size: 11px;
+            }
+
+            &__total-title,
+            &__price,
+            &__docs {
+                font-size: 13px;
+            }
+        }
+    }
+}
+

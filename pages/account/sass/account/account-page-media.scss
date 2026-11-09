@@ -2,6 +2,11 @@
 
 $nav-collapse: bp.$tablet !default;
 
+// высота мобильной шапки и нижней навигации сайта: между ними встаёт
+// полноэкранное меню кабинета
+$mobile-header: 65px;
+$mobile-bottom-nav: 48px;
+
 @media (max-width: $nav-collapse)  {
     .account {
         &-sidebar {
@@ -112,49 +117,40 @@ $nav-collapse: bp.$tablet !default;
         &-wrapper {
             display: block;
         }
-        &-overlay {
-        display: block; 
-        position: fixed;
-        inset: 0;
-        z-index: 20;
-        background: rgba(0, 0, 0, 0.4);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        &.is-visible {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-        }
+        // панель во весь экран под шапкой — как бургер-меню сайта
         &-nav {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            z-index: 21;
-            width: calc(100% - 32px);
-            max-width: 328px;
-            max-height: calc(100dvh - 40px);
+            top: $mobile-header;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            // ниже нижней навигации сайта (z-index 20, у залипшего хедера 11),
+            // чтобы она оставалась поверх меню
+            z-index: 10;
+            width: 100%;
+            max-width: none;
+            max-height: none;
+            border-radius: 0;
+            // нижняя навигация перекрывает последний пункт, если не отступить
+            padding: 16px 16px $mobile-bottom-nav + 16px;
             overflow-y: auto;
-            opacity: 0;
+            box-shadow: none;
             visibility: hidden;
-            transform: translate(-50%, -48%);
+            transform: translateX(-100%);
             transition:
-                opacity 0.3s ease,
                 transform 0.3s ease,
                 visibility 0.3s ease;
 
-            // на мобильной модалке ширину не фиксируем — она тянется по экрану
+            // на всю ширину экрана, а не по раскрытому рельсу
             &__list {
                 width: auto;
             }
 
             &.is-expanded {
-                width: calc(100% - 32px);
-                opacity: 1;
+                width: 100%;
                 visibility: visible;
-                transform: translate(-50%, -50%);
+                transform: translateX(0);
+                box-shadow: none;
             }
             &__actions {
                 display: flex;

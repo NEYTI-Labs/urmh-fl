@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.account-nav');
     const menuButton = document.querySelector('.account-nav__actions');
     const closeButton = document.querySelector('.account-nav__close');
-    const overlay = document.querySelector('.account-overlay');
     const tabletWidth = Math.max(Number(nav?.dataset.navCollapse) || TABLET_WIDTH, MOBILE_WIDTH);
     const mobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`);
     const tablet = window.matchMedia(`(max-width: ${tabletWidth}px)`);
@@ -62,14 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const openMenu = () => {
             nav.classList.add('is-expanded');
-            overlay?.classList.add('is-visible');
             menuButton?.setAttribute('aria-expanded', 'true');
             document.body.classList.toggle('account-locked', mobile.matches);
         };
 
         const closeMenu = () => {
             nav.classList.remove('is-expanded');
-            overlay?.classList.remove('is-visible');
             menuButton?.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('account-locked');
         };
@@ -79,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         closeButton?.addEventListener('click', closeMenu);
-        overlay?.addEventListener('click', closeMenu);
 
         const closeSection = btn => {
             btn.closest('.account-nav__item').classList.remove('is-open');

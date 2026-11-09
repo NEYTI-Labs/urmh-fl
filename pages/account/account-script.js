@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('.account-nav__actions');
     const closeButton = document.querySelector('.account-nav__close');
     const overlay = document.querySelector('.account-overlay');
-    const tabletWidth = Number(nav?.dataset.navCollapse) || TABLET_WIDTH;
+    const tabletWidth = Math.max(Number(nav?.dataset.navCollapse) || TABLET_WIDTH, MOBILE_WIDTH);
     const mobile = window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`);
     const tablet = window.matchMedia(`(max-width: ${tabletWidth}px)`);
 
@@ -248,16 +248,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.orders-table__toggle, .ordersHistory-table__toggle');
-    if (!btn) return;
+    document.addEventListener('click', e => {
+        const btn = e.target.closest('.ordersHistory-table__toggle');
+        if (!btn) return;
 
-    const details = btn.closest('tr').nextElementSibling;
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        // строка с товарами идёт сразу за строкой заказа; если её нет —
+        // кнопке нечего раскрывать
+        const details = btn.closest('tr')?.nextElementSibling;
+        if (!details?.classList.contains('ordersHistory-table__details')) return;
 
-    btn.setAttribute('aria-expanded', String(!isOpen));
-    btn.setAttribute('aria-label', isOpen ? 'Показать товары' : 'Скрыть товары');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-    details.classList.toggle('is-open', !isOpen);
-});
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        btn.setAttribute('aria-label', isOpen ? 'Показать товары' : 'Скрыть товары');
+
+        details.classList.toggle('is-open', !isOpen);
+    });
 });

@@ -165,9 +165,10 @@
         border-radius: 16px;
         padding: 24px;
         background: #fff;
+        min-height: 419px;
         &__scroll {
             min-width: 0;
-            max-height: 350px;
+            max-height: 322px;
             overflow: auto;
 
             &::-webkit-scrollbar {
@@ -249,6 +250,7 @@
         border-radius: 16px;
         padding: 24px;
         background: #fff;
+        min-height: 419px;
         &__list {
             display: grid;
             grid-template-columns: repeat(4, 1fr);

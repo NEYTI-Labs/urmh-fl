@@ -371,7 +371,8 @@ p{
         height: 11px;
     }
   }
-  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .auth .btn, .comparison-info__head .btn ) {
+  .btn:not(.service button, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .auth .btn, .comparison-info__head .btn, 
+  .ordersHistory-table--empty .btn) {
     font-size: 14px;
     padding: 8px 20px;
     line-height: normal;

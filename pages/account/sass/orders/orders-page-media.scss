@@ -8,6 +8,9 @@
         &-preview {
             grid-column: 1 / -1;
         }
+        &-notifications--empty {
+            min-height: 319px;
+        }
         &-manager {
             &__contacts {
                 justify-content: flex-start;
@@ -127,6 +130,7 @@
         &-preview {
             padding: 16px;
             gap: 16px;
+            min-height: 319px;
 
             // на мобильной раскладке карточка и так во всю ширину,
             // вложенный скролл тут только мешает
@@ -193,6 +197,7 @@
         &-parts {
             gap: 16px;
             padding: 16px;
+            min-height: 319px;
             &__list {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);

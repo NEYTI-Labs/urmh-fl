@@ -71,35 +71,36 @@ $mobile-bottom-nav: 48px;
                     grid-template-rows: 0fr;
                 }
 
-                .account-nav__item--has-sub.is-open {
-                    // фон во всю ширину пункта уезжал бы за край свёрнутой
-                    // панели, поэтому подсвечиваем только иконку
+                // фон во всю ширину пункта уезжал бы за край свёрнутой панели
+                .account-nav__item--has-sub {
                     background: transparent;
+                }
 
-                    > .account-nav__toggle {
+                // в рельсе списки всё равно не видны, поэтому квадратом
+                // помечаем раздел текущей страницы, а не раскрытый
+                .account-nav__item--has-sub.is-current > .account-nav__toggle {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        aspect-ratio: 1;
+                        border-radius: 12px;
+                        background: #f7f7f8;
+                    }
+
+                    > * {
                         position: relative;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            left: 0;
-                            aspect-ratio: 1;
-                            border-radius: 12px;
-                            background: #f7f7f8;
-                        }
-
-                        > * {
-                            position: relative;
-                        }
                     }
+                }
 
-                    .account-nav__sub-list {
-                        border-top: none;
-                        padding: 0;
-                        margin: 0;
-                    }
+                .account-nav__item--has-sub.is-open .account-nav__sub-list {
+                    border-top: none;
+                    padding: 0;
+                    margin: 0;
                 }
             }
         }

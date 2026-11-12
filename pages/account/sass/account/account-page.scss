@@ -25,6 +25,8 @@ body.account-locked {
         border-radius: 16px;
         padding: 16px;
         background: #fff;
+        // пункты меню — элементы управления, выделять их текст незачем
+        user-select: none;
         &__list {
             display: flex;
             flex-direction: column;
@@ -34,6 +36,9 @@ body.account-locked {
             border-radius: 12px;
             transition: background 0.3s ease;
 
+            // серая подложка — у раскрытого раздела, синий текст — у раздела
+            // текущей страницы (см. &__link): отметка о том, где находишься,
+            // остаётся, даже когда раскрыт другой раздел
             &.is-open {
                 background: #f7f7f8;
             }
@@ -54,6 +59,17 @@ body.account-locked {
             overflow: hidden;
             text-overflow: ellipsis;
             color: #2c3336;
+            transition: color 0.3s ease;
+
+            // так же, как у ссылок подменю: активный раздел и наведение — синие
+            &:hover {
+                color: #0071e3;
+            }
+
+            .is-current > & {
+                color: #0071e3;
+            }
+
             &_name {
                 display: flex;
                 align-items: center;

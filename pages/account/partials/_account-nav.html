@@ -16,7 +16,7 @@
                 </a>
             </li>
 
-            <li class="account-nav__item account-nav__item--has-sub{{#if sectionOrders}} is-open{{/if}}">
+            <li class="account-nav__item account-nav__item--has-sub{{#if sectionOrders}} is-current is-open{{/if}}">
                 <button class="account-nav__link account-nav__toggle" type="button"
                     aria-expanded="{{#if sectionOrders}}true{{else}}false{{/if}}">
                     <div class="account-nav__link_name">
@@ -61,7 +61,7 @@
                     </div>
                 </li>
 
-                <li class="account-nav__item account-nav__item--has-sub{{#if sectionLoyalty}} is-open{{/if}}">
+                <li class="account-nav__item account-nav__item--has-sub{{#if sectionLoyalty}} is-current is-open{{/if}}">
                     <button class="account-nav__link account-nav__toggle" type="button"
                         aria-expanded="{{#if sectionLoyalty}}true{{else}}false{{/if}}">
                         <div class="account-nav__link_name">

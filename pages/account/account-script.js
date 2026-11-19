@@ -77,21 +77,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         closeButton?.addEventListener('click', closeMenu);
 
+        const currentToggle = nav.querySelector('.account-nav__item--has-sub.is-current > .account-nav__toggle');
+
         const closeSection = btn => {
             btn.closest('.account-nav__item').classList.remove('is-open');
             btn.setAttribute('aria-expanded', 'false');
         };
 
+        const openSection = btn => {
+            btn.closest('.account-nav__item').classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+
+            navToggles.forEach(other => other !== btn && closeSection(other));
+        };
+
         navToggles.forEach(btn => {
             btn.addEventListener('click', () => {
-                const item = btn.closest('.account-nav__item');
+                if (!btn.closest('.account-nav__item').classList.contains('is-open')) {
+                    openSection(btn);
+                    return;
+                }
 
-                if (item.classList.contains('is-open')) return;
-
-                item.classList.add('is-open');
-                btn.setAttribute('aria-expanded', 'true');
-
-                navToggles.forEach(other => other !== btn && closeSection(other));
+                if (currentToggle && currentToggle !== btn) {
+                    openSection(currentToggle);
+                }
             });
         });
 

@@ -71,9 +71,13 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .account-link svg{
-                width: 24px;
-                height: 24px;
+            .account-link {
+                align-self: flex-start;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
         &__info p {
@@ -332,8 +336,8 @@
             display: flex;
             align-items: center;
             gap: 24px;
-            a {
-                flex: 1;
+            .product__card-nav {
+                margin-inline-start: auto;
             }
         }
         .account-empty {

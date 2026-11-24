@@ -7,7 +7,7 @@ const MOBILE_WIDTH = 768;
 const TABLET_WIDTH = 1024;
 
 document.addEventListener('DOMContentLoaded', () => {
-    const productSliderElement = document.querySelector('.orders-card__swiper');
+    const productSliderElement = document.querySelector('.account-card__swiper');
 
     if (productSliderElement) {
         new Swiper(productSliderElement, {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 
             pagination: {
-                el: '.orders-card__slider_pagger',
+                el: '.account-card__slider_pagger',
                 clickable: true,
             },
 

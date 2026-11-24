@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="stylesheet" href="./sass/orders/index.scss" />
+        <link rel="stylesheet" href="./sass/account/dashboard/index.scss" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HMRU</title>
     </head>
@@ -17,7 +17,7 @@
                         <a href="/public" title="Главная"> Главная </a>
                     </li>
                 </ol>
-                <section class="orders">
+                <section class="account">
                     <div class="account-top">
                         <h1 class="page-heading">Личный кабинет</h1>
                         <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
@@ -26,8 +26,8 @@
                         </button>
                     </div>
                     <div class="account-wrapper">
-                        {{> _account-nav sectionOrders=true pageOrders=true }}
-                        <div class="orders-content">
+                        {{> _account-nav sectionOrders=true pageAccount=true }}
+                        <div class="account-content">
                             <div class="account-balance">
                                 <div class="account-balance__top">
                                     <span class="account-balance__points">4850 баллов</span>
@@ -60,7 +60,7 @@
                                     <img src="/images/account/balance-banner.png" alt="">
                                 </div>
                             </div>
-                            <div class="orders-notifications">
+                            <div class="account-notifications">
                                 <div class="account-block__top">
                                     <h4>Уведомления</h4>
                                     <a class="account-link" href="#">
@@ -70,62 +70,62 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <ul class="orders-notifications__list">
-                                    <li class="orders-notifications__item">
-                                        <a class="orders-notifications__link" href="#">
-                                            <span class="orders-notifications__icon">
+                                <ul class="account-notifications__list">
+                                    <li class="account-notifications__item">
+                                        <a class="account-notifications__link" href="#">
+                                            <span class="account-notifications__icon">
                                                 <img src="/images/account/icons/info.svg" alt="">
                                             </span>
-                                            <div class="orders-notifications__text">
-                                                <span class="orders-notifications__title">Заказ №2311 - изменён статус</span>
+                                            <div class="account-notifications__text">
+                                                <span class="account-notifications__title">Заказ №2311 - изменён статус</span>
                                                 <p>Готовится к отгрузке</p>
                                             </div>
-                                            <div class="orders-notifications__date">
+                                            <div class="account-notifications__date">
                                                 <span>15.09.2026</span>
                                                 <span>10:43</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="orders-notifications__item">
-                                        <a class="orders-notifications__link" href="#">
-                                            <span class="orders-notifications__icon">
+                                    <li class="account-notifications__item">
+                                        <a class="account-notifications__link" href="#">
+                                            <span class="account-notifications__icon">
                                                 <img src="/images/account/icons/info.svg" alt="">
                                             </span>
-                                            <div class="orders-notifications__text">
-                                                <span class="orders-notifications__title">Заказ №2311 - изменён статус</span>
+                                            <div class="account-notifications__text">
+                                                <span class="account-notifications__title">Заказ №2311 - изменён статус</span>
                                                 <p>Готовится к отгрузке</p>
                                             </div>
-                                            <div class="orders-notifications__date">
+                                            <div class="account-notifications__date">
                                                 <span>15.09.2026</span>
                                                 <span>10:43</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="orders-notifications__item">
-                                        <a class="orders-notifications__link" href="#">
-                                            <span class="orders-notifications__icon">
+                                    <li class="account-notifications__item">
+                                        <a class="account-notifications__link" href="#">
+                                            <span class="account-notifications__icon">
                                                 <img src="/images/account/icons/tool.svg" alt="">
                                             </span>
-                                            <div class="orders-notifications__text">
-                                                <span class="orders-notifications__title">Заказ №2311 - изменён статус</span>
+                                            <div class="account-notifications__text">
+                                                <span class="account-notifications__title">Заказ №2311 - изменён статус</span>
                                                 <p>Принято в работу</p>
                                             </div>
-                                            <div class="orders-notifications__date">
+                                            <div class="account-notifications__date">
                                                 <span>15.09.2026</span>
                                                 <span>10:43</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="orders-notifications__item">
-                                        <a class="orders-notifications__link" href="#">
-                                            <span class="orders-notifications__icon">
+                                    <li class="account-notifications__item">
+                                        <a class="account-notifications__link" href="#">
+                                            <span class="account-notifications__icon">
                                                 <img src="/images/account/icons/info.svg" alt="">
                                             </span>
-                                            <div class="orders-notifications__text">
-                                                <span class="orders-notifications__title">Заказ №2311 - изменён статус</span>
+                                            <div class="account-notifications__text">
+                                                <span class="account-notifications__title">Заказ №2311 - изменён статус</span>
                                                 <p>Готовится к отгрузке</p>
                                             </div>
-                                            <div class="orders-notifications__date">
+                                            <div class="account-notifications__date">
                                                 <span>15.09.2026</span>
                                                 <span>10:43</span>
                                             </div>
@@ -133,14 +133,14 @@
                                     </li>
                                 </ul>
                             </div>
-                            <ul class="orders-stats">
-                                <li class="orders-stats__item">
+                            <ul class="account-stats">
+                                <li class="account-stats__item">
                                     <span class="account-icon">
                                         <img src="/images/account/icons/account-menu-2.svg" alt="">
                                     </span>
-                                    <div class="orders-stats__content">
-                                        <div class="orders-stats__info">
-                                            <span class="orders-stats__value">2</span>
+                                    <div class="account-stats__content">
+                                        <div class="account-stats__info">
+                                            <span class="account-stats__value">2</span>
                                             <p>Активных заказа</p>
                                         </div>
                                         <a class="account-link" href="#">
@@ -151,13 +151,13 @@
                                         </a>
                                     </div>
                                 </li>
-                                <li class="orders-stats__item">
+                                <li class="account-stats__item">
                                     <span class="account-icon">
                                         <img src="/images/account/icons/account-menu-3.svg" alt="">
                                     </span>
-                                    <div class="orders-stats__content">
-                                        <div class="orders-stats__info">
-                                            <span class="orders-stats__value">12</span>
+                                    <div class="account-stats__content">
+                                        <div class="account-stats__info">
+                                            <span class="account-stats__value">12</span>
                                             <p>Единиц оборудования</p>
                                         </div>
                                         <a class="account-link" href="#">
@@ -168,13 +168,13 @@
                                         </a>
                                     </div>
                                 </li>
-                                <li class="orders-stats__item">
+                                <li class="account-stats__item">
                                     <span class="account-icon">
                                         <img src="/images/account/icons/account-menu-4.svg" alt="">
                                     </span>
-                                    <div class="orders-stats__content">
-                                        <div class="orders-stats__info">
-                                            <span class="orders-stats__value">3</span>
+                                    <div class="account-stats__content">
+                                        <div class="account-stats__info">
+                                            <span class="account-stats__value">3</span>
                                             <p>Документа на скачивание</p>
                                         </div>
                                         <a class="account-link" href="#">
@@ -186,9 +186,9 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="orders-manager">
-                                <div class="account-block__top orders-manager__top">
-                                    <h4 class="orders-manager__title">Персональный менеджер</h4>
+                            <div class="account-manager">
+                                <div class="account-block__top account-manager__top">
+                                    <h4 class="account-manager__title">Персональный менеджер</h4>
                                     <a class="account-link" href="#">
                                         Написать менеджеру
 
@@ -201,24 +201,24 @@
                                     </a>
                                 </div>
 
-                                <div class="orders-manager__body">
-                                    <img class="orders-manager__img" src="/images/account/manager.png" alt="Иванов Иван">
-                                    <div class="orders-manager__content">
-                                        <div class="orders-manager__info">
-                                            <p class="orders-manager__name">Иванов Иван</p>
-                                            <p class="orders-manager__role">Менеджер по работе с клиентами</p>
+                                <div class="account-manager__body">
+                                    <img class="account-manager__img" src="/images/account/manager.png" alt="Иванов Иван">
+                                    <div class="account-manager__content">
+                                        <div class="account-manager__info">
+                                            <p class="account-manager__name">Иванов Иван</p>
+                                            <p class="account-manager__role">Менеджер по работе с клиентами</p>
                                         </div>
-                                        <div class="orders-manager__contacts">
-                                            <div class="orders-manager__contact">
-                                                <span class="orders-manager__icon"><img src="/images/account/icons/phone.svg" alt=""></span>
-                                                <div class="orders-manager__details">
+                                        <div class="account-manager__contacts">
+                                            <div class="account-manager__contact">
+                                                <span class="account-manager__icon"><img src="/images/account/icons/phone.svg" alt=""></span>
+                                                <div class="account-manager__details">
                                                     <span>Телефон:</span>
                                                     <a href="tel:+73833734503">8 383 373-45-03</a>
                                                 </div>
                                             </div>
-                                            <div class="orders-manager__contact">
-                                                <span class="orders-manager__icon"><img src="/images/account/icons/mail.svg" alt=""></span>
-                                                <div class="orders-manager__details">
+                                            <div class="account-manager__contact">
+                                                <span class="account-manager__icon"><img src="/images/account/icons/mail.svg" alt=""></span>
+                                                <div class="account-manager__details">
                                                     <span>Электронная почта:</span>
                                                     <a href="mailto:nsk4@hmru.ru">nsk4@hmru.ru</a>
                                                 </div>
@@ -237,9 +237,9 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="orders-preview">
+                            <div class="account-preview">
                                 <div class="account-block__top">
-                                    <h4 class="orders-preview__title">Последние заказы</h4>
+                                    <h4 class="account-preview__title">Последние заказы</h4>
                                     <a class="account-link" href="#">
                                         Все заказы
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,8 +248,8 @@
                                     </a>
                                 </div>
 
-                                <div class="orders-preview__scroll">
-                                    <table class="orders-preview__table">
+                                <div class="account-preview__scroll">
+                                    <table class="account-preview__table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">№</th>
@@ -260,12 +260,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="orders-preview__row">
+                                            <tr class="account-preview__row">
                                                 <td>00000</td>
-                                                <td class="orders-preview__date">15.09.2026</td>
+                                                <td class="account-preview__date">15.09.2026</td>
                                                 <td>540 000 ₽</td>
                                                 <td>
-                                                    <span class="orders-preview__status orders-preview__status--shipping">
+                                                    <span class="account-preview__status account-preview__status--shipping">
                                                         <img src="/images/account/icons/table1.svg" alt="">
                                                         Готовится к отгрузке
                                                     </span>
@@ -273,12 +273,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="orders-preview__row">
+                                            <tr class="account-preview__row">
                                                 <td>00000</td>
-                                                <td class="orders-preview__date">15.09.2026</td>
+                                                <td class="account-preview__date">15.09.2026</td>
                                                 <td>1 540 000 ₽</td>
                                                 <td>
-                                                    <span class="orders-preview__status orders-preview__status--completed">
+                                                    <span class="account-preview__status account-preview__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
@@ -286,12 +286,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="orders-preview__row">
+                                            <tr class="account-preview__row">
                                                 <td>00000</td>
-                                                <td class="orders-preview__date">15.09.2026</td>
+                                                <td class="account-preview__date">15.09.2026</td>
                                                 <td>12 000 ₽</td>
                                                 <td>
-                                                    <span class="orders-preview__status orders-preview__status--pending">
+                                                    <span class="account-preview__status account-preview__status--pending">
                                                         <img src="/images/account/icons/table3.svg" alt="">
                                                         Ожидает оплаты
                                                     </span>
@@ -301,12 +301,12 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="orders-preview__row">
+                                            <tr class="account-preview__row">
                                                 <td>00000</td>
-                                                <td class="orders-preview__date">15.09.2026</td>
+                                                <td class="account-preview__date">15.09.2026</td>
                                                 <td>54 000 ₽</td>
                                                 <td>
-                                                    <span class="orders-preview__status orders-preview__status--shipped">
+                                                    <span class="account-preview__status account-preview__status--shipped">
                                                         <img src="/images/account/icons/table4.svg" alt="">
                                                         Отгружен
                                                     </span>
@@ -314,12 +314,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="orders-preview__row">
+                                            <tr class="account-preview__row">
                                                 <td>00000</td>
-                                                <td class="orders-preview__date">15.09.2026</td>
+                                                <td class="account-preview__date">15.09.2026</td>
                                                 <td>40 000 ₽</td>
                                                 <td>
-                                                    <span class="orders-preview__status orders-preview__status--completed">
+                                                    <span class="account-preview__status account-preview__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
@@ -330,9 +330,9 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="orders-parts">
+                            <div class="account-parts">
                                 <div class="account-block__top">
-                                    <h4 class="orders-parts__title">Запчасти для вашего оборудования</h4>
+                                    <h4 class="account-parts__title">Запчасти для вашего оборудования</h4>
                                     <a class="account-link" href="#">
                                         Все товары
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -341,15 +341,15 @@
                                     </a>
                                 </div>
 
-                                <ul class="orders-parts__list">
-                                    <li class="orders-parts__item">
-                                        <div class="orders-parts__image">
+                                <ul class="account-parts__list">
+                                    <li class="account-parts__item">
+                                        <div class="account-parts__image">
                                             <img src="/images/account/parts1.png" alt="">
                                         </div>
-                                        <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
-                                        <div class="orders-parts__bottom">
-                                            <span class="orders-parts__price"><b>60 224</b> ₽</span>
-                                            <button class="orders-parts__btn">
+                                        <a class="account-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                                        <div class="account-parts__bottom">
+                                            <span class="account-parts__price"><b>60 224</b> ₽</span>
+                                            <button class="account-parts__btn">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
                                                     <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
@@ -359,14 +359,14 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="orders-parts__item">
-                                        <div class="orders-parts__image">
+                                    <li class="account-parts__item">
+                                        <div class="account-parts__image">
                                             <img src="/images/account/parts2.png" alt="">
                                         </div>
-                                        <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
-                                        <div class="orders-parts__bottom">
-                                            <span class="orders-parts__price"><b>3 655</b> ₽</span>
-                                            <button class="orders-parts__btn">
+                                        <a class="account-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                                        <div class="account-parts__bottom">
+                                            <span class="account-parts__price"><b>3 655</b> ₽</span>
+                                            <button class="account-parts__btn">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
                                                     <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
@@ -376,14 +376,14 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="orders-parts__item">
-                                        <div class="orders-parts__image">
+                                    <li class="account-parts__item">
+                                        <div class="account-parts__image">
                                             <img src="/images/account/parts3.png" alt="">
                                         </div>
-                                        <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
-                                        <div class="orders-parts__bottom">
-                                            <span class="orders-parts__price"><b>3 691</b> ₽</span>
-                                            <button class="orders-parts__btn">
+                                        <a class="account-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                                        <div class="account-parts__bottom">
+                                            <span class="account-parts__price"><b>3 691</b> ₽</span>
+                                            <button class="account-parts__btn">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
                                                     <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
@@ -393,14 +393,14 @@
                                             </button>
                                         </div>
                                     </li>
-                                    <li class="orders-parts__item">
-                                        <div class="orders-parts__image">
+                                    <li class="account-parts__item">
+                                        <div class="account-parts__image">
                                             <img src="/images/account/parts4.png" alt="">
                                         </div>
-                                        <a class="orders-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
-                                        <div class="orders-parts__bottom">
-                                            <span class="orders-parts__price"><b>3 195</b> ₽</span>
-                                            <button class="orders-parts__btn">
+                                        <a class="account-parts__name" href="#">Поступление вакуумного массажёра GRKL-2500</a>
+                                        <div class="account-parts__bottom">
+                                            <span class="account-parts__price"><b>3 195</b> ₽</span>
+                                            <button class="account-parts__btn">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M4.16602 7L8.07664 16.385C8.15263 16.5672 8.28082 16.7228 8.44506 16.8322C8.60931 16.9416 8.80227 17 8.99964 17H16.9996C17.4166 17 17.7896 16.741 17.9366 16.352L20.9366 8.352C20.9933 8.20063 21.0125 8.03776 20.9925 7.87735C20.9724 7.71695 20.9138 7.56379 20.8216 7.431C20.7297 7.29808 20.6068 7.18943 20.4637 7.11436C20.3205 7.0393 20.1613 7.00006 19.9996 7L4.16602 7ZM7.16664 9L9.66664 15H16.3066L18.5566 9H7.16664Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
                                                     <path d="M2 5H6L7 7H2V5Z" fill="currentColor" />
@@ -412,8 +412,8 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="orders-products">
-                                <div class="orders-products__top">
+                            <div class="account-products">
+                                <div class="account-products__top">
                                     <h4>Ваше оборудование</h4>
                                     <a href="#" class="account-link">
                                         <span class="account-link__desc">Весь парк оборудования</span>
@@ -441,166 +441,166 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="orders-card__slider">
+                                <div class="account-card__slider">
 
-                                    <div class="orders-card__swiper swiper">
+                                    <div class="account-card__swiper swiper">
                                         <div class="swiper-wrapper">
 
                                             <div class="swiper-slide">
-                                                <a href="#" class="orders-card">
-                                                    <div class="orders-card__image">
+                                                <a href="#" class="account-card">
+                                                    <div class="account-card__image">
                                                         <img src="/images/popular-product-1.png"
                                                             alt="Поступление вакуумного массажёра GRKL-2500">
                                                     </div>
-                                                    <div class="orders-card__content">
-                                                        <div class="orders-card__info">
-                                                            <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                                    <div class="account-card__content">
+                                                        <div class="account-card__info">
+                                                            <h4 class="account-card__name">HVC-510S/2A</h4>
                                                             <p>Вакуумный упаковщик</p>
                                                         </div>
-                                                        <div class="orders-card__footer">
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Серийный номер</span>
-                                                                <span class="orders-card__value">500FD341A43DX</span>
+                                                        <div class="account-card__footer">
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Серийный номер</span>
+                                                                <span class="account-card__value">500FD341A43DX</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Дата покупки</span>
-                                                                <span class="orders-card__value">15.09.2026</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Дата покупки</span>
+                                                                <span class="account-card__value">15.09.2026</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Гарантия</span>
-                                                                <span class="orders-card__value">до 15.09.2028</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Гарантия</span>
+                                                                <span class="account-card__value">до 15.09.2028</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Филиал</span>
-                                                                <span class="orders-card__value">Новосибирск</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Филиал</span>
+                                                                <span class="account-card__value">Новосибирск</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="#" class="orders-card">
-                                                    <div class="orders-card__image">
+                                                <a href="#" class="account-card">
+                                                    <div class="account-card__image">
                                                         <img src="/images/popular-product-1.png"
                                                             alt="Поступление вакуумного массажёра GRKL-2500">
                                                     </div>
-                                                    <div class="orders-card__content">
-                                                        <div class="orders-card__info">
-                                                            <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                                    <div class="account-card__content">
+                                                        <div class="account-card__info">
+                                                            <h4 class="account-card__name">HVC-510S/2A</h4>
                                                             <p>Вакуумный упаковщик</p>
                                                         </div>
-                                                        <div class="orders-card__footer">
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Серийный номер</span>
-                                                                <span class="orders-card__value">500FD341A43DX</span>
+                                                        <div class="account-card__footer">
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Серийный номер</span>
+                                                                <span class="account-card__value">500FD341A43DX</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Дата покупки</span>
-                                                                <span class="orders-card__value">15.09.2026</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Дата покупки</span>
+                                                                <span class="account-card__value">15.09.2026</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Гарантия</span>
-                                                                <span class="orders-card__value">до 15.09.2028</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Гарантия</span>
+                                                                <span class="account-card__value">до 15.09.2028</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Филиал</span>
-                                                                <span class="orders-card__value">Новосибирск</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Филиал</span>
+                                                                <span class="account-card__value">Новосибирск</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="#" class="orders-card">
-                                                    <div class="orders-card__image">
+                                                <a href="#" class="account-card">
+                                                    <div class="account-card__image">
                                                         <img src="/images/popular-product-1.png"
                                                             alt="Поступление вакуумного массажёра GRKL-2500">
                                                     </div>
-                                                    <div class="orders-card__content">
-                                                        <div class="orders-card__info">
-                                                            <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                                    <div class="account-card__content">
+                                                        <div class="account-card__info">
+                                                            <h4 class="account-card__name">HVC-510S/2A</h4>
                                                             <p>Вакуумный упаковщик</p>
                                                         </div>
-                                                        <div class="orders-card__footer">
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Серийный номер</span>
-                                                                <span class="orders-card__value">500FD341A43DX</span>
+                                                        <div class="account-card__footer">
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Серийный номер</span>
+                                                                <span class="account-card__value">500FD341A43DX</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Дата покупки</span>
-                                                                <span class="orders-card__value">15.09.2026</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Дата покупки</span>
+                                                                <span class="account-card__value">15.09.2026</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Гарантия</span>
-                                                                <span class="orders-card__value">до 15.09.2028</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Гарантия</span>
+                                                                <span class="account-card__value">до 15.09.2028</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Филиал</span>
-                                                                <span class="orders-card__value">Новосибирск</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Филиал</span>
+                                                                <span class="account-card__value">Новосибирск</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="#" class="orders-card">
-                                                    <div class="orders-card__image">
+                                                <a href="#" class="account-card">
+                                                    <div class="account-card__image">
                                                         <img src="/images/popular-product-1.png"
                                                             alt="Поступление вакуумного массажёра GRKL-2500">
                                                     </div>
-                                                    <div class="orders-card__content">
-                                                        <div class="orders-card__info">
-                                                            <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                                    <div class="account-card__content">
+                                                        <div class="account-card__info">
+                                                            <h4 class="account-card__name">HVC-510S/2A</h4>
                                                             <p>Вакуумный упаковщик</p>
                                                         </div>
-                                                        <div class="orders-card__footer">
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Серийный номер</span>
-                                                                <span class="orders-card__value">500FD341A43DX</span>
+                                                        <div class="account-card__footer">
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Серийный номер</span>
+                                                                <span class="account-card__value">500FD341A43DX</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Дата покупки</span>
-                                                                <span class="orders-card__value">15.09.2026</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Дата покупки</span>
+                                                                <span class="account-card__value">15.09.2026</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Гарантия</span>
-                                                                <span class="orders-card__value">до 15.09.2028</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Гарантия</span>
+                                                                <span class="account-card__value">до 15.09.2028</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Филиал</span>
-                                                                <span class="orders-card__value">Новосибирск</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Филиал</span>
+                                                                <span class="account-card__value">Новосибирск</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="swiper-slide">
-                                                <a href="#" class="orders-card">
-                                                    <div class="orders-card__image">
+                                                <a href="#" class="account-card">
+                                                    <div class="account-card__image">
                                                         <img src="/images/popular-product-1.png"
                                                             alt="Поступление вакуумного массажёра GRKL-2500">
                                                     </div>
-                                                    <div class="orders-card__content">
-                                                        <div class="orders-card__info">
-                                                            <h4 class="orders-card__name">HVC-510S/2A</h4>
+                                                    <div class="account-card__content">
+                                                        <div class="account-card__info">
+                                                            <h4 class="account-card__name">HVC-510S/2A</h4>
                                                             <p>Вакуумный упаковщик</p>
                                                         </div>
-                                                        <div class="orders-card__footer">
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Серийный номер</span>
-                                                                <span class="orders-card__value">500FD341A43DX</span>
+                                                        <div class="account-card__footer">
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Серийный номер</span>
+                                                                <span class="account-card__value">500FD341A43DX</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Дата покупки</span>
-                                                                <span class="orders-card__value">15.09.2026</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Дата покупки</span>
+                                                                <span class="account-card__value">15.09.2026</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Гарантия</span>
-                                                                <span class="orders-card__value">до 15.09.2028</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Гарантия</span>
+                                                                <span class="account-card__value">до 15.09.2028</span>
                                                             </div>
-                                                            <div class="orders-card__spec">
-                                                                <span class="orders-card__label">Филиал</span>
-                                                                <span class="orders-card__value">Новосибирск</span>
+                                                            <div class="account-card__spec">
+                                                                <span class="account-card__label">Филиал</span>
+                                                                <span class="account-card__value">Новосибирск</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -608,11 +608,11 @@
                                             </div>
 
                                         </div>
-                                        <div class="orders-card__slider_pagger"></div>
+                                        <div class="account-card__slider_pagger"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="orders-banner">
+                            <div class="account-banner">
                                 <img src="/images/catalog/adversing-banner.png" alt="">
                                 <button>
                                     <img src="/images/account/icons/krestik.svg" alt="">

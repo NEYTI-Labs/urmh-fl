@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="stylesheet" href="./sass/orders/index.scss" />
+        <link rel="stylesheet" href="./sass/account/dashboard/index.scss" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HMRU</title>
     </head>
@@ -17,7 +17,7 @@
                         <a href="/public" title="Главная"> Главная </a>
                     </li>
                 </ol>
-                <section class="orders">
+                <section class="account">
                     <div class="account-top">
                         <h1 class="page-heading">Личный кабинет</h1>
                         <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
@@ -26,8 +26,8 @@
                         </button>
                     </div>
                     <div class="account-wrapper">
-                        {{> _account-nav sectionOrders=true pageOrders=true }}
-                        <div class="orders-content">
+                        {{> _account-nav sectionOrders=true pageAccount=true }}
+                        <div class="account-content">
                         <div class="account-balance account-balance--empty">
                             <div class="account-balance__top">
                                 <span class="account-balance__points">0 баллов</span>
@@ -50,7 +50,7 @@
                                 <img src="/images/account/balance-banner.png" alt="">
                             </div>
                         </div>
-                        <div class="orders-notifications orders-notifications--empty">
+                        <div class="account-notifications account-notifications--empty">
                             <div class="account-block__top">
                                 <h4>Уведомления</h4>
                             </div>
@@ -59,14 +59,14 @@
                                 <p class="account-empty__text">Новых уведомлений нет</p>
                             </div>
                         </div>
-                        <ul class="orders-stats">
-                            <li class="orders-stats__item">
+                        <ul class="account-stats">
+                            <li class="account-stats__item">
                                 <span class="account-icon">
                                     <img src="/images/account/icons/account-menu-2.svg" alt="">
                                 </span>
-                                <div class="orders-stats__content">
-                                    <div class="orders-stats__info">
-                                        <span class="orders-stats__value">2</span>
+                                <div class="account-stats__content">
+                                    <div class="account-stats__info">
+                                        <span class="account-stats__value">2</span>
                                         <p>Активных заказа</p>
                                     </div>
                                     <a class="account-link" href="#">
@@ -77,13 +77,13 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="orders-stats__item">
+                            <li class="account-stats__item">
                                 <span class="account-icon">
                                     <img src="/images/account/icons/account-menu-3.svg" alt="">
                                 </span>
-                                <div class="orders-stats__content">
-                                    <div class="orders-stats__info">
-                                        <span class="orders-stats__value">12</span>
+                                <div class="account-stats__content">
+                                    <div class="account-stats__info">
+                                        <span class="account-stats__value">12</span>
                                         <p>Единиц оборудования</p>
                                     </div>
                                     <a class="account-link" href="#">
@@ -94,13 +94,13 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="orders-stats__item">
+                            <li class="account-stats__item">
                                 <span class="account-icon">
                                     <img src="/images/account/icons/account-menu-4.svg" alt="">
                                 </span>
-                                <div class="orders-stats__content">
-                                    <div class="orders-stats__info">
-                                        <span class="orders-stats__value">3</span>
+                                <div class="account-stats__content">
+                                    <div class="account-stats__info">
+                                        <span class="account-stats__value">3</span>
                                         <p>Документа на скачивание</p>
                                     </div>
                                     <a class="account-link" href="#">
@@ -112,9 +112,9 @@
                                 </div>
                             </li>
                         </ul>
-                            <div class="orders-manager">
-                                <div class="account-block__top orders-manager__top">
-                                    <h4 class="orders-manager__title">Персональный менеджер</h4>
+                            <div class="account-manager">
+                                <div class="account-block__top account-manager__top">
+                                    <h4 class="account-manager__title">Персональный менеджер</h4>
                                     <a class="account-link" href="#">
                                         Написать менеджеру
 
@@ -127,24 +127,24 @@
                                     </a>
                                 </div>
 
-                                <div class="orders-manager__body">
-                                    <img class="orders-manager__img" src="/images/account/manager.png" alt="Иванов Иван">
-                                    <div class="orders-manager__content">
-                                        <div class="orders-manager__info">
-                                            <p class="orders-manager__name">Иванов Иван</p>
-                                            <p class="orders-manager__role">Менеджер по работе с клиентами</p>
+                                <div class="account-manager__body">
+                                    <img class="account-manager__img" src="/images/account/manager.png" alt="Иванов Иван">
+                                    <div class="account-manager__content">
+                                        <div class="account-manager__info">
+                                            <p class="account-manager__name">Иванов Иван</p>
+                                            <p class="account-manager__role">Менеджер по работе с клиентами</p>
                                         </div>
-                                        <div class="orders-manager__contacts">
-                                            <div class="orders-manager__contact">
-                                                <span class="orders-manager__icon"><img src="/images/account/icons/phone.svg" alt=""></span>
-                                                <div class="orders-manager__details">
+                                        <div class="account-manager__contacts">
+                                            <div class="account-manager__contact">
+                                                <span class="account-manager__icon"><img src="/images/account/icons/phone.svg" alt=""></span>
+                                                <div class="account-manager__details">
                                                     <span>Телефон:</span>
                                                     <a href="tel:+73833734503">8 383 373-45-03</a>
                                                 </div>
                                             </div>
-                                            <div class="orders-manager__contact">
-                                                <span class="orders-manager__icon"><img src="/images/account/icons/mail.svg" alt=""></span>
-                                                <div class="orders-manager__details">
+                                            <div class="account-manager__contact">
+                                                <span class="account-manager__icon"><img src="/images/account/icons/mail.svg" alt=""></span>
+                                                <div class="account-manager__details">
                                                     <span>Электронная почта:</span>
                                                     <a href="mailto:nsk4@hmru.ru">nsk4@hmru.ru</a>
                                                 </div>
@@ -163,9 +163,9 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="orders-preview">
+                            <div class="account-preview">
                                 <div class="account-block__top">
-                                    <h4 class="orders-preview__title">Последние заказы</h4>
+                                    <h4 class="account-preview__title">Последние заказы</h4>
                                 </div>
                                 <div class="account-empty">
                                     <img class="account-empty__icon" src="/images/account/icons/empty1.png" alt="">
@@ -173,9 +173,9 @@
                                     <a class="btn" href="#">Перейти в каталог</a>
                                 </div>
                             </div>
-                            <div class="orders-parts">
+                            <div class="account-parts">
                                 <div class="account-block__top">
-                                    <h4 class="orders-parts__title">Запчасти для вашего оборудования</h4>
+                                    <h4 class="account-parts__title">Запчасти для вашего оборудования</h4>
                                 </div>
                                 <div class="account-empty">
                                     <img class="account-empty__icon" src="/images/account/icons/empty2.png" alt="">
@@ -183,8 +183,8 @@
                                     <a class="btn" href="#">Перейти в каталог</a>
                                 </div>
                             </div>
-                            <div class="orders-products">
-                                <div class="orders-products__top">
+                            <div class="account-products">
+                                <div class="account-products__top">
                                     <h4>Ваше оборудование</h4>
                                     <a href="#" class="account-link">
                                         <span class="account-link__desc">Весь парк оборудования</span>
@@ -200,7 +200,7 @@
                                 <a class="btn" href="#">Перейти в каталог</a>
                             </div>
                             </div>
-                            <div class="orders-banner">
+                            <div class="account-banner">
                                 <img src="/images/catalog/adversing-banner.png" alt="">
                                 <button>
                                     <img src="/images/account/icons/krestik.svg" alt="">

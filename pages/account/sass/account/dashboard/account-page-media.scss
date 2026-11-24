@@ -1,7 +1,7 @@
 @use "common/breakpoints" as bp;
 
 @media (max-width: bp.$desktop-wide) {
-    .orders {
+    .account {
         &-manager,
         &-stats,
         &-parts,
@@ -21,7 +21,7 @@
 }
 
 @media (max-width: bp.$desktop) {
-    .orders {
+    .account {
         &-notifications{
             grid-column: 1 / -1;
         }
@@ -32,7 +32,7 @@
 }
 
 @media (max-width: bp.$mobile)  {
-    .orders {
+    .account {
         padding-bottom: 16px;
         &-notifications {
             padding: 16px;

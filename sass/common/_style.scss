@@ -411,7 +411,7 @@ p{
     gap: 8px;
   }
   p:not(.about p, .cart p, .catalog-aside__calculator p, .solution__info_price p, .feedback-accordion p, .delivery__desc p, .delivery__process-chek p, 
-  .auth p, .favoritesEmpty__text p){
+  .auth p, .favoritesEmpty__text p, .account-manager__name){
     font-size: 14px;
   }
   .btn:not(.cartEmpty a, .solution__banner .btn, .feedback-success .btn, .delivery__feedback .btn, .auth .btn, .comparison-info__head .btn) {

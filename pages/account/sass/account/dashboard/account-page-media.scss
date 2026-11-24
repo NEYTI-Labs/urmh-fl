@@ -5,7 +5,7 @@
         &-manager,
         &-stats,
         &-parts,
-        &-preview {
+        &-orders {
             grid-column: 1 / -1;
         }
         &-notifications--empty {
@@ -115,10 +115,9 @@
             &__icon {
                 padding: 8px;
             }
-            &__details {
-                span, a {
-                    font-size: 14px;
-                }
+            &__label,
+            &__value {
+                font-size: 14px;
             }
             .account-link__mobile {
                 display: flex;
@@ -129,7 +128,7 @@
                 }
             }
         }
-        &-preview {
+        &-orders {
             padding: 16px;
             gap: 16px;
             min-height: 319px;

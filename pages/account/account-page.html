@@ -209,20 +209,20 @@
                                             <p class="account-manager__role">Менеджер по работе с клиентами</p>
                                         </div>
                                         <div class="account-manager__contacts">
-                                            <div class="account-manager__contact">
+                                            <a class="account-manager__contact" href="tel:+73833734503">
                                                 <span class="account-manager__icon"><img src="/images/account/icons/phone.svg" alt=""></span>
-                                                <div class="account-manager__details">
-                                                    <span>Телефон:</span>
-                                                    <a href="tel:+73833734503">8 383 373-45-03</a>
-                                                </div>
-                                            </div>
-                                            <div class="account-manager__contact">
+                                                <span class="account-manager__details">
+                                                    <span class="account-manager__label">Телефон:</span>
+                                                    <span class="account-manager__value">8 383 373-45-03</span>
+                                                </span>
+                                            </a>
+                                            <a class="account-manager__contact" href="mailto:nsk4@hmru.ru">
                                                 <span class="account-manager__icon"><img src="/images/account/icons/mail.svg" alt=""></span>
-                                                <div class="account-manager__details">
-                                                    <span>Электронная почта:</span>
-                                                    <a href="mailto:nsk4@hmru.ru">nsk4@hmru.ru</a>
-                                                </div>
-                                            </div>
+                                                <span class="account-manager__details">
+                                                    <span class="account-manager__label">Электронная почта:</span>
+                                                    <span class="account-manager__value">nsk4@hmru.ru</span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -237,9 +237,9 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="account-preview">
+                            <div class="account-orders">
                                 <div class="account-block__top">
-                                    <h4 class="account-preview__title">Последние заказы</h4>
+                                    <h4 class="account-orders__title">Последние заказы</h4>
                                     <a class="account-link" href="#">
                                         Все заказы
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,8 +248,8 @@
                                     </a>
                                 </div>
 
-                                <div class="account-preview__scroll">
-                                    <table class="account-preview__table">
+                                <div class="account-orders__scroll">
+                                    <table class="account-orders__table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">№</th>
@@ -260,12 +260,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="account-preview__row">
+                                            <tr class="account-orders__row">
                                                 <td>00000</td>
-                                                <td class="account-preview__date">15.09.2026</td>
+                                                <td class="account-orders__date">15.09.2026</td>
                                                 <td>540 000 ₽</td>
                                                 <td>
-                                                    <span class="account-preview__status account-preview__status--shipping">
+                                                    <span class="account-orders__status account-orders__status--shipping">
                                                         <img src="/images/account/icons/table1.svg" alt="">
                                                         Готовится к отгрузке
                                                     </span>
@@ -273,12 +273,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="account-preview__row">
+                                            <tr class="account-orders__row">
                                                 <td>00000</td>
-                                                <td class="account-preview__date">15.09.2026</td>
+                                                <td class="account-orders__date">15.09.2026</td>
                                                 <td>1 540 000 ₽</td>
                                                 <td>
-                                                    <span class="account-preview__status account-preview__status--completed">
+                                                    <span class="account-orders__status account-orders__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
@@ -286,12 +286,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="account-preview__row">
+                                            <tr class="account-orders__row">
                                                 <td>00000</td>
-                                                <td class="account-preview__date">15.09.2026</td>
+                                                <td class="account-orders__date">15.09.2026</td>
                                                 <td>12 000 ₽</td>
                                                 <td>
-                                                    <span class="account-preview__status account-preview__status--pending">
+                                                    <span class="account-orders__status account-orders__status--pending">
                                                         <img src="/images/account/icons/table3.svg" alt="">
                                                         Ожидает оплаты
                                                     </span>
@@ -301,12 +301,12 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="account-preview__row">
+                                            <tr class="account-orders__row">
                                                 <td>00000</td>
-                                                <td class="account-preview__date">15.09.2026</td>
+                                                <td class="account-orders__date">15.09.2026</td>
                                                 <td>54 000 ₽</td>
                                                 <td>
-                                                    <span class="account-preview__status account-preview__status--shipped">
+                                                    <span class="account-orders__status account-orders__status--shipped">
                                                         <img src="/images/account/icons/table4.svg" alt="">
                                                         Отгружен
                                                     </span>
@@ -314,12 +314,12 @@
                                                 <td></td>
                                             </tr>
 
-                                            <tr class="account-preview__row">
+                                            <tr class="account-orders__row">
                                                 <td>00000</td>
-                                                <td class="account-preview__date">15.09.2026</td>
+                                                <td class="account-orders__date">15.09.2026</td>
                                                 <td>40 000 ₽</td>
                                                 <td>
-                                                    <span class="account-preview__status account-preview__status--completed">
+                                                    <span class="account-orders__status account-orders__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>

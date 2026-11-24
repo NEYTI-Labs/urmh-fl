@@ -150,20 +150,25 @@
         &__details {
             display: flex;
             flex-direction: column;
-            span {
-                font-weight: 500;
-                font-size: 16px;
-            }
-            a {
-                line-height: 140%;
-                color: #70828a;
-            }
+        }
+        &__label {
+            font-weight: 500;
+            font-size: 16px;
+        }
+        &__value {
+            line-height: 140%;
+            color: #70828a;
+            transition: all 0.3s ease;
+        }
+        &__contact:hover &__value,
+        &__contact:focus-visible &__value {
+            color: #0071e3;
         }
         .account-link__mobile {
             display: none;
         }
     }
-    &-preview {
+    &-orders {
         display: flex;
         flex-direction: column;
         gap: 20px;

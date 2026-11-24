@@ -19,40 +19,36 @@
             width: 100%;
             border-collapse: collapse;
 
-            > thead > tr > th {
+            > .orders-table__head .orders-table__col {
                 padding: 7.3px 8px;
                 text-align: start;
                 font-weight: 400;
                 color: #70828a;
                 white-space: nowrap;
             }
-            > thead > tr > th:nth-child(1) { width: 78px; }
-            > thead > tr > th:nth-child(2) { width: 99px; }
-            > thead > tr > th:nth-child(4) { width: 110px; }
-            > thead > tr > th:nth-child(5) { width: 146px; }
+            > .orders-table__head .orders-table__col--num { width: 78px; }
+            > .orders-table__head .orders-table__col--date { width: 99px; }
+            > .orders-table__head .orders-table__col--sum { width: 110px; }
+            > .orders-table__head .orders-table__col--pay { width: 146px; }
         }
 
-        .is-right { text-align: right; }
-
-        &__item {
+        &__body--order {
             border-top: 1px solid #ececf0;
         }
 
-        &__row {
-            td {
-                padding: 12px 8px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 2.03;
-                white-space: nowrap;
-            }
+        &__row--order > &__data {
+            padding: 12px 8px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 2.03;
+            white-space: nowrap;
         }
 
-        &__date { 
+        &__data--date {
             font-weight: 400; 
             color: #70828a;
         }
-        &__sum  { text-align: right; }
+        &__data--sum  { text-align: right; }
 
         &__state {
             display: flex;
@@ -141,35 +137,27 @@
                 color: #0071e3;
             }
         }
-        &__details {
-            > td {
-                padding: 0;
-                border: none;
-                transition: padding 0.3s ease;
-            }
-
-            &-content {
-                display: grid;
-                grid-template-rows: 0fr;
-                opacity: 0;
-                transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
-            }
-
-            &-inner {
-                min-height: 0;
-                overflow: hidden;
-            }
-
-            &.is-open {
-                > td {
-                    padding-top: 8px;
-                }
-
-                .orders-table__details-content {
-                    grid-template-rows: 1fr;
-                    opacity: 1;
-                }
-            }
+        &__row--details > &__data {
+            padding: 0;
+            border: none;
+            transition: padding 0.3s ease;
+        }
+        &__panel {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+        }
+        &__inner {
+            min-height: 0;
+            overflow: hidden;
+        }
+        &__row--open > &__data {
+            padding-top: 8px;
+        }
+        &__row--open &__panel {
+            grid-template-rows: 1fr;
+            opacity: 1;
         }
 
         &__info {
@@ -218,7 +206,7 @@
         &__goods {
             width: 100%;
             border-collapse: collapse;
-            > thead > tr > th {
+            .orders-table__col {
                 padding: 16px 0 8px;
                 text-align: start;
                 font-weight: 400;
@@ -227,36 +215,40 @@
                 white-space: nowrap;
             }
 
-            > thead > tr > th:nth-child(1) { width: 100px; text-align: center;}
-            > thead > tr > th:nth-child(3) { width: 90px; }
-            > thead > tr > th:nth-child(4) { width: 133px; }
-            > thead > tr > th:nth-child(5) { width: 101px;}
+            .orders-table__col--img { width: 100px; text-align: center; }
+            .orders-table__col--qty { width: 90px; }
+            .orders-table__col--stock { width: 133px; }
+            .orders-table__col--price { width: 101px; }
 
-            > tbody > tr > td:nth-child(5) {
-                padding-right: 24px;
-            }
-            > thead > tr > th:nth-child(n+4) {
+            .orders-table__col--stock,
+            .orders-table__col--price {
                 padding-left: 56px;
             }
-            > thead > tr > th:nth-child(2),
-            > tbody > tr > td:nth-child(2) {
-                padding: 16px 24px 8px ;
+            .orders-table__col--name {
+                padding: 16px 24px 8px;
             }
-            > tbody > tr,
-            > tfoot > tr {
+            .orders-table__body > .orders-table__row,
+            .orders-table__foot > .orders-table__row {
                 border-top: 1px solid #ececf0;
             }
-            > tbody > tr > td{
-                white-space: nowrap;
-                padding: 7px 0 8px;
-                    &:nth-child(2) {
-                        white-space: normal;
-                    }
+            .orders-table__body {
+                .orders-table__data {
+                    white-space: nowrap;
+                    padding: 7px 0 8px;
+                }
+                .orders-table__data--name {
+                    padding: 16px 24px 8px;
+                    white-space: normal;
+                }
+                .orders-table__data--stock,
+                .orders-table__data--price {
+                    padding-left: 56px;
+                }
+                .orders-table__data--price {
+                    padding-right: 24px;
+                }
             }
-            > tbody > tr > td:nth-child(n+4) {
-                padding-left: 56px;
-            }
-            > tfoot > tr > td {
+            .orders-table__foot .orders-table__data {
                 white-space: nowrap;
                 padding: 8px 24px ;
                 line-height: 1.22;
@@ -270,7 +262,7 @@
             max-width: none;
             margin: 0 auto;
         }
-        &__cell {
+        &__value {
             font-weight: 500;
         }
 
@@ -286,7 +278,8 @@
             }
         }
 
-        &__price {
+        &__data--price {
+            text-align: right;
             font-size: 18px;
             font-weight: 100;
         }

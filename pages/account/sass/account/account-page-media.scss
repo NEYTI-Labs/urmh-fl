@@ -212,7 +212,8 @@ $mobile-bottom-nav: 48px;
                 right: -200px;
             }
         }
-        &-icon {
+        &-icon,
+        &-manager__icon {
             padding: 8px;
         }
         &-link {

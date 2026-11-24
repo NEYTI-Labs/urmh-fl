@@ -252,14 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // строка с товарами идёт сразу за строкой заказа; если её нет —
         // кнопке нечего раскрывать
-        const details = btn.closest('tr')?.nextElementSibling;
-        if (!details?.classList.contains('orders-table__details')) return;
+        const details = btn.closest('.orders-table__row--order')?.nextElementSibling;
+        if (!details?.classList.contains('orders-table__row--details')) return;
 
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
         btn.setAttribute('aria-expanded', String(!isOpen));
         btn.setAttribute('aria-label', isOpen ? 'Показать товары' : 'Скрыть товары');
 
-        details.classList.toggle('is-open', !isOpen);
+        details.classList.toggle('orders-table__row--open', !isOpen);
     });
 });

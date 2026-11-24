@@ -251,13 +251,16 @@ body.account-locked {
     align-items: center;
     justify-content: space-between;
     }
-    &-icon {
+    &-icon,
+    &-manager__icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
         background: #e2e3e9;
         padding: 12px;
+    }
+    &-icon {
+        border-radius: 8px;
         img {
             max-width: none;
         }

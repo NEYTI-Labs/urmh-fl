@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         closeButton?.addEventListener('click', closeMenu);
 
-        const currentToggle = nav.querySelector('.account-nav__item--has-sub.is-current > .account-nav__toggle');
-
         const closeSection = btn => {
             btn.closest('.account-nav__item').classList.remove('is-open');
             btn.setAttribute('aria-expanded', 'false');
@@ -95,11 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => {
                 if (!btn.closest('.account-nav__item').classList.contains('is-open')) {
                     openSection(btn);
-                    return;
-                }
-
-                if (currentToggle && currentToggle !== btn) {
-                    openSection(currentToggle);
                 }
             });
         });

@@ -39,10 +39,12 @@
             &__list {
                 gap: 8px;
             }
-            &__item {
+            &__link {
                 gap: 8px;
-                padding-bottom: 8px;
                 flex-wrap: wrap;
+            }
+            &__item:not(:last-child) &__link {
+                padding-bottom: 8px;
             }
             &__icon {
                 order: 1;
@@ -50,9 +52,9 @@
             &__text {
                 max-height: 36px;
                 order: 2;
-                a {
-                    font-size: 14px;
-                }
+            }
+            &__title {
+                font-size: 14px;
             }
             &__date {
             flex-direction: row;

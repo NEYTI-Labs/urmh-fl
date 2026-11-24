@@ -1,8 +1,8 @@
 @use "common/breakpoints" as bp;
 
 @media (max-width: bp.$desktop-small) {
-    .ordersHistory {
-        .ordersHistory-table__info-item {
+    .orders {
+        .orders-table__info-item {
             align-items: flex-start;
             flex-direction: column;
         }
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: bp.$table-cards) {
-    .ordersHistory-table {
+    .orders-table {
 
         &__table,
         &__table > tbody {
@@ -180,7 +180,7 @@
 }
 
 @media (max-width: bp.$mobile) {
-    .ordersHistory {
+    .orders {
         padding-bottom: 16px;
 
         &-table {
@@ -286,7 +286,7 @@
 }
 
 @media (max-width: bp.$mobile-xs) {
-    .ordersHistory {
+    .orders {
         &-table {
             padding: 12px;
             &__table > thead > tr {

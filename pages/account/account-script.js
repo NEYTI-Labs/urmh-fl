@@ -247,13 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('click', e => {
-        const btn = e.target.closest('.ordersHistory-table__toggle');
+        const btn = e.target.closest('.orders-table__toggle');
         if (!btn) return;
 
         // строка с товарами идёт сразу за строкой заказа; если её нет —
         // кнопке нечего раскрывать
         const details = btn.closest('tr')?.nextElementSibling;
-        if (!details?.classList.contains('ordersHistory-table__details')) return;
+        if (!details?.classList.contains('orders-table__details')) return;
 
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
 

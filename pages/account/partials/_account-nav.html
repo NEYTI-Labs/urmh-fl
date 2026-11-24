@@ -9,10 +9,10 @@
         </button>
 
         <ul class="account-nav__list">
-            <li class="account-nav__item">
-                <a class="account-nav__link" href="#">
+            <li class="account-nav__item{{#if pageAccount}} is-current{{/if}}">
+                <a class="account-nav__link" href="account-page.html"{{#if pageAccount}} aria-current="page"{{/if}}>
                     <img src="/images/account/icons/account-menu-1.svg" alt="">
-                    <span>Дешборд</span>
+                    <span>Дашборд</span>
                 </a>
             </li>
 
@@ -31,12 +31,11 @@
                 <div class="account-nav__sub">
                     <ul class="account-nav__sub-list">
                         <li>
-                                <a class="account-nav__sub-link{{#if pageAccount}} is-active{{/if}}" href="account-page.html"
-                                    {{#if pageAccount}}aria-current="page"{{/if}}>Текущие заказы</a>
+                                <a class="account-nav__sub-link" href="account-page.html">Текущие заказы</a>
                             </li>
                             <li>
-                                <a class="account-nav__sub-link{{#if pageOrdersHistory}} is-active{{/if}}" href="ordersHistory-page.html"
-                                    {{#if pageOrdersHistory}}aria-current="page"{{/if}}>История заказов</a>
+                                <a class="account-nav__sub-link{{#if pageOrders}} is-active{{/if}}" href="orders-page.html"
+                                    {{#if pageOrders}}aria-current="page"{{/if}}>История заказов</a>
                             </li>
                         </ul>
                     </div>

@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="stylesheet" href="./sass/ordersHistory/index.scss" />
+        <link rel="stylesheet" href="./sass/orders/index.scss" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HMRU</title>
     </head>
     <body>
         {{> _header}}
 
-        <main class="main page-content ordersHistory__main">
+        <main class="main page-content orders__main">
             <div class="container account__container">
                 <ol class="kroshki">
                     <li>
                         <a href="/public" title="Главная"> Главная </a>
                     </li>
                 </ol>
-                <section class="ordersHistory">
+                <section class="orders">
                     <div class="account-top">
                         <h1 class="page-heading">Личный кабинет</h1>
                         <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
@@ -26,10 +26,10 @@
                         </button>
                     </div>
                     <div class="account-wrapper">
-                        {{> _account-nav sectionOrders=true pageOrdersHistory=true navCollapse=1160}}
-                        <div class="ordersHistory-content">
-                            <div class="ordersHistory-table ordersHistory-table--empty">
-                                <h4 class="ordersHistory-table__title">Активные заказы</h4>
+                        {{> _account-nav sectionOrders=true pageOrders=true navCollapse=1160}}
+                        <div class="orders-content">
+                            <div class="orders-table orders-table--empty">
+                                <h4 class="orders-table__title">Активные заказы</h4>
                                 <div class="account-empty">
                                     <img class="account-empty__icon" src="/images/account/icons/empty1.png" alt="">
                                     <p class="account-empty__text">У вас нет заказов</p>
@@ -37,8 +37,8 @@
                                 </div>
                             </div>
 
-                            <div class="ordersHistory-table ordersHistory-table--completed ordersHistory-table--empty">
-                                <h4 class="ordersHistory-table__title">Завершенные заказы</h4>
+                            <div class="orders-table orders-table--completed orders-table--empty">
+                                <h4 class="orders-table__title">Завершенные заказы</h4>
 
                                 <div class="account-empty">
                                     <img class="account-empty__icon" src="/images/account/icons/empty1.png" alt="">

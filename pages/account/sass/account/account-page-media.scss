@@ -78,7 +78,7 @@ $mobile-bottom-nav: 48px;
 
                 // в рельсе списки всё равно не видны, поэтому квадратом
                 // помечаем раздел текущей страницы, а не раскрытый
-                .account-nav__item--has-sub.is-current > .account-nav__toggle {
+                .account-nav__item.is-current > .account-nav__link {
                     position: relative;
 
                     &::before {

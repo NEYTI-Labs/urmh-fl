@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="stylesheet" href="./sass/ordersHistory/index.scss" />
+        <link rel="stylesheet" href="./sass/orders/index.scss" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HMRU</title>
     </head>
     <body>
         {{> _header}}
 
-        <main class="main page-content ordersHistory__main">
+        <main class="main page-content orders__main">
             <div class="container account__container">
                 <ol class="kroshki">
                     <li>
                         <a href="/public" title="Главная"> Главная </a>
                     </li>
                 </ol>
-                <section class="ordersHistory">
+                <section class="orders">
                     <div class="account-top">
                         <h1 class="page-heading">Личный кабинет</h1>
                         <button type="button" class="account-nav__actions" aria-label="Открыть меню кабинета"
@@ -26,12 +26,12 @@
                         </button>
                     </div>
                     <div class="account-wrapper">
-                        {{> _account-nav sectionOrders=true pageOrdersHistory=true navCollapse=1160}}
-                        <div class="ordersHistory-content">
-                            <div class="ordersHistory-table">
-                                <h4 class="ordersHistory-table__title">Активные заказы</h4>
+                        {{> _account-nav sectionOrders=true pageOrders=true navCollapse=1160}}
+                        <div class="orders-content">
+                            <div class="orders-table">
+                                <h4 class="orders-table__title">Активные заказы</h4>
 
-                                    <table class="ordersHistory-table__table">
+                                    <table class="orders-table__table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">№</th>
@@ -42,24 +42,24 @@
                                             </tr>
                                         </thead>
 
-                                        <tbody class="ordersHistory-table__item">
-                                            <tr class="ordersHistory-table__row">
+                                        <tbody class="orders-table__item">
+                                            <tr class="orders-table__row">
                                                 <td>00000</td>
-                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td class="orders-table__date">15.09.2026</td>
                                                 <td>
-                                                    <div class="ordersHistory-table__state">
-                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipping">
+                                                    <div class="orders-table__state">
+                                                        <span class="orders-table__status orders-table__status--shipping">
                                                             <img src="/images/account/icons/table1.svg" alt="">
                                                             Готовится к отгрузке
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                                <td class="orders-table__sum">1 540 000 ₽</td>
                                                 <td>
-                                                <div class="ordersHistory-table__payment">
-                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                                <div class="orders-table__payment">
+                                                    <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                    <button class="ordersHistory-table__toggle" type="button"
+                                                    <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -69,15 +69,15 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="ordersHistory-table__details">
+                                            <tr class="orders-table__details">
                                                 <td colspan="5">
-                                                    <div class="ordersHistory-table__details-content">
-                                                        <div class="ordersHistory-table__details-inner">
-                                                            <div class="ordersHistory-table__info">
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                    <div class="orders-table__details-content">
+                                                        <div class="orders-table__details-inner">
+                                                            <div class="orders-table__info">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Доставка:</span>
+                                                                    <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <g clip-path="url(#clip0_6001_21440-1)">
                                                                             <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -92,16 +92,16 @@
                                                                         Изменить
                                                                     </button>
                                                                 </div>
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Плательщик:</span>
+                                                                    <span class="orders-table__info-text">Иван Иванов</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <img src="/images/account/icons/change.svg" alt="">
                                                                         Изменить
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                            <table class="ordersHistory-table__goods">
+                                                            <table class="orders-table__goods">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Изобр.</th>
@@ -114,53 +114,53 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
-                                                                    <tr class="ordersHistory-table__total">
+                                                                    <tr class="orders-table__total">
                                                                         <td colspan="4">
-                                                                            <div class="ordersHistory-table__total-info">
-                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            <div class="orders-table__total-info">
+                                                                                <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                                <span class="orders-table__total-count">3 товара</span>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                        <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -169,24 +169,24 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        <tbody class="ordersHistory-table__item">
-                                            <tr class="ordersHistory-table__row">
+                                        <tbody class="orders-table__item">
+                                            <tr class="orders-table__row">
                                                 <td>00000</td>
-                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td class="orders-table__date">15.09.2026</td>
                                                 <td>
-                                                    <div class="ordersHistory-table__state">
-                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipping">
+                                                    <div class="orders-table__state">
+                                                        <span class="orders-table__status orders-table__status--shipping">
                                                             <img src="/images/account/icons/table1.svg" alt="">
                                                             Готовится к отгрузке
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td class="orders-table__sum">540 000 ₽</td>
                                                 <td>
-                                                <div class="ordersHistory-table__payment">
-                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                                <div class="orders-table__payment">
+                                                    <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                    <button class="ordersHistory-table__toggle" type="button"
+                                                    <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -196,15 +196,15 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="ordersHistory-table__details" >
+                                            <tr class="orders-table__details" >
                                                 <td colspan="5">
-                                                    <div class="ordersHistory-table__details-content">
-                                                        <div class="ordersHistory-table__details-inner">
-                                                            <div class="ordersHistory-table__info">
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                    <div class="orders-table__details-content">
+                                                        <div class="orders-table__details-inner">
+                                                            <div class="orders-table__info">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Доставка:</span>
+                                                                    <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <g clip-path="url(#clip0_6001_21440-2)">
                                                                             <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -219,16 +219,16 @@
                                                                         Изменить
                                                                     </button>
                                                                 </div>
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Плательщик:</span>
+                                                                    <span class="orders-table__info-text">Иван Иванов</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <img src="/images/account/icons/change.svg" alt="">
                                                                         Изменить
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                            <table class="ordersHistory-table__goods">
+                                                            <table class="orders-table__goods">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Изобр.</th>
@@ -241,53 +241,53 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
-                                                                    <tr class="ordersHistory-table__total">
+                                                                    <tr class="orders-table__total">
                                                                         <td colspan="4">
-                                                                            <div class="ordersHistory-table__total-info">
-                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            <div class="orders-table__total-info">
+                                                                                <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                                <span class="orders-table__total-count">3 товара</span>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                        <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -296,30 +296,30 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        <tbody class="ordersHistory-table__item">
-                                            <tr class="ordersHistory-table__row">
+                                        <tbody class="orders-table__item">
+                                            <tr class="orders-table__row">
                                                 <td>00000</td>
-                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td class="orders-table__date">15.09.2026</td>
                                                 <td>
-                                                    <div class="ordersHistory-table__state">
-                                                        <span class="ordersHistory-table__status ordersHistory-table__status--pending">
+                                                    <div class="orders-table__state">
+                                                        <span class="orders-table__status orders-table__status--pending">
                                                             <img src="/images/account/icons/table3.svg" alt="">
                                                             Ожидает оплаты
                                                         </span>
 
-                                                        <a class="ordersHistory-table__docs"
+                                                        <a class="orders-table__docs"
                                                         href="/images/account/parts1.png" download>
                                                             <img src="/images/account/icons/document.svg" alt="">
                                                             Документы
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td class="orders-table__sum">540 000 ₽</td>
                                                 <td>
-                                                <div class="ordersHistory-table__payment">
-                                                    <button type="button" class="ordersHistory-table__pay">Оплатить</button>
+                                                <div class="orders-table__payment">
+                                                    <button type="button" class="orders-table__pay">Оплатить</button>
 
-                                                    <button class="ordersHistory-table__toggle" type="button"
+                                                    <button class="orders-table__toggle" type="button"
                                                         aria-expanded="false" aria-label="Показать товары">
                                                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -329,15 +329,15 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="ordersHistory-table__details" >
+                                            <tr class="orders-table__details" >
                                                 <td colspan="5">
-                                                    <div class="ordersHistory-table__details-content">
-                                                        <div class="ordersHistory-table__details-inner">
-                                                            <div class="ordersHistory-table__info">
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                    <div class="orders-table__details-content">
+                                                        <div class="orders-table__details-inner">
+                                                            <div class="orders-table__info">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Доставка:</span>
+                                                                    <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <g clip-path="url(#clip0_6001_21440-3)">
                                                                             <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -352,16 +352,16 @@
                                                                         Изменить
                                                                     </button>
                                                                 </div>
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Плательщик:</span>
+                                                                    <span class="orders-table__info-text">Иван Иванов</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <img src="/images/account/icons/change.svg" alt="">
                                                                         Изменить
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                            <table class="ordersHistory-table__goods">
+                                                            <table class="orders-table__goods">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Изобр.</th>
@@ -374,53 +374,53 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
-                                                                    <tr class="ordersHistory-table__total">
+                                                                    <tr class="orders-table__total">
                                                                         <td colspan="4">
-                                                                            <div class="ordersHistory-table__total-info">
-                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            <div class="orders-table__total-info">
+                                                                                <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                                <span class="orders-table__total-count">3 товара</span>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                        <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -429,24 +429,24 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        <tbody class="ordersHistory-table__item">
-                                            <tr class="ordersHistory-table__row">
+                                        <tbody class="orders-table__item">
+                                            <tr class="orders-table__row">
                                                 <td>00000</td>
-                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td class="orders-table__date">15.09.2026</td>
                                                 <td>
-                                                    <div class="ordersHistory-table__state">
-                                                        <span class="ordersHistory-table__status ordersHistory-table__status--pending">
+                                                    <div class="orders-table__state">
+                                                        <span class="orders-table__status orders-table__status--pending">
                                                             <img src="/images/account/icons/table3.svg" alt="">
                                                             Ожидает оплаты
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                                <td class="orders-table__sum">1 540 000 ₽</td>
                                                 <td>
-                                                <div class="ordersHistory-table__payment">
-                                                    <button type="button" class="ordersHistory-table__pay">Оплатить</button>
+                                                <div class="orders-table__payment">
+                                                    <button type="button" class="orders-table__pay">Оплатить</button>
 
-                                                    <button class="ordersHistory-table__toggle" type="button"
+                                                    <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -456,15 +456,15 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="ordersHistory-table__details" >
+                                            <tr class="orders-table__details" >
                                                 <td colspan="5">
-                                                    <div class="ordersHistory-table__details-content">
-                                                        <div class="ordersHistory-table__details-inner">
-                                                            <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                    <div class="orders-table__details-content">
+                                                        <div class="orders-table__details-inner">
+                                                            <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-4)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -479,16 +479,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                             </div>
-                                                            <table class="ordersHistory-table__goods">
+                                                            <table class="orders-table__goods">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Изобр.</th>
@@ -501,53 +501,53 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
-                                                                    <tr class="ordersHistory-table__total">
+                                                                    <tr class="orders-table__total">
                                                                         <td colspan="4">
-                                                                            <div class="ordersHistory-table__total-info">
-                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            <div class="orders-table__total-info">
+                                                                                <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                                <span class="orders-table__total-count">3 товара</span>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                        <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -556,24 +556,24 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        <tbody class="ordersHistory-table__item">
-                                            <tr class="ordersHistory-table__row">
+                                        <tbody class="orders-table__item">
+                                            <tr class="orders-table__row">
                                                 <td>00000</td>
-                                                <td class="ordersHistory-table__date">15.09.2026</td>
+                                                <td class="orders-table__date">15.09.2026</td>
                                                 <td>
-                                                    <div class="ordersHistory-table__state">
-                                                        <span class="ordersHistory-table__status ordersHistory-table__status--shipped">
+                                                    <div class="orders-table__state">
+                                                        <span class="orders-table__status orders-table__status--shipped">
                                                             <img src="/images/account/icons/table4.svg" alt="">
                                                             Отгружен
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                                <td class="orders-table__sum">540 000 ₽</td>
                                                 <td>
-                                                <div class="ordersHistory-table__payment">
-                                                    <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                                <div class="orders-table__payment">
+                                                    <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                    <button class="ordersHistory-table__toggle" type="button"
+                                                    <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -583,15 +583,15 @@
                                                 </td>
                                             </tr>
 
-                                            <tr class="ordersHistory-table__details" >
+                                            <tr class="orders-table__details" >
                                                 <td colspan="5">
-                                                    <div class="ordersHistory-table__details-content">
-                                                        <div class="ordersHistory-table__details-inner">
-                                                            <div class="ordersHistory-table__info">
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                    <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                    <div class="orders-table__details-content">
+                                                        <div class="orders-table__details-inner">
+                                                            <div class="orders-table__info">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Доставка:</span>
+                                                                    <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <g clip-path="url(#clip0_6001_21440-5)">
                                                                             <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -606,17 +606,17 @@
                                                                         Изменить
                                                                     </button>
                                                                 </div>
-                                                                <div class="ordersHistory-table__info-item">
-                                                                    <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                    <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                    <button class="ordersHistory-table__info-btn" type="button">
+                                                                <div class="orders-table__info-item">
+                                                                    <span class="orders-table__info-label">Плательщик:</span>
+                                                                    <span class="orders-table__info-text">Иван Иванов</span>
+                                                                    <button class="orders-table__info-btn" type="button">
                                                                         <img src="/images/account/icons/change.svg" alt="">
                                                                         Изменить
                                                                     </button>
                                                                 </div>
                                                             </div>
 
-                                                            <table class="ordersHistory-table__goods">
+                                                            <table class="orders-table__goods">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Изобр.</th>
@@ -628,53 +628,53 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                            <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                         </td>
-                                                                        <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                        <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                        <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                        <td><div class="orders-table__cell">1 шт</div></td>
                                                                         <td>
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                            <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                             Новосибирск
-                                                                            <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                            <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                        <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                     </tr>
                                                                 </tbody>
                                                                 <tfoot>
-                                                                    <tr class="ordersHistory-table__total">
+                                                                    <tr class="orders-table__total">
                                                                         <td colspan="4">
-                                                                            <div class="ordersHistory-table__total-info">
-                                                                                <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                                <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                            <div class="orders-table__total-info">
+                                                                                <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                                <span class="orders-table__total-count">3 товара</span>
                                                                             </div>
                                                                         </td>
-                                                                        <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                        <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -686,10 +686,10 @@
                                     </table>
                             </div>
 
-                            <div class="ordersHistory-table ordersHistory-table--completed">
-                                <h4 class="ordersHistory-table__title">Завершенные заказы</h4>
+                            <div class="orders-table orders-table--completed">
+                                <h4 class="orders-table__title">Завершенные заказы</h4>
 
-                                <table class="ordersHistory-table__table">
+                                <table class="orders-table__table">
                                     <thead>
                                         <tr>
                                             <th scope="col">№</th>
@@ -700,24 +700,24 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td class="orders-table__sum">1 540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -727,15 +727,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details">
+                                        <tr class="orders-table__details">
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-6)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -750,16 +750,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -772,53 +772,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -827,24 +827,24 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td class="orders-table__sum">1 540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -854,15 +854,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details">
+                                        <tr class="orders-table__details">
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-7)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -877,16 +877,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -899,53 +899,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -954,30 +954,30 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
 
-                                                    <a class="ordersHistory-table__docs"
+                                                    <a class="orders-table__docs"
                                                     href="/images/account/parts1.png" download>
                                                         <img src="/images/account/icons/document.svg" alt="">
                                                         Документы
                                                     </a>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">540 000 ₽</td>
+                                            <td class="orders-table__sum">540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -987,15 +987,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details" >
+                                        <tr class="orders-table__details" >
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-8)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -1010,16 +1010,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -1032,53 +1032,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -1087,24 +1087,24 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td class="orders-table__sum">1 540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -1114,15 +1114,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details">
+                                        <tr class="orders-table__details">
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-9)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -1137,16 +1137,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -1159,53 +1159,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -1214,24 +1214,24 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td class="orders-table__sum">1 540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -1241,15 +1241,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details">
+                                        <tr class="orders-table__details">
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-10)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -1264,16 +1264,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -1286,53 +1286,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -1341,24 +1341,24 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                    <tbody class="ordersHistory-table__item">
-                                        <tr class="ordersHistory-table__row">
+                                    <tbody class="orders-table__item">
+                                        <tr class="orders-table__row">
                                             <td>00000</td>
-                                            <td class="ordersHistory-table__date">15.09.2026</td>
+                                            <td class="orders-table__date">15.09.2026</td>
                                             <td>
-                                                <div class="ordersHistory-table__state">
-                                                    <span class="ordersHistory-table__status ordersHistory-table__status--completed">
+                                                <div class="orders-table__state">
+                                                    <span class="orders-table__status orders-table__status--completed">
                                                         <img src="/images/account/icons/table2.svg" alt="">
                                                         Завершен
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="ordersHistory-table__sum">1 540 000 ₽</td>
+                                            <td class="orders-table__sum">1 540 000 ₽</td>
                                             <td>
-                                            <div class="ordersHistory-table__payment">
-                                                <span class="ordersHistory-table__pay ordersHistory-table__pay--paid">Оплачено</span>
+                                            <div class="orders-table__payment">
+                                                <span class="orders-table__pay orders-table__pay--paid">Оплачено</span>
 
-                                                <button class="ordersHistory-table__toggle" type="button"
+                                                <button class="orders-table__toggle" type="button"
                                                     aria-expanded="false" aria-label="Показать товары">
                                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.5 0.5L4.5 4.5L0.5 0.5" stroke-linecap="round" stroke="currentColor" />
@@ -1368,15 +1368,15 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="ordersHistory-table__details">
+                                        <tr class="orders-table__details">
                                             <td colspan="5">
-                                                <div class="ordersHistory-table__details-content">
-                                                    <div class="ordersHistory-table__details-inner">
-                                                        <div class="ordersHistory-table__info">
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Доставка:</span>
-                                                                <span class="ordersHistory-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                <div class="orders-table__details-content">
+                                                    <div class="orders-table__details-inner">
+                                                        <div class="orders-table__info">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Доставка:</span>
+                                                                <span class="orders-table__info-text">г. Москва, ул. Тверская, д. 12, стр. 2</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_6001_21440-11)">
                                                                         <path d="M6.39062 0.169908C7.44754 -0.0462321 8.56027 -0.0462065 9.61719 0.169908C10.1297 0.273993 10.6426 0.433617 11.123 0.633775C11.6004 0.832862 12.0566 1.07946 12.4844 1.3701C12.9088 1.65836 13.3096 1.98733 13.6699 2.34764H13.6533C13.7895 2.47575 13.918 2.61953 14.0381 2.76366L16 0.801744V5.60643H11.1953L12.9014 3.90038C12.7733 3.75627 12.6527 3.62046 12.5166 3.48436C12.2283 3.19611 11.9076 2.93141 11.5713 2.6992C11.2271 2.46713 10.8666 2.26748 10.4824 2.10741C9.28712 1.60115 7.9659 1.46929 6.69434 1.73045C6.28602 1.81853 5.87746 1.9473 5.49316 2.10741C5.10897 2.2675 4.74849 2.46712 4.4043 2.6992C4.06796 2.93141 3.74727 3.19611 3.45898 3.48436C3.1709 3.77244 2.90691 4.09264 2.6748 4.4287C2.44257 4.773 2.24219 5.1342 2.08203 5.51854C2.0146 5.67655 1.95547 5.83754 1.90137 5.99999H0.251953C0.349772 5.62226 0.476806 5.24916 0.625 4.89354C0.82414 4.41624 1.07061 3.95996 1.36133 3.53221C2.22847 2.24365 3.4531 1.23626 4.88477 0.633775C5.37325 0.4336 5.87811 0.273999 6.39062 0.169908Z" fill="currentColor" />
@@ -1391,16 +1391,16 @@
                                                                     Изменить
                                                                 </button>
                                                             </div>
-                                                            <div class="ordersHistory-table__info-item">
-                                                                <span class="ordersHistory-table__info-label">Плательщик:</span>
-                                                                <span class="ordersHistory-table__info-text">Иван Иванов</span>
-                                                                <button class="ordersHistory-table__info-btn" type="button">
+                                                            <div class="orders-table__info-item">
+                                                                <span class="orders-table__info-label">Плательщик:</span>
+                                                                <span class="orders-table__info-text">Иван Иванов</span>
+                                                                <button class="orders-table__info-btn" type="button">
                                                                     <img src="/images/account/icons/change.svg" alt="">
                                                                     Изменить
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <table class="ordersHistory-table__goods">
+                                                        <table class="orders-table__goods">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Изобр.</th>
@@ -1413,53 +1413,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img class="ordersHistory-table__img" src="/images/popular-product-1.png" alt="">
+                                                                        <img class="orders-table__img" src="/images/popular-product-1.png" alt="">
                                                                     </td>
-                                                                    <td><div class="ordersHistory-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
-                                                                    <td><div class="ordersHistory-table__cell">1 шт</div></td>
+                                                                    <td><div class="orders-table__cell">Поступление вакуумного массажёра GRKL-2500</div></td>
+                                                                    <td><div class="orders-table__cell">1 шт</div></td>
                                                                     <td>
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--label">Склад отгрузки:</span>
+                                                                        <span class="orders-table__stock orders-table__stock--label">Склад отгрузки:</span>
                                                                         Новосибирск
-                                                                        <span class="ordersHistory-table__stock ordersHistory-table__stock--date">ожидается, 06.10</span>
+                                                                        <span class="orders-table__stock orders-table__stock--date">ожидается, 06.10</span>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>6 160 224</b>₽</td>
+                                                                    <td class="orders-table__price is-right"><b>6 160 224</b>₽</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr class="ordersHistory-table__total">
+                                                                <tr class="orders-table__total">
                                                                     <td colspan="4">
-                                                                        <div class="ordersHistory-table__total-info">
-                                                                            <span class="ordersHistory-table__total-title">Итого в заказе:</span>
-                                                                            <span class="ordersHistory-table__total-count">3 товара</span>
+                                                                        <div class="orders-table__total-info">
+                                                                            <span class="orders-table__total-title">Итого в заказе:</span>
+                                                                            <span class="orders-table__total-count">3 товара</span>
                                                                         </div>
                                                                     </td>
-                                                                    <td class="ordersHistory-table__price is-right"><b>18 480 672</b> ₽</td>
+                                                                    <td class="orders-table__price is-right"><b>18 480 672</b> ₽</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>

@@ -1,4 +1,4 @@
-.ordersHistory {
+.orders {
     padding-bottom: 80px;
     &-content {
         display: flex;
@@ -165,7 +165,7 @@
                     padding-top: 8px;
                 }
 
-                .ordersHistory-table__details-content {
+                .orders-table__details-content {
                     grid-template-rows: 1fr;
                     opacity: 1;
                 }
